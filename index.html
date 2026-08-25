@@ -23,6 +23,11 @@ padding:55px 20px;
 
 .hero h1{
 font-size:42px;
+margin:0 0 15px;
+}
+
+.hero p{
+font-size:20px;
 }
 
 .container{
@@ -57,14 +62,14 @@ label{
 display:block;
 font-weight:bold;
 margin-top:15px;
+margin-bottom:6px;
 }
 
-input[type=text],
-input[type=tel],
-input[type=email]{
+input[type="text"],
+input[type="tel"],
+input[type="email"]{
 width:100%;
 padding:15px;
-margin-top:6px;
 box-sizing:border-box;
 border:1px solid #ccc;
 border-radius:8px;
@@ -95,13 +100,17 @@ color:#666;
 
 .footer{
 text-align:center;
-padding:25px;
+padding:30px;
 font-size:12px;
 }
 
 @media(max-width:650px){
 .grid{
 grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:32px;
 }
 }
 </style>
@@ -111,14 +120,18 @@ grid-template-columns:1fr;
 <body>
 
 <section class="hero">
+
 <h1>IKPIRDHU SRL</h1>
+
 <p>
 Consulenza finanziaria e informazioni su opportunità da valutare.
 </p>
+
 </section>
 
 
 <div class="container">
+
 
 <div class="card">
 
@@ -133,7 +146,7 @@ Compila il modulo e sarai ricontattato.
 
 <div class="item">
 <strong>Consulenza</strong><br>
-<span class="small">Approccio informativo</span>
+<span class="small">Approccio informativo e dedicato</span>
 </div>
 
 <div class="item">
@@ -147,7 +160,6 @@ Compila il modulo e sarai ricontattato.
 </div>
 
 </div>
-
 
 
 <form id="leadForm">
@@ -179,7 +191,11 @@ RICHIEDI INFORMAZIONI
 </form>
 
 
+<p id="msg"></p>
+
+
 </div>
+
 
 
 <div class="card">
@@ -187,7 +203,7 @@ RICHIEDI INFORMAZIONI
 <h2>Informazioni importanti</h2>
 
 <p class="small">
-Questa pagina ha finalità informative.
+Questa pagina ha finalità informative. Non costituisce una promessa o garanzia di rendimento.
 </p>
 
 </div>
@@ -204,32 +220,33 @@ Questa pagina ha finalità informative.
 
 <script>
 
-document.getElementById("leadForm").addEventListener("submit",function(e){
+document.getElementById("leadForm").addEventListener("submit", function(e){
 
 e.preventDefault();
 
+let form = this;
 
-let dati = new FormData(this);
+let data = new FormData(form);
 
 
-fetch("https://formsubmit.co/ajax/simontabb1@gmail.com",{
-
+fetch("https://formsubmit.co/ajax/simontabb1@gmail.com", {
 method:"POST",
-body:dati
+body:data
+})
+
+.then(function(){
+
+document.getElementById("msg").innerHTML =
+"<b>Grazie! La tua richiesta è stata ricevuta.</b>";
+
+form.reset();
 
 })
 
-.then(()=>{
+.catch(function(){
 
-alert("Grazie! La tua richiesta è stata ricevuta.");
-
-document.getElementById("leadForm").reset();
-
-})
-
-.catch(()=>{
-
-alert("Errore. Riprova.");
+document.getElementById("msg").innerHTML =
+"Errore. Riprova.";
 
 });
 
