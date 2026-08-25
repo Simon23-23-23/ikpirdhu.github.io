@@ -256,7 +256,8 @@ margin-bottom:25px;
 }
 
 input,
-select{
+select,
+textarea{
 width:100%;
 padding:16px;
 margin:8px 0;
@@ -292,6 +293,22 @@ transition:.3s;
 button:hover{
 background:#ffda33;
 transform:translateY(-2px);
+}
+textarea{
+width:100%;
+padding:16px;
+margin:8px 0;
+background:#101f3d;
+border:0;
+border-radius:12px;
+color:white;
+font-size:16px;
+font-family:Inter,Arial,sans-serif;
+resize:vertical;
+}
+
+textarea::placeholder{
+color:#9ba8c0;
 }
 
 /* FOOTER */
@@ -542,24 +559,42 @@ placeholder="Email"
 required
 >
 
-<select
-name="interesse"
-required
->
+<select name="budget" required>
 
 <option value="">
-Interesse
+Budget disponibile
 </option>
 
-<option value="Intelligenza Artificiale">
-Intelligenza Artificiale
+<option value="Meno di 1.000 €">
+Meno di 1.000 €
 </option>
 
-<option value="Analisi portafoglio">
-Analisi portafoglio
+<option value="1.000 - 5.000 €">
+1.000 - 5.000 €
+</option>
+
+<option value="5.000 - 10.000 €">
+5.000 - 10.000 €
+</option>
+
+<option value="Oltre 10.000 €">
+Oltre 10.000 €
+</option>
+
+<option value="Da definire">
+Da definire
 </option>
 
 </select>
+
+
+<textarea
+name="realizzazione"
+placeholder="Cosa vuoi realizzare?"
+rows="5"
+required
+></textarea>
+
 
 <button type="submit">
 INVIA RICHIESTA
