@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>IKPIRDHU SRL | Consulenza Finanziaria</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fa;
+      color: #172033;
+    }
+
+    .hero {
+      background: #172033;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      margin: 0 0 15px;
+      font-size: 42px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: auto;
+      padding: 25px 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      margin-top: -25px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-top: 0;
+    }
+
+    .description {
+      color: #5d6878;
+      line-height: 1.6;
+    }
+
+    .benefits {
+      display: flex;
+      gap: 15px;
+      margin: 25px 0;
+    }
+
+    .benefit {
+      flex: 1;
+      background: #f5f7fa;
+      padding: 18px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 18px;
+      margin-bottom: 7px;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #cbd2dc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .privacy {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 20px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .privacy input {
+      width: auto;
+      margin-top: 4px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 16px;
+      background: #172033;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    #message {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .info {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      margin-top: 25px;
+      line-height: 1.6;
+      color: #5d6878;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 13px;
+      color: #5d6878;
+    }
+
+    @media (max-width: 650px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .benefits {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+    <h1>IKPIRDHU SRL</h1>
+
+    <p>
+      Consulenza finanziaria e informazioni su opportunità
+      da valutare in base alle tue esigenze.
+    </p>
+  </section>
+
+  <div class="container">
+
+    <div class="card">
+
+      <h2>Richiedi maggiori informazioni</h2>
+
+      <p class="description">
+        Compila il modulo e sarai ricontattato per ricevere
+        ulteriori dettagli e informazioni.
+      </p>
+
+      <div class="benefits">
+
+        <div class="benefit">
+          <strong>Consulenza</strong><br>
+          Supporto informativo dedicato
+        </div>
+
+        <div class="benefit">
+          <strong>Valutazione</strong><br>
+          Opportunità da approfondire
+        </div>
+
+        <div class="benefit">
+          <strong>Supporto</strong><br>
+          Maggiori informazioni su richiesta
+        </div>
+
+      </div>
+
+      <form id="leadForm">
+
+        <label>Nome e Cognome</label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Inserisci il tuo nome"
+          required
+        >
+
+        <label>Numero di telefono</label>
+        <input
+          type="tel"
+          id="phone"
+          placeholder="Inserisci il tuo numero"
+          required
+        >
+
+        <label>Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Inserisci la tua email"
+          required
+        >
+
+        <div class="privacy">
+
+          <input type="checkbox" id="privacy" required>
+
+          <span>
+            Ho letto l'Informativa sulla Privacy e acconsento
+            al trattamento dei miei dati personali per essere
+            ricontattato in merito alla mia richiesta.
+          </span>
+
+        </div>
+
+        <button type="submit">
+          RICHIEDI INFORMAZIONI
+        </button>
+
+      </form>
+
+      <p id="message"></p>
+
+    </div>
+
+    <div class="info">
+
+      <strong>Informazioni importanti</strong>
+
+      <p>
+        Questa pagina ha finalità informative e non costituisce
+        una promessa o garanzia di rendimento. Eventuali risultati
+        dipendono da diversi fattori, inclusi capitale, strategia,
+        costi e condizioni di mercato.
+      </p>
+
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 IKPIRDHU SRL — Tutti i diritti riservati
+  </footer>
+
+  <script>
+
+    document.getElementById("leadForm").addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      document.getElementById("message").innerHTML =
+        "Grazie! La tua richiesta è stata ricevuta.";
+
+    });
+
+  </script>
+
+</body>
+</html>
