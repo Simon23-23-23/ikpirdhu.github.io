@@ -554,7 +554,7 @@ Richiedi una consulenza
 </h2>
 
 
-<form action="https://formsubmit.co/simontabb1@gmail.com" method="POST">
+<form id="contactForm">
 
 
 <input name="nome" placeholder="Nome e Cognome" required>
@@ -581,7 +581,7 @@ Analisi portafoglio
 </select>
 
 
-<button>
+<button type="submit" id="sendBtn">
 INVIA RICHIESTA
 </button>
 
@@ -602,6 +602,41 @@ INVIA RICHIESTA
 
 </footer>
 
+<script>
 
+document
+.getElementById("contactForm")
+.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+
+const btn = document.getElementById("sendBtn");
+
+btn.innerHTML = "INVIATO ✓";
+btn.style.background = "#00c853";
+
+
+const message = document.createElement("div");
+
+message.innerHTML = "Grazie! Ti contatteremo presto.";
+
+message.style.marginTop="20px";
+message.style.padding="15px";
+message.style.background="#00c853";
+message.style.borderRadius="12px";
+message.style.textAlign="center";
+message.style.fontWeight="bold";
+
+
+this.appendChild(message);
+
+
+this.reset();
+
+
+});
+
+</script>
 </body>
 </html>
