@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -19,7 +20,7 @@ color:#172033;
 background:#172033;
 color:white;
 text-align:center;
-padding:60px 20px;
+padding:55px 20px;
 }
 
 .hero h1{
@@ -41,7 +42,7 @@ padding:20px;
 background:white;
 border-radius:14px;
 padding:30px;
-margin-top:30px;
+margin-top:25px;
 box-shadow:0 8px 30px rgba(0,0,0,.12);
 }
 
@@ -54,7 +55,7 @@ margin:25px 0;
 
 .item{
 background:#f5f7fa;
-padding:20px;
+padding:18px;
 border-radius:10px;
 text-align:center;
 }
@@ -69,12 +70,14 @@ margin-bottom:6px;
 input[type="text"],
 input[type="tel"],
 input[type="email"]{
+
 width:100%;
 padding:15px;
 box-sizing:border-box;
 border:1px solid #ccd2dc;
 border-radius:8px;
 font-size:16px;
+
 }
 
 .check{
@@ -82,20 +85,18 @@ margin-top:15px;
 }
 
 button{
+
 width:100%;
-margin-top:20px;
 padding:16px;
-border:0;
-border-radius:8px;
+margin-top:20px;
 background:#172033;
 color:white;
+border:0;
+border-radius:8px;
 font-size:17px;
 font-weight:bold;
 cursor:pointer;
-}
 
-button:hover{
-opacity:.9;
 }
 
 .small{
@@ -103,21 +104,32 @@ font-size:13px;
 color:#5d6878;
 }
 
+
 .footer{
+
 text-align:center;
 padding:30px;
 font-size:12px;
+
 }
 
+
 @media(max-width:650px){
+
 .grid{
 grid-template-columns:1fr;
 }
+
+.hero h1{
+font-size:32px;
+}
+
 }
 
 </style>
 
 </head>
+
 
 <body>
 
@@ -133,10 +145,12 @@ Consulenza finanziaria e informazioni su opportunità da valutare.
 </section>
 
 
+
 <div class="container">
 
 
 <div class="card">
+
 
 <h2>Richiedi maggiori informazioni</h2>
 
@@ -145,11 +159,12 @@ Compila il modulo e sarai ricontattato per ricevere ulteriori dettagli.
 </p>
 
 
+
 <div class="grid">
 
+
 <div class="item">
-<strong>Consulenza</strong>
-<br>
+<strong>Consulenza</strong><br>
 <span class="small">
 Approccio informativo e dedicato
 </span>
@@ -157,8 +172,7 @@ Approccio informativo e dedicato
 
 
 <div class="item">
-<strong>Valutazione</strong>
-<br>
+<strong>Valutazione</strong><br>
 <span class="small">
 Opportunità da approfondire
 </span>
@@ -166,12 +180,12 @@ Opportunità da approfondire
 
 
 <div class="item">
-<strong>Supporto</strong>
-<br>
+<strong>Supporto</strong><br>
 <span class="small">
 Contatto per maggiori dettagli
 </span>
 </div>
+
 
 </div>
 
@@ -183,10 +197,11 @@ Contatto per maggiori dettagli
 <label>Nome e Cognome</label>
 
 <input 
-type="text" 
+type="text"
 name="nome"
 placeholder="Inserisci nome e cognome"
 required>
+
 
 
 <label>Numero di telefono</label>
@@ -198,6 +213,7 @@ placeholder="Inserisci numero di telefono"
 required>
 
 
+
 <label>Email</label>
 
 <input 
@@ -205,6 +221,7 @@ type="email"
 name="email"
 placeholder="Inserisci email"
 required>
+
 
 
 <div class="check">
@@ -216,13 +233,21 @@ Ho letto e accetto l'informativa sulla privacy.
 </div>
 
 
+
 <input type="hidden" name="_subject" value="Nuovo contatto IKPIRDHU SRL">
+
 
 <input type="hidden" name="_captcha" value="false">
 
 
+<input type="hidden" name="_next" value="https://simon23-23-23.github.io/ikpirdhu.github.io/?success=true">
+
+
+
 <button type="submit">
+
 RICHIEDI INFORMAZIONI
+
 </button>
 
 
@@ -238,22 +263,59 @@ RICHIEDI INFORMAZIONI
 <h2>Informazioni importanti</h2>
 
 <p class="small">
-Questa pagina ha finalità informative. 
+
+Questa pagina ha finalità informative.
 Non costituisce una promessa o garanzia di rendimento.
+
 </p>
 
 </div>
 
 
+
 </div>
 
 
-<div class="footer">
+
+<footer class="footer">
 
 © 2026 IKPIRDHU SRL — Tutti i diritti riservati
 
+</footer>
+
+
+
+<script>
+
+if(window.location.search.includes("success=true")){
+
+document.body.innerHTML += `
+
+<div style="
+position:fixed;
+top:30px;
+left:50%;
+transform:translateX(-50%);
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 25px rgba(0,0,0,.2);
+text-align:center;
+font-size:18px;
+z-index:9999;">
+
+<strong>Grazie!</strong><br>
+La tua richiesta è stata ricevuta.<br>
+Ti ricontatteremo presto.
+
 </div>
 
-<input type="hidden" name="_next" value="https://simon23-23-23.github.io/ikpirdhu.github.io/?success=true">
+`;
+
+}
+
+</script>
+
+
 </body>
 </html>
