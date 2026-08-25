@@ -7,6 +7,7 @@
 <title>Intelligenza Artificiale | Analisi Portafoglio</title>
 
 <style>
+
 *{
 box-sizing:border-box;
 }
@@ -14,122 +15,180 @@ box-sizing:border-box;
 body{
 margin:0;
 font-family:Arial,Helvetica,sans-serif;
-background:#07111f;
-color:white;
+background:#f4f7fb;
+color:#172033;
 }
+
 
 .hero{
+background:linear-gradient(135deg,#06152f,#174ea6);
+color:white;
 text-align:center;
-padding:70px 20px;
-background:linear-gradient(135deg,#07111f,#294f8f);
+padding:80px 20px;
 }
+
 
 .hero h1{
-font-size:45px;
-margin-bottom:15px;
+font-size:48px;
+margin:0 0 20px;
 }
 
+
 .hero p{
-font-size:20px;
+font-size:21px;
 max-width:750px;
 margin:auto;
-color:#dce7ff;
+line-height:1.5;
 }
+
 
 
 .container{
-max-width:850px;
+max-width:950px;
 margin:auto;
 padding:20px;
 }
 
 
+
 .card{
 background:white;
-color:#172033;
 padding:35px;
 border-radius:25px;
-margin-top:-35px;
-box-shadow:0 10px 40px rgba(0,0,0,.25);
+margin-top:-40px;
+box-shadow:0 15px 40px rgba(0,0,0,.15);
 }
+
+
+
+h2{
+font-size:30px;
+}
+
 
 
 .grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:15px;
-margin:25px 0;
+gap:20px;
+margin:30px 0;
 }
 
 
+
 .box{
-background:#eef3fb;
-padding:20px;
+background:#eef4ff;
+padding:25px;
 border-radius:15px;
 text-align:center;
 }
 
 
+
+.box strong{
+font-size:20px;
+}
+
+
+
 label{
 display:block;
 font-weight:bold;
-margin-top:15px;
+margin-top:18px;
 }
+
 
 
 input,select{
+
 width:100%;
 padding:15px;
 margin-top:7px;
+border:1px solid #ccd5e5;
 border-radius:10px;
-border:1px solid #ccc;
 font-size:16px;
+
 }
+
 
 
 .check{
-margin-top:15px;
+
+margin-top:20px;
+
 }
+
 
 
 button{
+
 width:100%;
-padding:17px;
-margin-top:20px;
-background:#102a56;
-color:white;
+padding:18px;
+margin-top:25px;
 border:0;
-border-radius:10px;
+border-radius:12px;
+background:#174ea6;
+color:white;
 font-size:18px;
 font-weight:bold;
 cursor:pointer;
+
 }
 
 
-.small{
-font-size:13px;
-color:#666;
+
+button:hover{
+
+opacity:.9;
+
 }
+
+
+
+.section{
+
+margin-top:30px;
+background:#fff;
+padding:30px;
+border-radius:20px;
+
+}
+
 
 
 .footer{
+
 text-align:center;
 padding:30px;
-color:#bbb;
+background:#06152f;
+color:white;
+margin-top:40px;
+
 }
 
 
+
+.small{
+
+font-size:13px;
+color:#666;
+
+}
+
+
+
 @media(max-width:700px){
+
+.hero h1{
+font-size:34px;
+}
 
 .grid{
 grid-template-columns:1fr;
 }
 
-.hero h1{
-font-size:32px;
 }
 
-}
 
 </style>
 
@@ -139,15 +198,17 @@ font-size:32px;
 <body>
 
 
+
 <section class="hero">
 
 <h1>INTELLIGENZA ARTIFICIALE</h1>
 
 <p>
-L'intelligenza artificiale al servizio dell'analisi del portafoglio e delle informazioni finanziarie.
+Analisi intelligente del portafoglio e informazioni finanziarie personalizzate.
 </p>
 
 </section>
+
 
 
 
@@ -159,33 +220,40 @@ L'intelligenza artificiale al servizio dell'analisi del portafoglio e delle info
 
 <h2>Richiedi maggiori informazioni</h2>
 
+
 <p>
 Compila il modulo e ricevi un contatto personalizzato.
 </p>
 
 
 
+
 <div class="grid">
 
-<div class="box">
-<strong>Analisi AI</strong><br>
-Approccio innovativo
-</div>
-
 
 <div class="box">
-<strong>Portafoglio</strong><br>
-Valutazione personalizzata
+<strong>🤖 Analisi AI</strong>
+<br>
+Tecnologia intelligente per analisi avanzate.
 </div>
 
 
 <div class="box">
-<strong>Supporto</strong><br>
-Informazioni dedicate
+<strong>📊 Portafoglio</strong>
+<br>
+Valutazione delle esigenze personali.
+</div>
+
+
+<div class="box">
+<strong>🚀 Supporto</strong>
+<br>
+Informazioni dedicate.
 </div>
 
 
 </div>
+
 
 
 
@@ -193,35 +261,49 @@ Informazioni dedicate
 <form id="leadForm">
 
 
-<label>Nome e Cognome</label>
+<label>
+Nome e Cognome
+</label>
 
 <input 
 type="text"
 name="nome"
+placeholder="Inserisci nome e cognome"
 required>
 
 
 
-<label>Numero di telefono</label>
+
+<label>
+Numero di telefono
+</label>
 
 <input 
 type="tel"
 name="telefono"
+placeholder="Inserisci telefono"
 required>
 
 
 
-<label>Email</label>
+
+<label>
+Email
+</label>
 
 <input 
 type="email"
 name="email"
+placeholder="Inserisci email"
 required>
 
 
 
 
-<label>Cosa ti interessa?</label>
+<label>
+Qual è il tuo interesse principale?
+</label>
+
 
 <select name="interesse" required>
 
@@ -238,8 +320,9 @@ Informazioni sugli investimenti
 </option>
 
 <option>
-Soluzioni basate su AI
+Soluzioni basate su Intelligenza Artificiale
 </option>
+
 
 </select>
 
@@ -254,7 +337,6 @@ Esperienza negli investimenti
 
 <select name="esperienza" required>
 
-
 <option>
 Nessuna esperienza
 </option>
@@ -267,8 +349,37 @@ Esperienza base
 Esperienza avanzata
 </option>
 
+</select>
+
+
+
+
+
+<label>
+Capitale indicativo da valutare
+</label>
+
+
+<select name="capitale">
+
+<option>
+Preferisco non indicarlo
+</option>
+
+<option>
+Meno di 10.000 €
+</option>
+
+<option>
+10.000 - 50.000 €
+</option>
+
+<option>
+Oltre 50.000 €
+</option>
 
 </select>
+
 
 
 
@@ -284,6 +395,7 @@ Accetto l'informativa sulla privacy.
 
 
 
+
 <button type="submit">
 
 RICHIEDI INFORMAZIONI
@@ -295,13 +407,58 @@ RICHIEDI INFORMAZIONI
 
 
 
-<p id="msg" class="small"></p>
+<p id="msg"></p>
+
+
+
+</div>
+
+
+
+
+
+<div class="section">
+
+
+<h2>
+Come funziona
+</h2>
+
+
+<p>
+Ricevi informazioni, valuta le tue esigenze e vieni ricontattato per maggiori dettagli.
+</p>
 
 
 </div>
 
 
+
+
+
+<div class="section">
+
+
+<h2>
+Informazioni importanti
+</h2>
+
+
+<p class="small">
+
+Questa pagina ha finalità informative.
+Non rappresenta una promessa di rendimento o risultato garantito.
+Ogni valutazione dipende dalle esigenze individuali e dalle condizioni del mercato.
+
+</p>
+
+
 </div>
+
+
+
+</div>
+
 
 
 
@@ -316,9 +473,7 @@ RICHIEDI INFORMAZIONI
 
 <script>
 
-document
-.getElementById("leadForm")
-.addEventListener("submit",function(e){
+document.getElementById("leadForm").addEventListener("submit",function(e){
 
 e.preventDefault();
 
@@ -331,20 +486,24 @@ body:new FormData(this)
 }
 )
 
-.then(function(){
+.then(()=>{
+
 
 document.getElementById("msg").innerHTML=
-"Grazie! La tua richiesta è stata ricevuta.";
+"<b>Grazie! La tua richiesta è stata ricevuta.</b>";
 
-document.getElementById("leadForm").reset();
 
-});
+this.reset();
+
+
+})
 
 
 });
 
 
 </script>
+
 
 
 
