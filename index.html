@@ -7,10 +7,7 @@
 <title>Intelligenza Artificiale | Analisi Portafoglio</title>
 
 <style>
-
-*{
-box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
 margin:0;
@@ -19,37 +16,38 @@ background:#f4f7fb;
 color:#172033;
 }
 
-
 .hero{
 background:linear-gradient(135deg,#06152f,#174ea6);
 color:white;
 text-align:center;
-padding:80px 20px;
+padding:60px 20px;
 }
-
 
 .hero h1{
 font-size:48px;
-margin:0 0 20px;
+margin:0 0 15px;
 }
 
-
 .hero p{
-font-size:21px;
+font-size:20px;
 max-width:750px;
 margin:auto;
 line-height:1.5;
 }
 
-
+.hero img{
+width:100%;
+max-width:900px;
+margin-top:35px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.35);
+}
 
 .container{
 max-width:950px;
 margin:auto;
 padding:20px;
 }
-
-
 
 .card{
 background:white;
@@ -59,22 +57,12 @@ margin-top:-40px;
 box-shadow:0 15px 40px rgba(0,0,0,.15);
 }
 
-
-
-h2{
-font-size:30px;
-}
-
-
-
 .grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:20px;
 margin:30px 0;
 }
-
-
 
 .box{
 background:#eef4ff;
@@ -83,99 +71,53 @@ border-radius:15px;
 text-align:center;
 }
 
-
-
-.box strong{
-font-size:20px;
-}
-
-
-
 label{
 display:block;
 font-weight:bold;
-margin-top:18px;
+margin-top:15px;
 }
 
-
-
 input,select{
-
 width:100%;
 padding:15px;
 margin-top:7px;
-border:1px solid #ccd5e5;
 border-radius:10px;
+border:1px solid #ccd5e5;
 font-size:16px;
-
 }
-
-
-
-.check{
-
-margin-top:20px;
-
-}
-
-
 
 button{
-
 width:100%;
 padding:18px;
 margin-top:25px;
+background:#f5b700;
+color:#172033;
 border:0;
 border-radius:12px;
-background:#174ea6;
-color:white;
 font-size:18px;
 font-weight:bold;
 cursor:pointer;
-
 }
-
-
-
-button:hover{
-
-opacity:.9;
-
-}
-
-
 
 .section{
-
-margin-top:30px;
-background:#fff;
+background:white;
 padding:30px;
 border-radius:20px;
-
+margin-top:25px;
 }
-
-
 
 .footer{
-
-text-align:center;
-padding:30px;
 background:#06152f;
 color:white;
+text-align:center;
+padding:30px;
 margin-top:40px;
-
 }
-
-
 
 .small{
-
 font-size:13px;
 color:#666;
-
 }
-
-
 
 @media(max-width:700px){
 
@@ -188,27 +130,27 @@ grid-template-columns:1fr;
 }
 
 }
-
-
 </style>
 
 </head>
 
-
 <body>
-
 
 
 <section class="hero">
 
-<h1>INTELLIGENZA ARTIFICIALE</h1>
+<h1>
+INTELLIGENZA ARTIFICIALE
+</h1>
 
 <p>
 Analisi intelligente del portafoglio e informazioni finanziarie personalizzate.
 </p>
 
-</section>
+<img src="a_clean_modern_landing_page_advertisement_style.png"
+alt="Intelligenza artificiale e finanza">
 
+</section>
 
 
 
@@ -220,245 +162,134 @@ Analisi intelligente del portafoglio e informazioni finanziarie personalizzate.
 
 <h2>Richiedi maggiori informazioni</h2>
 
-
 <p>
 Compila il modulo e ricevi un contatto personalizzato.
 </p>
 
 
-
-
 <div class="grid">
 
+<div class="box">
+<b>🤖 Analisi AI</b>
+<br>
+Tecnologia innovativa
+</div>
 
 <div class="box">
-<strong>🤖 Analisi AI</strong>
+<b>📊 Portafoglio</b>
 <br>
-Tecnologia intelligente per analisi avanzate.
+Valutazione personalizzata
 </div>
-
 
 <div class="box">
-<strong>📊 Portafoglio</strong>
+<b>🚀 Supporto</b>
 <br>
-Valutazione delle esigenze personali.
+Informazioni dedicate
 </div>
 
-
-<div class="box">
-<strong>🚀 Supporto</strong>
-<br>
-Informazioni dedicate.
 </div>
-
-
-</div>
-
-
 
 
 
 <form id="leadForm">
 
 
-<label>
-Nome e Cognome
-</label>
-
-<input 
-type="text"
-name="nome"
-placeholder="Inserisci nome e cognome"
-required>
+<label>Nome e Cognome</label>
+<input type="text" name="nome" required>
 
 
+<label>Numero di telefono</label>
+<input type="tel" name="telefono" required>
 
 
-<label>
-Numero di telefono
-</label>
-
-<input 
-type="tel"
-name="telefono"
-placeholder="Inserisci telefono"
-required>
+<label>Email</label>
+<input type="email" name="email" required>
 
 
-
-
-<label>
-Email
-</label>
-
-<input 
-type="email"
-name="email"
-placeholder="Inserisci email"
-required>
-
-
-
-
-<label>
-Qual è il tuo interesse principale?
-</label>
-
+<label>Interesse principale</label>
 
 <select name="interesse" required>
 
-<option value="">
-Seleziona
-</option>
-
-<option>
-Analisi del portafoglio
-</option>
-
-<option>
-Informazioni sugli investimenti
-</option>
-
-<option>
-Soluzioni basate su Intelligenza Artificiale
-</option>
-
+<option value="">Seleziona</option>
+<option>Analisi del portafoglio</option>
+<option>Informazioni sugli investimenti</option>
+<option>Soluzioni basate su Intelligenza Artificiale</option>
 
 </select>
 
 
 
+<label>Esperienza negli investimenti</label>
 
+<select name="esperienza">
 
-<label>
-Esperienza negli investimenti
-</label>
-
-
-<select name="esperienza" required>
-
-<option>
-Nessuna esperienza
-</option>
-
-<option>
-Esperienza base
-</option>
-
-<option>
-Esperienza avanzata
-</option>
+<option>Nessuna esperienza</option>
+<option>Esperienza base</option>
+<option>Esperienza avanzata</option>
 
 </select>
 
 
 
-
-
-<label>
-Capitale indicativo da valutare
-</label>
-
+<label>Capitale indicativo</label>
 
 <select name="capitale">
 
-<option>
-Preferisco non indicarlo
-</option>
-
-<option>
-Meno di 10.000 €
-</option>
-
-<option>
-10.000 - 50.000 €
-</option>
-
-<option>
-Oltre 50.000 €
-</option>
+<option>Preferisco non indicarlo</option>
+<option>Meno di 10.000 €</option>
+<option>10.000 - 50.000 €</option>
+<option>Oltre 50.000 €</option>
 
 </select>
 
 
 
-
-
-<div class="check">
-
+<label>
 <input type="checkbox" required>
-
-Accetto l'informativa sulla privacy.
-
-</div>
-
-
+Accetto l'informativa sulla privacy
+</label>
 
 
 
 <button type="submit">
-
 RICHIEDI INFORMAZIONI
-
 </button>
 
 
 </form>
 
 
-
-<p id="msg"></p>
-
+<p id="msg" class="small"></p>
 
 
 </div>
 
 
 
-
-
 <div class="section">
 
-
-<h2>
-Come funziona
-</h2>
-
+<h2>Come funziona</h2>
 
 <p>
-Ricevi informazioni, valuta le tue esigenze e vieni ricontattato per maggiori dettagli.
+Ricevi informazioni personalizzate e valuta soluzioni basate su tecnologia e analisi intelligente.
 </p>
 
-
 </div>
-
-
 
 
 
 <div class="section">
 
-
-<h2>
-Informazioni importanti
-</h2>
-
+<h2>Informazioni importanti</h2>
 
 <p class="small">
-
-Questa pagina ha finalità informative.
-Non rappresenta una promessa di rendimento o risultato garantito.
-Ogni valutazione dipende dalle esigenze individuali e dalle condizioni del mercato.
-
+Questa pagina ha finalità informative. Non rappresenta una promessa di rendimento o risultato garantito. Ogni valutazione dipende dalle esigenze individuali.
 </p>
 
-
 </div>
 
 
-
 </div>
-
 
 
 
@@ -470,41 +301,30 @@ Ogni valutazione dipende dalle esigenze individuali e dalle condizioni del merca
 
 
 
-
 <script>
 
 document.getElementById("leadForm").addEventListener("submit",function(e){
 
 e.preventDefault();
 
-
-fetch(
-"https://formsubmit.co/ajax/simontabb1@gmail.com",
+fetch("https://formsubmit.co/ajax/simontabb1@gmail.com",
 {
 method:"POST",
 body:new FormData(this)
-}
-)
+})
 
 .then(()=>{
 
-
 document.getElementById("msg").innerHTML=
-"<b>Grazie! La tua richiesta è stata ricevuta.</b>";
-
+"Grazie! La tua richiesta è stata ricevuta.";
 
 this.reset();
 
-
-})
-
+});
 
 });
 
-
 </script>
-
-
 
 
 </body>
