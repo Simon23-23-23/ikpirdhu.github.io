@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="IKPIRDHU SRL — Richiedi maggiori informazioni e verrai ricontattato.">
+<meta name="description" content="IKPIRDHU SRL — Richiedi maggiori informazioni.">
 <meta property="og:title" content="IKPIRDHU SRL | Richiedi informazioni">
 <meta property="og:description" content="Compila il modulo per ricevere maggiori dettagli.">
 <meta property="og:type" content="website">
@@ -16,31 +16,31 @@ body{
   margin:0;
   font-family:Arial,Helvetica,sans-serif;
   background:#f5f7fa;
-  color:#172033
+  color:#172033;
 }
 
 .container{
   max-width:900px;
   margin:auto;
-  padding:24px
+  padding:24px;
 }
 
 .hero{
   padding:55px 24px;
   text-align:center;
   background:#172033;
-  color:white
+  color:white;
 }
 
 .hero h1{
   font-size:42px;
-  margin:0 0 12px
+  margin:0 0 12px;
 }
 
 .hero p{
   font-size:20px;
   max-width:680px;
-  margin:0 auto 25px
+  margin:0 auto 25px;
 }
 
 .card{
@@ -49,78 +49,68 @@ body{
   padding:30px;
   margin:-20px auto 24px;
   box-shadow:0 8px 30px rgba(0,0,0,.10);
-  max-width:760px
+  max-width:760px;
 }
 
 h2{
-  margin-top:0
+  margin-top:0;
 }
 
 .grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:14px;
-  margin:20px 0
+  margin:20px 0;
 }
 
 .item{
   padding:18px;
   background:#f5f7fa;
   border-radius:10px;
-  text-align:center
+  text-align:center;
 }
 
 .small{
   font-size:12px;
   color:#5d6878;
-  line-height:1.5
+  line-height:1.5;
 }
 
-.hero .container{
-  max-width:900px
+.form-container{
+  margin-top:20px;
+  width:100%;
+  overflow:hidden;
 }
 
-.hero h1{
-  letter-spacing:.3px
+.form-container iframe{
+  width:100%;
+  min-height:850px;
+  border:0;
+  background:white;
 }
 
 .footer{
   text-align:center;
   font-size:12px;
   color:#5d6878;
-  padding:25px
-}
-
-.info-button{
-  display:block;
-  text-align:center;
-  text-decoration:none;
-  width:100%;
-  box-sizing:border-box;
-  border-radius:8px;
-  padding:16px;
-  margin-top:18px;
-  font-size:17px;
-  font-weight:bold;
-  background:#172033;
-  color:white;
-}
-
-.info-button:hover{
-  opacity:.92
+  padding:25px;
 }
 
 @media(max-width:650px){
   .hero h1{
-    font-size:32px
+    font-size:32px;
   }
 
   .grid{
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
   }
 
   .card{
-    padding:22px
+    padding:22px;
+  }
+
+  .form-container iframe{
+    min-height:1000px;
   }
 }
 </style>
@@ -131,6 +121,7 @@ h2{
 <section class="hero">
   <div class="container">
     <h1>IKPIRDHU SRL</h1>
+
     <p>
       Consulenza finanziaria e informazioni su opportunità
       da valutare in base alle tue esigenze.
@@ -174,13 +165,16 @@ h2{
 
     </div>
 
-    <a
-      href="https://docs.google.com/forms/d/e/1FAIpQLSdxCyqFXEqs95K8Sh_oc7aUV-HCcKICokym7KYumC7oe3pe7g/viewform"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="info-button">
-      RICHIEDI INFORMAZIONI
-    </a>
+    <!-- GOOGLE FORM DIREKT NË FAQE -->
+    <div class="form-container">
+
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdxCyqFXEqs95K8Sh_oc7aUV-HCcKICokym7KYumC7oe3pe7g/viewform?embedded=true"
+        title="Modulo di registrazione IKPIRDHU SRL">
+        Caricamento del modulo...
+      </iframe>
+
+    </div>
 
   </section>
 
