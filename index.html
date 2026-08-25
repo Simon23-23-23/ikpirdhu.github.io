@@ -501,9 +501,12 @@ Richiedi una consulenza
 <form
 name="contact"
 method="POST"
+action="/"
 data-netlify="true"
 netlify-honeypot="bot-field"
 >
+
+
 
 <input
 type="hidden"
@@ -573,6 +576,61 @@ INVIA RICHIESTA
 © 2026 QUANTERA AI - Intelligenza Artificiale Avanzata
 
 </footer>
+<script>
+const form = document.querySelector('form[name="contact"]');
+
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const button = form.querySelector('button');
+  const formData = new FormData(form);
+
+  button.disabled = true;
+  button.textContent = "INVIO...";
+
+  try {
+    await fetch("/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      body: new URLSearchParams(formData).toString()
+    });
+
+    form.reset();
+
+    button.textContent = "INVIATO ✓";
+    button.style.background = "#00c853";
+
+    const oldMessage = form.querySelector(".success-message");
+    if (oldMessage) oldMessage.remove();
+
+    const message = document.createElement("div");
+    message.className = "success-message";
+    message.textContent = "Grazie! Ti contatteremo presto.";
+    message.style.marginTop = "20px";
+    message.style.padding = "15px";
+    message.style.background = "#00c853";
+    message.style.borderRadius = "12px";
+    message.style.textAlign = "center";
+    message.style.fontWeight = "bold";
+
+    form.appendChild(message);
+
+    setTimeout(() => {
+      button.disabled = false;
+      button.textContent = "INVIA RICHIESTA";
+      button.style.background = "#ffc400";
+      message.remove();
+    }, 5000);
+
+  } catch (error) {
+    button.disabled = false;
+    button.textContent = "RIPROVA";
+    alert("Si è verificato un errore. Riprova.");
+  }
+});
+</script>
 
 </body>
 
