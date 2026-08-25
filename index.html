@@ -1,186 +1,67 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>IKPIRDHU SRL | Richiedi informazioni</title>
-
-<style>
-body{
-margin:0;
-font-family:Arial,Helvetica,sans-serif;
-background:#f5f7fa;
-color:#172033;
-}
-
-.hero{
-background:#172033;
-color:white;
-text-align:center;
-padding:55px 20px;
-}
-
-.hero h1{
-font-size:42px;
-margin:0 0 15px;
-}
-
-.hero p{
-font-size:20px;
-}
-
-.container{
-max-width:850px;
-margin:auto;
-padding:20px;
-}
-
-.card{
-background:white;
-padding:30px;
-margin-top:25px;
-border-radius:14px;
-box-shadow:0 8px 30px rgba(0,0,0,.12);
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:15px;
-margin:25px 0;
-}
-
-.item{
-background:#f5f7fa;
-padding:20px;
-border-radius:10px;
-text-align:center;
-}
-
-label{
-display:block;
-font-weight:bold;
-margin-top:15px;
-margin-bottom:6px;
-}
-
-input[type="text"],
-input[type="tel"],
-input[type="email"]{
-width:100%;
-padding:15px;
-box-sizing:border-box;
-border:1px solid #ccc;
-border-radius:8px;
-font-size:16px;
-}
-
-.check{
-margin-top:15px;
-}
-
-button{
-width:100%;
-padding:16px;
-margin-top:20px;
-background:#172033;
-color:white;
-border:0;
-border-radius:8px;
-font-size:17px;
-font-weight:bold;
-cursor:pointer;
-}
-
-.small{
-font-size:13px;
-color:#666;
-}
-
-.footer{
-text-align:center;
-padding:30px;
-font-size:12px;
-}
-
-@media(max-width:650px){
-.grid{
-grid-template-columns:1fr;
-}
-
-.hero h1{
-font-size:32px;
-}
-}
-</style>
-
-</head>
-
-<body>
-
-<section class="hero">
-
-<h1>IKPIRDHU SRL</h1>
-
-<p>
-Consulenza finanziaria e informazioni su opportunità da valutare.
-</p>
-
-</section>
-
-
-<div class="container">
-
-
-<div class="card">
-
-<h2>Richiedi maggiori informazioni</h2>
-
-<p>
-Compila il modulo e sarai ricontattato.
-</p>
-
-
-<div class="grid">
-
-<div class="item">
-<strong>Consulenza</strong><br>
-<span class="small">Approccio informativo e dedicato</span>
-</div>
-
-<div class="item">
-<strong>Valutazione</strong><br>
-<span class="small">Opportunità da approfondire</span>
-</div>
-
-<div class="item">
-<strong>Supporto</strong><br>
-<span class="small">Contatto diretto</span>
-</div>
-
-</div>
-
-
 <form id="leadForm">
 
-
 <label>Nome e Cognome</label>
-<input type="text" name="nome" required>
+<input 
+type="text" 
+name="nome" 
+placeholder="Inserisci nome e cognome"
+required>
 
 
 <label>Numero di telefono</label>
-<input type="tel" name="telefono" required>
+<input 
+type="tel" 
+name="telefono" 
+placeholder="Inserisci numero di telefono"
+required>
 
 
 <label>Email</label>
-<input type="email" name="email" required>
+<input 
+type="email" 
+name="email" 
+placeholder="Inserisci email"
+required>
+
+
+<label>Qual è il tuo principale interesse?</label>
+
+<select name="interesse" required
+style="width:100%;padding:15px;border-radius:8px;border:1px solid #ccc;font-size:16px;">
+
+<option value="">Seleziona</option>
+<option value="Informazioni opportunità">Informarmi sulle opportunità</option>
+<option value="Pianificare futuro">Pianificare il futuro</option>
+<option value="Valutare investimenti">Valutare investimenti</option>
+
+</select>
+
+
+
+<label>
+Qual è la tua esperienza nel mondo degli investimenti?
+</label>
+
+<select name="esperienza" required
+style="width:100%;padding:15px;border-radius:8px;border:1px solid #ccc;font-size:16px;">
+
+<option value="">Seleziona</option>
+<option value="Nessuna esperienza">Nessuna esperienza</option>
+<option value="Esperienza base">Esperienza base</option>
+<option value="Esperienza avanzata">Esperienza avanzata</option>
+
+</select>
+
 
 
 <div class="check">
+
 <input type="checkbox" required>
-Accetto l'informativa sulla privacy.
+
+Ho letto e accetto l'informativa sulla privacy.
+
 </div>
+
 
 
 <button type="submit">
@@ -189,71 +70,3 @@ RICHIEDI INFORMAZIONI
 
 
 </form>
-
-
-<p id="msg"></p>
-
-
-</div>
-
-
-
-<div class="card">
-
-<h2>Informazioni importanti</h2>
-
-<p class="small">
-Questa pagina ha finalità informative. Non costituisce una promessa o garanzia di rendimento.
-</p>
-
-</div>
-
-
-</div>
-
-
-<footer class="footer">
-© 2026 IKPIRDHU SRL — Tutti i diritti riservati
-</footer>
-
-
-
-<script>
-
-document.getElementById("leadForm").addEventListener("submit", function(e){
-
-e.preventDefault();
-
-let form = this;
-
-let data = new FormData(form);
-
-
-fetch("https://formsubmit.co/ajax/simontabb1@gmail.com", {
-method:"POST",
-body:data
-})
-
-.then(function(){
-
-document.getElementById("msg").innerHTML =
-"<b>Grazie! La tua richiesta è stata ricevuta.</b>";
-
-form.reset();
-
-})
-
-.catch(function(){
-
-document.getElementById("msg").innerHTML =
-"Errore. Riprova.";
-
-});
-
-});
-
-</script>
-
-
-</body>
-</html>
