@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,16 +12,48 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
+font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-font-family:Arial,Helvetica,sans-serif;
-background:#f4f7fb;
-color:#101d38;
+background:#f5f8ff;
+color:#081b3a;
+}
+
+header{
+background:#061733;
+height:80px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 6%;
+color:white;
+}
+
+.logo{
+font-size:22px;
+font-weight:800;
+}
+
+.logo span{
+color:#19c8ff;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 12px;
+font-size:15px;
+}
+
+.btn{
+background:#ffbd00;
+color:#061733;
+padding:15px 25px;
+border-radius:10px;
+font-weight:bold;
+text-decoration:none;
+display:inline-block;
 }
 
 
@@ -30,95 +61,75 @@ color:#101d38;
 
 .hero{
 
-background:linear-gradient(135deg,#06152f,#154fa0);
-min-height:100vh;
+min-height:550px;
+background:
+linear-gradient(90deg,#061733 35%,rgba(6,23,51,.65)),
+radial-gradient(circle at right,#1671ff,#061733);
+
 display:flex;
 align-items:center;
-padding:60px 8%;
-gap:50px;
+padding:60px 6%;
 color:white;
 
 }
 
 
-.left{
-
-width:50%;
-
+.hero-text{
+width:55%;
 }
 
 
-.left h1{
-
+.hero h1{
 font-size:60px;
-line-height:1.1;
-margin-bottom:20px;
-
+line-height:1;
 }
 
 
-.left h1 span{
-
-color:#19c5ff;
-
+.hero h1 span{
+color:#1ac8ff;
 }
 
 
-.left p{
-
-font-size:22px;
-line-height:1.5;
-margin-bottom:35px;
-
+.hero p{
+font-size:20px;
+line-height:1.6;
+margin:25px 0;
 }
 
 
+.ai-card{
 
-.btn{
-
-background:#f5b900;
-color:#06152f;
-padding:18px 35px;
-border-radius:12px;
-font-weight:bold;
-text-decoration:none;
-display:inline-block;
-
-}
-
-
-
-/* IMAGE AREA */
-
-.right{
-
-width:50%;
-display:flex;
-justify-content:center;
-}
-
-
-.ai-box{
-
-width:100%;
-height:420px;
-border-radius:25px;
-background:
-radial-gradient(circle at top,#1b73e8,#06152f);
+width:350px;
+height:350px;
+border-radius:50%;
+background:radial-gradient(circle,#19c8ff,#06347a);
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:90px;
+font-size:100px;
+box-shadow:0 0 60px #19c8ff;
 
 }
 
 
 
-/* CARDS */
+/* SECTIONS */
 
-.info{
+section{
+padding:60px 6%;
+}
 
-padding:60px 8%;
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:35px;
+}
+
+
+
+.cards{
+
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:25px;
@@ -126,7 +137,7 @@ gap:25px;
 }
 
 
-.box{
+.card{
 
 background:white;
 padding:30px;
@@ -137,15 +148,20 @@ box-shadow:0 10px 30px #0002;
 }
 
 
+.card h3{
+margin-bottom:15px;
+color:#061733;
+}
 
-/* FORM */
 
-.form{
 
-background:#06152f;
-color:white;
+
+.form-box{
+
 max-width:600px;
-margin:40px auto;
+margin:auto;
+background:#061733;
+color:white;
 padding:35px;
 border-radius:25px;
 
@@ -156,20 +172,20 @@ input,select{
 
 width:100%;
 padding:15px;
-margin:8px 0;
+margin:10px 0;
 border-radius:10px;
 border:0;
 
 }
 
 
-.send{
+.submit{
 
 width:100%;
 padding:16px;
-background:#f5b900;
+background:#ffbd00;
 border:0;
-border-radius:12px;
+border-radius:10px;
 font-weight:bold;
 cursor:pointer;
 
@@ -177,12 +193,28 @@ cursor:pointer;
 
 
 
+.stats{
+
+display:flex;
+justify-content:space-around;
+text-align:center;
+
+}
+
+
+.stats h2{
+font-size:40px;
+color:#1671ff;
+}
+
+
+
 footer{
 
-background:#06152f;
+background:#061733;
 color:white;
+padding:25px;
 text-align:center;
-padding:20px;
 
 }
 
@@ -191,30 +223,33 @@ padding:20px;
 @media(max-width:800px){
 
 .hero{
-
 display:block;
-
 }
 
-
-.left,.right{
-
+.hero-text{
 width:100%;
-
 }
 
-
-.left h1{
-
-font-size:38px;
-
+.hero h1{
+font-size:40px;
 }
 
+.ai-card{
+margin-top:40px;
+width:250px;
+height:250px;
+}
 
-.info{
-
+.cards{
 grid-template-columns:1fr;
+}
 
+.stats{
+display:block;
+}
+
+nav{
+display:none;
 }
 
 }
@@ -227,10 +262,35 @@ grid-template-columns:1fr;
 <body>
 
 
-<section class="hero">
+<header>
+
+<div class="logo">
+🧠 INTELLIGENZA <span>ARTIFICIALE</span>
+</div>
 
 
-<div class="left">
+<nav>
+<a href="#">Home</a>
+<a href="#">Come funziona</a>
+<a href="#">Vantaggi</a>
+<a href="#">Contatti</a>
+</nav>
+
+
+<a href="#form" class="btn">
+Richiedi informazioni
+</a>
+
+
+</header>
+
+
+
+
+<div class="hero">
+
+
+<div class="hero-text">
 
 
 <h1>
@@ -242,7 +302,7 @@ ARTIFICIALE
 
 
 <p>
-L'intelligenza artificiale al servizio dell'analisi del portafoglio e delle decisioni finanziarie.
+L’intelligenza artificiale al servizio dell’analisi del portafoglio e delle decisioni finanziarie.
 </p>
 
 
@@ -255,10 +315,7 @@ INIZIA ORA
 
 
 
-<div class="right">
-
-
-<div class="ai-box">
+<div class="ai-card">
 🤖
 </div>
 
@@ -266,45 +323,72 @@ INIZIA ORA
 </div>
 
 
+
+
+
+<section>
+
+
+<h2 class="title">
+Come funziona
+</h2>
+
+
+<div class="cards">
+
+
+<div class="card">
+<h3>🤖 Analisi AI</h3>
+<p>
+Tecnologia intelligente per analizzare informazioni.
+</p>
+</div>
+
+
+<div class="card">
+<h3>📊 Strategie</h3>
+<p>
+Soluzioni personalizzate e moderne.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🚀 Innovazione</h3>
+<p>
+Un nuovo modo di vedere il futuro digitale.
+</p>
+</div>
+
+
+</div>
+
 </section>
 
 
 
 
-<section class="info">
+<section>
 
 
-<div class="box">
+<div class="stats">
 
-<h2>🤖 AI Avanzata</h2>
-
-<p>
-Tecnologia intelligente per analisi moderne.
-</p>
-
+<div>
+<h2>99%</h2>
+<p>Tecnologia</p>
 </div>
 
 
-
-<div class="box">
-
-<h2>📊 Analisi</h2>
-
-<p>
-Soluzioni personalizzate.
-</p>
-
+<div>
+<h2>24/7</h2>
+<p>Supporto</p>
 </div>
 
 
-
-<div class="box">
-
-<h2>🚀 Futuro</h2>
-
-<p>
-Innovazione digitale.
-</p>
+<div>
+<h2>AI</h2>
+<p>Intelligenza</p>
+</div>
 
 </div>
 
@@ -315,7 +399,10 @@ Innovazione digitale.
 
 
 
-<section class="form" id="form">
+<section id="form">
+
+
+<div class="form-box">
 
 
 <h2>
@@ -326,47 +413,25 @@ Richiedi informazioni
 <form action="https://formsubmit.co/simontabb1@gmail.com" method="POST">
 
 
-<input 
-type="text"
-name="nome"
-placeholder="Nome e Cognome"
-required>
+<input name="nome" placeholder="Nome e Cognome" required>
 
 
-<input
-type="tel"
-name="telefono"
-placeholder="Telefono"
-required>
+<input name="telefono" placeholder="Telefono" required>
 
 
-<input
-type="email"
-name="email"
-placeholder="Email"
-required>
+<input name="email" placeholder="Email" required>
 
 
+<select>
 
-<select name="interesse">
-
-<option>
-Seleziona interesse
-</option>
-
-<option>
-Investimenti
-</option>
-
-<option>
-Intelligenza Artificiale
-</option>
+<option>Interesse</option>
+<option>Investimenti</option>
+<option>Intelligenza Artificiale</option>
 
 </select>
 
 
-
-<button class="send">
+<button class="submit">
 INVIA RICHIESTA
 </button>
 
@@ -374,8 +439,10 @@ INVIA RICHIESTA
 </form>
 
 
-</section>
+</div>
 
+
+</section>
 
 
 
