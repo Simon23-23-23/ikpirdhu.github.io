@@ -1,207 +1,41 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<form id="leadForm" action="https://formsubmit.co/simontabb1@gmail.com" method="POST">
 
-<meta name="description" content="IKPIRDHU SRL — Richiedi maggiori informazioni.">
-<meta property="og:title" content="IKPIRDHU SRL | Richiedi informazioni">
-<meta property="og:description" content="Compila il modulo per ricevere maggiori dettagli.">
-<meta property="og:type" content="website">
+  <label>Nome e Cognome</label>
+  <input 
+    type="text" 
+    name="nome" 
+    placeholder="Inserisci nome e cognome" 
+    required>
 
-<title>IKPIRDHU SRL | Consulenza Finanziaria</title>
+  <label>Numero di telefono</label>
+  <input 
+    type="tel" 
+    name="telefono" 
+    placeholder="Inserisci numero di telefono" 
+    required>
 
-<style>
-body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f5f7fa;
-  color:#172033;
-}
+  <label>Email</label>
+  <input 
+    type="email" 
+    name="email" 
+    placeholder="Inserisci email" 
+    required>
 
-.container{
-  max-width:900px;
-  margin:auto;
-  padding:24px;
-}
-
-.hero{
-  padding:55px 24px;
-  text-align:center;
-  background:#172033;
-  color:white;
-}
-
-.hero h1{
-  font-size:42px;
-  margin:0 0 12px;
-}
-
-.hero p{
-  font-size:20px;
-  max-width:680px;
-  margin:0 auto 25px;
-}
-
-.card{
-  background:white;
-  border-radius:14px;
-  padding:30px;
-  margin:-20px auto 24px;
-  box-shadow:0 8px 30px rgba(0,0,0,.10);
-  max-width:760px;
-}
-
-h2{
-  margin-top:0;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-  margin:20px 0;
-}
-
-.item{
-  padding:18px;
-  background:#f5f7fa;
-  border-radius:10px;
-  text-align:center;
-}
-
-.small{
-  font-size:12px;
-  color:#5d6878;
-  line-height:1.5;
-}
-
-.form-container{
-  margin-top:20px;
-  width:100%;
-  overflow:hidden;
-}
-
-.form-container iframe{
-  width:100%;
-  min-height:850px;
-  border:0;
-  background:white;
-}
-
-.footer{
-  text-align:center;
-  font-size:12px;
-  color:#5d6878;
-  padding:25px;
-}
-
-@media(max-width:650px){
-  .hero h1{
-    font-size:32px;
-  }
-
-  .grid{
-    grid-template-columns:1fr;
-  }
-
-  .card{
-    padding:22px;
-  }
-
-  .form-container iframe{
-    min-height:1000px;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<section class="hero">
-  <div class="container">
-    <h1>IKPIRDHU SRL</h1>
-
-    <p>
-      Consulenza finanziaria e informazioni su opportunità
-      da valutare in base alle tue esigenze.
-    </p>
+  <div class="check">
+    <input type="checkbox" required>
+    <span>
+      Ho letto e accetto l'informativa sulla privacy.
+    </span>
   </div>
-</section>
 
-<main class="container">
+  <input type="hidden" name="_subject" value="Nuovo contatto IKPIRDHU SRL">
 
-  <section class="card">
+  <input type="hidden" name="_captcha" value="false">
 
-    <h2>Richiedi maggiori informazioni</h2>
+  <input type="hidden" name="_next" value="https://simon23-23-23.github.io/ikpirdhu.github.io/">
 
-    <p>
-      Compila il modulo e sarai ricontattato
-      per ricevere ulteriori dettagli.
-    </p>
+  <button type="submit">
+    RICHIEDI INFORMAZIONI
+  </button>
 
-    <div class="grid">
-
-      <div class="item">
-        <strong>Consulenza</strong><br>
-        <span class="small">
-          Approccio informativo e dedicato
-        </span>
-      </div>
-
-      <div class="item">
-        <strong>Valutazione</strong><br>
-        <span class="small">
-          Opportunità da approfondire
-        </span>
-      </div>
-
-      <div class="item">
-        <strong>Supporto</strong><br>
-        <span class="small">
-          Contatto per maggiori dettagli
-        </span>
-      </div>
-
-    </div>
-
-    <!-- GOOGLE FORM DIREKT NË FAQE -->
-    <div class="form-container">
-
-      <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSdxCyqFXEqs95K8Sh_oc7aUV-HCcKICokym7KYumC7oe3pe7g/viewform?embedded=true"
-        title="Modulo di registrazione IKPIRDHU SRL">
-        Caricamento del modulo...
-      </iframe>
-
-    </div>
-
-  </section>
-
-  <section class="card">
-
-    <h2>Informazioni importanti</h2>
-
-    <p class="small">
-      Questa pagina ha finalità informative.
-      Non costituisce una promessa o garanzia di rendimento.
-      Eventuali risultati dipendono da diversi fattori,
-      inclusi capitale, strategia, costi e condizioni di mercato.
-    </p>
-
-    <p class="small">
-      Prima della pubblicazione, inserisci i dati societari completi,
-      i recapiti, l'Informativa Privacy e verifica che i servizi
-      pubblicizzati siano autorizzati e conformi alle norme applicabili.
-    </p>
-
-  </section>
-
-</main>
-
-<footer class="footer">
-  © 2026 IKPIRDHU SRL — Tutti i diritti riservati
-</footer>
-
-</body>
-</html>
+</form>
