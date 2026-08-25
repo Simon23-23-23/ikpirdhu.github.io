@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Intelligenza Artificiale</title>
+<title>IKPIRDHU SRL | Intelligenza Artificiale</title>
 
 <style>
 
@@ -13,70 +13,61 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Arial',sans-serif;
+font-family:Inter,Arial,sans-serif;
 }
 
 body{
-background:#f5f8ff;
-color:#071b3a;
+background:#050b18;
+color:white;
+overflow-x:hidden;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 
 /* HEADER */
 
 header{
-
-height:85px;
-background:#041631;
+height:90px;
 display:flex;
 align-items:center;
 justify-content:space-between;
 padding:0 7%;
-color:white;
-
+background:rgba(5,11,24,.85);
+backdrop-filter:blur(15px);
+position:fixed;
+top:0;
+width:100%;
+z-index:10;
 }
 
+
 .logo{
-
-font-size:24px;
-font-weight:800;
-line-height:1;
-
+font-size:25px;
+font-weight:900;
 }
 
 .logo span{
-
-color:#18c8ff;
-
+color:#00d9ff;
 }
 
 
-.menu{
-
-display:flex;
-gap:35px;
-
-}
-
-
-.menu a{
-
+nav a{
 color:white;
 text-decoration:none;
-font-size:16px;
-
+margin:0 15px;
 }
 
 
-.top-btn{
-
-background:#ffbd00;
-color:#061733;
-padding:15px 25px;
-border-radius:12px;
+.cta{
+background:#ffc400;
+color:#061020;
+padding:15px 30px;
+border-radius:30px;
 font-weight:bold;
 text-decoration:none;
-
 }
 
 
@@ -85,66 +76,48 @@ text-decoration:none;
 
 .hero{
 
-min-height:620px;
-
+min-height:100vh;
 display:flex;
 align-items:center;
-
-padding:60px 7%;
+padding:120px 7% 60px;
 
 background:
-linear-gradient(
-90deg,
-#041631 20%,
-rgba(4,22,49,.75)
-),
-url("https://images.unsplash.com/photo-1677442136019-21780ecad995");
-
-background-size:cover;
-background-position:center;
-
-color:white;
+radial-gradient(circle at 80% 30%,#005cff55,transparent 35%),
+linear-gradient(120deg,#020617,#071b45);
 
 }
 
 
-.hero-left{
+
+.hero-text{
 
 width:55%;
 
 }
 
 
-.hero-left h1{
+.hero h1{
 
-font-size:64px;
+font-size:70px;
 line-height:1.05;
-margin-bottom:20px;
 
 }
 
 
-.hero-left h1 span{
+.hero h1 span{
 
-color:#19c8ff;
-
-}
-
-
-.hero-left h2{
-
-font-size:27px;
-margin-bottom:20px;
+color:#00d9ff;
 
 }
 
 
-.hero-left p{
 
-font-size:19px;
+.hero p{
+
+font-size:22px;
 line-height:1.6;
-max-width:600px;
-margin-bottom:35px;
+color:#d4d9e5;
+margin:30px 0;
 
 }
 
@@ -152,13 +125,13 @@ margin-bottom:35px;
 
 .main-btn{
 
-background:#ffbd00;
-color:#061733;
-padding:18px 35px;
-border-radius:12px;
-font-weight:bold;
-text-decoration:none;
 display:inline-block;
+background:linear-gradient(90deg,#ffc400,#ff9d00);
+padding:18px 40px;
+border-radius:30px;
+color:#081020;
+font-weight:800;
+text-decoration:none;
 
 }
 
@@ -166,7 +139,8 @@ display:inline-block;
 
 /* AI VISUAL */
 
-.hero-right{
+
+.visual{
 
 width:45%;
 display:flex;
@@ -175,62 +149,115 @@ justify-content:center;
 }
 
 
-.ai-circle{
+.dashboard{
 
 width:390px;
 height:390px;
-
-border-radius:50%;
+border-radius:35px;
 
 background:
-radial-gradient(
-circle,
-#18c8ff,
-#0842a0 45%,
-#041631 75%
-);
+linear-gradient(145deg,#102c66,#071226);
+
+box-shadow:
+0 0 80px #00d9ff55;
+
+padding:30px;
+
+animation:float 4s infinite;
+
+}
+
+
+
+@keyframes float{
+
+50%{
+transform:translateY(-15px);
+}
+
+}
+
+
+
+.circle{
+
+height:140px;
+width:140px;
+border-radius:50%;
+margin:auto;
+
+background:
+conic-gradient(#00d9ff,#ffc400,#00d9ff);
 
 display:flex;
 align-items:center;
 justify-content:center;
 
-font-size:120px;
-
-box-shadow:
-0 0 50px #18c8ff;
+font-size:60px;
 
 }
 
 
 
-/* SECTION TITLE */
+.chart{
+
+margin-top:40px;
+height:80px;
+display:flex;
+align-items:end;
+gap:10px;
+
+}
+
+
+.bar{
+
+width:25px;
+background:#00d9ff;
+border-radius:5px;
+
+}
+
+
+.bar:nth-child(1){
+height:30px;
+}
+
+.bar:nth-child(2){
+height:60px;
+}
+
+.bar:nth-child(3){
+height:45px;
+}
+
+.bar:nth-child(4){
+height:75px;
+}
+
+
+
+/* FEATURES */
+
+
+.section{
+
+padding:90px 7%;
+
+}
+
 
 .title{
 
 text-align:center;
-font-size:42px;
-margin:70px 0 20px;
-
-}
-
-
-.subtitle{
-
-text-align:center;
-font-size:20px;
-color:#555;
+font-size:45px;
 margin-bottom:50px;
 
 }
 
 
 
-/* CARDS */
-
 .cards{
-
-width:86%;
-margin:auto;
 
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -239,23 +266,23 @@ gap:30px;
 }
 
 
+
 .card{
 
-background:white;
+background:#0b1630;
 padding:35px;
-border-radius:22px;
-text-align:center;
+border-radius:25px;
+border:1px solid #ffffff15;
 
-box-shadow:
-0 15px 35px rgba(0,0,0,.08);
+transition:.3s;
 
 }
 
 
-.card-icon{
+.card:hover{
 
-font-size:45px;
-margin-bottom:15px;
+transform:translateY(-10px);
+border-color:#00d9ff;
 
 }
 
@@ -270,13 +297,112 @@ margin-bottom:15px;
 
 .card p{
 
-color:#555;
-line-height:1.5;
+color:#bfc8dc;
+line-height:1.6;
 
 }
+
+
+
+/* FORM */
+
+
+.form-box{
+
+max-width:650px;
+margin:auto;
+background:#0b1630;
+padding:45px;
+border-radius:30px;
+border:1px solid #ffffff15;
+
+}
+
+
+input,select{
+
+width:100%;
+padding:16px;
+margin:8px 0;
+
+background:#101f3d;
+border:0;
+border-radius:12px;
+color:white;
+
+}
+
+
+button{
+
+width:100%;
+padding:18px;
+border:0;
+border-radius:30px;
+
+background:#ffc400;
+font-weight:bold;
+cursor:pointer;
+
+}
+
+
+
+/* FOOTER */
+
+
+footer{
+
+text-align:center;
+padding:30px;
+background:#020617;
+color:#aaa;
+
+}
+
+
+
+@media(max-width:900px){
+
+.hero{
+display:block;
+}
+
+
+.hero-text,.visual{
+width:100%;
+}
+
+
+.hero h1{
+font-size:42px;
+}
+
+
+.dashboard{
+
+margin-top:50px;
+
+}
+
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+
+nav{
+display:none;
+}
+
+}
+
 </style>
 
 </head>
+
 
 <body>
 
@@ -284,23 +410,18 @@ line-height:1.5;
 <header>
 
 <div class="logo">
-🧠 INTELLIGENZA
-<br>
-<span>ARTIFICIALE</span>
+IKPIRDHU <span>SRL</span>
 </div>
 
 
-<div class="menu">
-
+<nav>
 <a href="#">Home</a>
-<a href="#">Come funziona</a>
-<a href="#">Vantaggi</a>
-<a href="#">Contatti</a>
-
-</div>
+<a href="#servizi">Servizi</a>
+<a href="#contatti">Contatti</a>
+</nav>
 
 
-<a href="#form" class="top-btn">
+<a href="#contatti" class="cta">
 Richiedi informazioni
 </a>
 
@@ -309,32 +430,26 @@ Richiedi informazioni
 
 
 
+
 <section class="hero">
 
 
-<div class="hero-left">
-
+<div class="hero-text">
 
 <h1>
-INTELLIGENZA
-<br>
+Trasforma il tuo portafoglio con
 <span>
-ARTIFICIALE
+l'Intelligenza Artificiale
 </span>
 </h1>
 
 
-<h2>
-La tecnologia che cambia il modo di analizzare il futuro
-</h2>
-
-
 <p>
-Scopri una nuova generazione di strumenti intelligenti per analizzare dati, strategie e opportunità attraverso l'intelligenza artificiale.
+Soluzioni intelligenti per analizzare dati, strategie e opportunità attraverso tecnologie avanzate.
 </p>
 
 
-<a href="#form" class="main-btn">
+<a href="#contatti" class="main-btn">
 INIZIA ORA
 </a>
 
@@ -343,13 +458,25 @@ INIZIA ORA
 
 
 
+<div class="visual">
 
-<div class="hero-right">
+
+<div class="dashboard">
+
+<div class="circle">
+AI
+</div>
 
 
-<div class="ai-circle">
+<div class="chart">
 
-🤖
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+
+</div>
+
 
 </div>
 
@@ -363,16 +490,12 @@ INIZIA ORA
 
 
 
+<section class="section" id="servizi">
+
+
 <h2 class="title">
-Come funziona
+La tecnologia del futuro
 </h2>
-
-
-<p class="subtitle">
-Un sistema intelligente semplice, veloce e innovativo
-</p>
-
-
 
 
 <div class="cards">
@@ -380,54 +503,32 @@ Un sistema intelligente semplice, veloce e innovativo
 
 <div class="card">
 
-<div class="card-icon">
-🤖
-</div>
-
-<h3>
-Analisi AI
-</h3>
+<h3>🤖 Analisi AI</h3>
 
 <p>
-L'intelligenza artificiale analizza informazioni e crea una visione più chiara.
+Algoritmi intelligenti per interpretare informazioni complesse.
 </p>
 
 </div>
-
-
 
 
 <div class="card">
 
-<div class="card-icon">
-📊
-</div>
-
-<h3>
-Dati intelligenti
-</h3>
+<h3>📊 Strategie</h3>
 
 <p>
-Trasforma dati complessi in informazioni comprensibili.
+Decisioni basate su dati e strumenti moderni.
 </p>
 
 </div>
-
-
 
 
 <div class="card">
 
-<div class="card-icon">
-🚀
-</div>
-
-<h3>
-Nuove possibilità
-</h3>
+<h3>🚀 Innovazione</h3>
 
 <p>
-Tecnologia moderna per affrontare il futuro digitale.
+Una nuova esperienza digitale professionale.
 </p>
 
 </div>
@@ -436,89 +537,52 @@ Tecnologia moderna per affrontare il futuro digitale.
 </div>
 
 
+</section>
 
 
 
-<section id="form" style="padding:70px 7%;">
 
 
-<div style="
-max-width:650px;
-margin:auto;
-background:#041631;
-color:white;
-padding:40px;
-border-radius:25px;
-">
+<section class="section" id="contatti">
 
 
-<h2 style="margin-bottom:25px;">
-Richiedi informazioni
+<div class="form-box">
+
+
+<h2>
+Richiedi una consulenza
 </h2>
 
 
 <form action="https://formsubmit.co/simontabb1@gmail.com" method="POST">
 
 
-<input 
-style="width:100%;padding:15px;margin:8px 0;border-radius:10px;border:0;"
-type="text"
-name="nome"
-placeholder="Nome e Cognome"
-required>
+<input name="nome" placeholder="Nome e Cognome" required>
 
 
-
-<input 
-style="width:100%;padding:15px;margin:8px 0;border-radius:10px;border:0;"
-type="tel"
-name="telefono"
-placeholder="Telefono"
-required>
+<input name="telefono" placeholder="Telefono" required>
 
 
-
-<input 
-style="width:100%;padding:15px;margin:8px 0;border-radius:10px;border:0;"
-type="email"
-name="email"
-placeholder="Email"
-required>
+<input name="email" placeholder="Email" required>
 
 
+<select>
 
-<select 
-style="width:100%;padding:15px;margin:8px 0;border-radius:10px;border:0;">
-
-<option>
-Seleziona interesse
-</option>
+<option>Interesse</option>
 
 <option>
 Intelligenza Artificiale
 </option>
 
 <option>
-Analisi dati
+Analisi portafoglio
 </option>
 
 </select>
 
 
-
-<button 
-style="
-width:100%;
-padding:17px;
-background:#ffbd00;
-border:0;
-border-radius:12px;
-font-weight:bold;
-cursor:pointer;
-">
-
+<button>
 INVIA RICHIESTA
-
 </button>
 
 
@@ -532,81 +596,12 @@ INVIA RICHIESTA
 
 
 
+<footer>
 
-
-<section style="
-padding:60px 7%;
-display:flex;
-justify-content:space-around;
-text-align:center;
-">
-
-
-<div>
-
-<h2 style="font-size:45px;color:#1671ff;">
-99%
-</h2>
-
-<p>
-Innovazione
-</p>
-
-</div>
-
-
-
-<div>
-
-<h2 style="font-size:45px;color:#1671ff;">
-24/7
-</h2>
-
-<p>
-Supporto
-</p>
-
-</div>
-
-
-
-
-<div>
-
-<h2 style="font-size:45px;color:#1671ff;">
-AI
-</h2>
-
-<p>
-Tecnologia
-</p>
-
-</div>
-
-
-
-</section>
-
-
-
-
-
-<footer style="
-background:#041631;
-color:white;
-padding:30px;
-text-align:center;
-">
-
-
-© 2026 Intelligenza Artificiale
-
+© 2026 IKPIRDHU SRL - Intelligenza Artificiale
 
 </footer>
 
 
-
-
 </body>
-
 </html>
