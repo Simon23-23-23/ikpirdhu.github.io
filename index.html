@@ -1,280 +1,94 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>IKPIRDHU SRL | Consulenza Finanziaria</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fa;
-      color: #172033;
-    }
-
-    .hero {
-      background: #172033;
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    .hero h1 {
-      margin: 0 0 15px;
-      font-size: 42px;
-    }
-
-    .hero p {
-      font-size: 20px;
-      max-width: 700px;
-      margin: auto;
-      line-height: 1.5;
-    }
-
-    .container {
-      max-width: 850px;
-      margin: auto;
-      padding: 25px 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      margin-top: -25px;
-      box-shadow: 0 5px 25px rgba(0,0,0,0.12);
-    }
-
-    h2 {
-      font-size: 28px;
-      margin-top: 0;
-    }
-
-    .description {
-      color: #5d6878;
-      line-height: 1.6;
-    }
-
-    .benefits {
-      display: flex;
-      gap: 15px;
-      margin: 25px 0;
-    }
-
-    .benefit {
-      flex: 1;
-      background: #f5f7fa;
-      padding: 18px;
-      border-radius: 10px;
-      text-align: center;
-    }
-
-    label {
-      display: block;
-      font-weight: bold;
-      margin-top: 18px;
-      margin-bottom: 7px;
-    }
-
-    input {
-      width: 100%;
-      padding: 14px;
-      border: 1px solid #cbd2dc;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-
-    .privacy {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      margin-top: 20px;
-      font-size: 13px;
-      line-height: 1.5;
-    }
-
-    .privacy input {
-      width: auto;
-      margin-top: 4px;
-    }
-
-    button {
-      width: 100%;
-      margin-top: 20px;
-      padding: 16px;
-      background: #172033;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 17px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    button:hover {
-      opacity: 0.9;
-    }
-
-    #message {
-      text-align: center;
-      margin-top: 15px;
-      font-size: 14px;
-    }
-
-    .info {
-      background: white;
-      padding: 25px;
-      border-radius: 15px;
-      margin-top: 25px;
-      line-height: 1.6;
-      color: #5d6878;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 13px;
-      color: #5d6878;
-    }
-
-    @media (max-width: 650px) {
-      .hero h1 {
-        font-size: 32px;
-      }
-
-      .benefits {
-        flex-direction: column;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="IKPIRDHU SRL — Richiedi maggiori informazioni e verrai ricontattato.">
+<meta property="og:title" content="IKPIRDHU SRL | Richiedi informazioni">
+<meta property="og:description" content="Compila il modulo per ricevere maggiori dettagli.">
+<meta property="og:type" content="website">
+<title>IKPIRDHU SRL | Consulenza Finanziaria</title>
+<style>
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f7fa;color:#172033}
+.container{max-width:900px;margin:auto;padding:24px}
+.hero{padding:55px 24px;text-align:center;background:#172033;color:white}
+.hero h1{font-size:42px;margin:0 0 12px}.hero p{font-size:20px;max-width:680px;margin:0 auto 25px}
+.card{background:white;border-radius:14px;padding:30px;margin:-20px auto 24px;box-shadow:0 8px 30px rgba(0,0,0,.10);max-width:760px}
+h2{margin-top:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0}
+.item{padding:18px;background:#f5f7fa;border-radius:10px;text-align:center}
+label{display:block;font-weight:bold;margin:14px 0 6px}
+input{box-sizing:border-box;width:100%;padding:14px;border:1px solid #cbd2dc;border-radius:8px;font-size:16px}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.45;margin-top:16px}.check input{width:auto;margin-top:3px}
+button{width:100%;border:0;border-radius:8px;padding:16px;margin-top:18px;font-size:17px;font-weight:bold;cursor:pointer;background:#172033;color:white}
+.small{font-size:12px;color:#5d6878;line-height:1.5}.hero .container{max-width:900px}
+.hero h1{letter-spacing:.3px}
+form{margin-top:10px}
+button:hover{opacity:.92}
+.footer{text-align:center;font-size:12px;color:#5d6878;padding:25px}
+@media(max-width:650px){.hero h1{font-size:32px}.grid{grid-template-columns:1fr}.card{padding:22px}}
+</style>
 </head>
-
 <body>
-
-  <section class="hero">
+<section class="hero">
+  <div class="container">
     <h1>IKPIRDHU SRL</h1>
+    <p>Consulenza finanziaria e informazioni su opportunità da valutare in base alle tue esigenze.</p>
+  </div>
+</section>
 
-    <p>
-      Consulenza finanziaria e informazioni su opportunità
-      da valutare in base alle tue esigenze.
-    </p>
+<main class="container">
+  <section class="card">
+    <h2>Richiedi maggiori informazioni</h2>
+    <p>Compila il modulo e sarai ricontattato per ricevere ulteriori dettagli.</p>
+    <div class="grid">
+      <div class="item"><strong>Consulenza</strong><br><span class="small">Approccio informativo e dedicato</span></div>
+      <div class="item"><strong>Valutazione</strong><br><span class="small">Opportunità da approfondire</span></div>
+      <div class="item"><strong>Supporto</strong><br><span class="small">Contatto per maggiori dettagli</span></div>
+    </div>
+
+    <form id="leadForm" action="https://formsubmit.co/hmrc_af@tutamail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nuova richiesta IKPIRDHU SRL">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <label for="name">Nome e Cognome</label>
+      <input id="name" name="name" required autocomplete="name">
+
+      <label for="phone">Numero di telefono</label>
+      <input id="phone" name="phone" type="tel" required autocomplete="tel">
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required autocomplete="email">
+
+      <label class="check">
+        <input type="checkbox" id="privacy" required>
+        <span>Ho letto l'Informativa sulla Privacy e acconsento al trattamento dei miei dati per essere ricontattato in merito alla mia richiesta.</span>
+      </label>
+
+      <button type="submit">RICHIEDI INFORMAZIONI</button>
+      <p class="small" style="margin-top:12px">
+        I dati saranno utilizzati esclusivamente per ricontattarti in merito alla tua richiesta.
+      </p>
+    </form>
+    <p id="message" class="small" aria-live="polite"></p>
   </section>
 
-  <div class="container">
+  <section class="card">
+    <h2>Informazioni importanti</h2>
+    <p class="small">Questa pagina ha finalità informative. Non costituisce una promessa o garanzia di rendimento. Eventuali risultati dipendono da diversi fattori, inclusi capitale, strategia, costi e condizioni di mercato.</p>
+    <p class="small">Prima della pubblicazione, inserisci i dati societari completi, i recapiti, l'Informativa Privacy e verifica che i servizi pubblicizzati siano autorizzati e conformi alle norme applicabili.</p>
+  </section>
+</main>
 
-    <div class="card">
+<footer class="footer">
+  © 2026 IKPIRDHU SRL — Tutti i diritti riservati
+</footer>
 
-      <h2>Richiedi maggiori informazioni</h2>
-
-      <p class="description">
-        Compila il modulo e sarai ricontattato per ricevere
-        ulteriori dettagli e informazioni.
-      </p>
-
-      <div class="benefits">
-
-        <div class="benefit">
-          <strong>Consulenza</strong><br>
-          Supporto informativo dedicato
-        </div>
-
-        <div class="benefit">
-          <strong>Valutazione</strong><br>
-          Opportunità da approfondire
-        </div>
-
-        <div class="benefit">
-          <strong>Supporto</strong><br>
-          Maggiori informazioni su richiesta
-        </div>
-
-      </div>
-
-      <form id="leadForm">
-
-        <label>Nome e Cognome</label>
-        <input
-          type="text"
-          id="name"
-          placeholder="Inserisci il tuo nome"
-          required
-        >
-
-        <label>Numero di telefono</label>
-        <input
-          type="tel"
-          id="phone"
-          placeholder="Inserisci il tuo numero"
-          required
-        >
-
-        <label>Email</label>
-        <input
-          type="email"
-          id="email"
-          placeholder="Inserisci la tua email"
-          required
-        >
-
-        <div class="privacy">
-
-          <input type="checkbox" id="privacy" required>
-
-          <span>
-            Ho letto l'Informativa sulla Privacy e acconsento
-            al trattamento dei miei dati personali per essere
-            ricontattato in merito alla mia richiesta.
-          </span>
-
-        </div>
-
-        <button type="submit">
-          RICHIEDI INFORMAZIONI
-        </button>
-
-      </form>
-
-      <p id="message"></p>
-
-    </div>
-
-    <div class="info">
-
-      <strong>Informazioni importanti</strong>
-
-      <p>
-        Questa pagina ha finalità informative e non costituisce
-        una promessa o garanzia di rendimento. Eventuali risultati
-        dipendono da diversi fattori, inclusi capitale, strategia,
-        costi e condizioni di mercato.
-      </p>
-
-    </div>
-
-  </div>
-
-  <footer>
-    © 2026 IKPIRDHU SRL — Tutti i diritti riservati
-  </footer>
-
-  <script>
-
-    document.getElementById("leadForm").addEventListener("submit", function(event) {
-
-      event.preventDefault();
-
-      document.getElementById("message").innerHTML =
-        "Grazie! La tua richiesta è stata ricevuta.";
-
-    });
-
-  </script>
-
+<script>
+document.getElementById('leadForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  document.getElementById('message').textContent =
+    'Modulo pronto: per ricevere realmente i lead, collega questo form a un servizio email, CRM o database prima della pubblicazione.';
+});
+</script>
 </body>
 </html>
