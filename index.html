@@ -1,56 +1,275 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Intelligenza Artificiale | Analisi Portafoglio</title>
+
+<style>
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:#07111f;
+color:white;
+}
+
+.hero{
+text-align:center;
+padding:70px 20px;
+background:linear-gradient(135deg,#07111f,#294f8f);
+}
+
+.hero h1{
+font-size:45px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+max-width:750px;
+margin:auto;
+color:#dce7ff;
+}
+
+
+.container{
+max-width:850px;
+margin:auto;
+padding:20px;
+}
+
+
+.card{
+background:white;
+color:#172033;
+padding:35px;
+border-radius:25px;
+margin-top:-35px;
+box-shadow:0 10px 40px rgba(0,0,0,.25);
+}
+
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+margin:25px 0;
+}
+
+
+.box{
+background:#eef3fb;
+padding:20px;
+border-radius:15px;
+text-align:center;
+}
+
+
+label{
+display:block;
+font-weight:bold;
+margin-top:15px;
+}
+
+
+input,select{
+width:100%;
+padding:15px;
+margin-top:7px;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:16px;
+}
+
+
+.check{
+margin-top:15px;
+}
+
+
+button{
+width:100%;
+padding:17px;
+margin-top:20px;
+background:#102a56;
+color:white;
+border:0;
+border-radius:10px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+
+.small{
+font-size:13px;
+color:#666;
+}
+
+
+.footer{
+text-align:center;
+padding:30px;
+color:#bbb;
+}
+
+
+@media(max-width:700px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<section class="hero">
+
+<h1>INTELLIGENZA ARTIFICIALE</h1>
+
+<p>
+L'intelligenza artificiale al servizio dell'analisi del portafoglio e delle informazioni finanziarie.
+</p>
+
+</section>
+
+
+
+<div class="container">
+
+
+<div class="card">
+
+
+<h2>Richiedi maggiori informazioni</h2>
+
+<p>
+Compila il modulo e ricevi un contatto personalizzato.
+</p>
+
+
+
+<div class="grid">
+
+<div class="box">
+<strong>Analisi AI</strong><br>
+Approccio innovativo
+</div>
+
+
+<div class="box">
+<strong>Portafoglio</strong><br>
+Valutazione personalizzata
+</div>
+
+
+<div class="box">
+<strong>Supporto</strong><br>
+Informazioni dedicate
+</div>
+
+
+</div>
+
+
+
+
 <form id="leadForm">
 
+
 <label>Nome e Cognome</label>
+
 <input 
-type="text" 
-name="nome" 
-placeholder="Inserisci nome e cognome"
+type="text"
+name="nome"
 required>
+
 
 
 <label>Numero di telefono</label>
+
 <input 
-type="tel" 
-name="telefono" 
-placeholder="Inserisci numero di telefono"
+type="tel"
+name="telefono"
 required>
+
 
 
 <label>Email</label>
+
 <input 
-type="email" 
-name="email" 
-placeholder="Inserisci email"
+type="email"
+name="email"
 required>
 
 
-<label>Qual è il tuo principale interesse?</label>
 
-<select name="interesse" required
-style="width:100%;padding:15px;border-radius:8px;border:1px solid #ccc;font-size:16px;">
 
-<option value="">Seleziona</option>
-<option value="Informazioni opportunità">Informarmi sulle opportunità</option>
-<option value="Pianificare futuro">Pianificare il futuro</option>
-<option value="Valutare investimenti">Valutare investimenti</option>
+<label>Cosa ti interessa?</label>
+
+<select name="interesse" required>
+
+<option value="">
+Seleziona
+</option>
+
+<option>
+Analisi del portafoglio
+</option>
+
+<option>
+Informazioni sugli investimenti
+</option>
+
+<option>
+Soluzioni basate su AI
+</option>
 
 </select>
+
+
 
 
 
 <label>
-Qual è la tua esperienza nel mondo degli investimenti?
+Esperienza negli investimenti
 </label>
 
-<select name="esperienza" required
-style="width:100%;padding:15px;border-radius:8px;border:1px solid #ccc;font-size:16px;">
 
-<option value="">Seleziona</option>
-<option value="Nessuna esperienza">Nessuna esperienza</option>
-<option value="Esperienza base">Esperienza base</option>
-<option value="Esperienza avanzata">Esperienza avanzata</option>
+<select name="esperienza" required>
+
+
+<option>
+Nessuna esperienza
+</option>
+
+<option>
+Esperienza base
+</option>
+
+<option>
+Esperienza avanzata
+</option>
+
 
 </select>
+
 
 
 
@@ -58,15 +277,76 @@ style="width:100%;padding:15px;border-radius:8px;border:1px solid #ccc;font-size
 
 <input type="checkbox" required>
 
-Ho letto e accetto l'informativa sulla privacy.
+Accetto l'informativa sulla privacy.
 
 </div>
 
 
 
+
 <button type="submit">
+
 RICHIEDI INFORMAZIONI
+
 </button>
 
 
 </form>
+
+
+
+<p id="msg" class="small"></p>
+
+
+</div>
+
+
+</div>
+
+
+
+<footer class="footer">
+
+© 2026 Intelligenza Artificiale
+
+</footer>
+
+
+
+
+<script>
+
+document
+.getElementById("leadForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+
+fetch(
+"https://formsubmit.co/ajax/simontabb1@gmail.com",
+{
+method:"POST",
+body:new FormData(this)
+}
+)
+
+.then(function(){
+
+document.getElementById("msg").innerHTML=
+"Grazie! La tua richiesta è stata ricevuta.";
+
+document.getElementById("leadForm").reset();
+
+});
+
+
+});
+
+
+</script>
+
+
+
+</body>
+</html>
