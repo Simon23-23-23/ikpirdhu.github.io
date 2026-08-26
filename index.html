@@ -9,9 +9,9 @@
 
 <style>
 
-/* =========================
+/* =========================================================
    RESET
-========================= */
+========================================================= */
 
 *{
     margin:0;
@@ -30,115 +30,78 @@ body{
     overflow-x:hidden;
 }
 
-
-/* =========================
-   BACKGROUND
-========================= */
-
 body::before{
     content:"";
-
     position:fixed;
-
     width:650px;
     height:650px;
-
-    top:-300px;
-    left:-250px;
-
+    top:-280px;
+    left:-260px;
     background:#00c853;
-
     opacity:.07;
-
     filter:blur(160px);
-
     border-radius:50%;
-
     pointer-events:none;
-
     z-index:-1;
 }
 
 body::after{
     content:"";
-
     position:fixed;
-
     width:650px;
     height:650px;
-
-    right:-300px;
-    bottom:-300px;
-
+    right:-280px;
+    bottom:-280px;
     background:#ffc400;
-
     opacity:.06;
-
     filter:blur(160px);
-
     border-radius:50%;
-
     pointer-events:none;
-
     z-index:-1;
 }
 
 
-/* =========================
+/* =========================================================
    HEADER
-========================= */
+========================================================= */
 
 header{
-
     height:82px;
-
     padding:0 6%;
 
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
 
     position:fixed;
-
     top:0;
     left:0;
-
     width:100%;
 
     z-index:1000;
 
     background:rgba(2,9,20,.90);
-
     backdrop-filter:blur(18px);
 
-    border-bottom:
-        1px solid rgba(255,255,255,.06);
+    border-bottom:1px solid rgba(255,255,255,.06);
 }
 
 .logo{
-
     display:flex;
-
     align-items:center;
-
     gap:10px;
 
     text-decoration:none;
-
-    color:white;
+    color:#fff;
 }
 
 .logo-icon{
-
     width:44px;
     height:44px;
 
     border-radius:50%;
 
     display:flex;
-
     align-items:center;
     justify-content:center;
 
@@ -152,7 +115,6 @@ header{
     color:#06101d;
 
     font-size:26px;
-
     font-weight:900;
 
     box-shadow:
@@ -160,11 +122,8 @@ header{
 }
 
 .logo-text{
-
     font-size:22px;
-
     font-weight:900;
-
     letter-spacing:1px;
 }
 
@@ -173,22 +132,16 @@ header{
 }
 
 nav{
-
     display:flex;
-
     align-items:center;
-
     gap:27px;
 }
 
 nav a{
-
     color:#ccd5e1;
-
     text-decoration:none;
 
     font-size:13px;
-
     font-weight:700;
 
     transition:.3s;
@@ -199,7 +152,6 @@ nav a:hover{
 }
 
 .header-btn{
-
     padding:12px 23px;
 
     border-radius:30px;
@@ -211,36 +163,31 @@ nav a:hover{
     text-decoration:none;
 
     font-size:13px;
-
     font-weight:800;
 
     transition:.3s;
 }
 
 .header-btn:hover{
-
     background:#ffc400;
-
     color:#06101d;
 }
 
 
-/* =========================
+/* =========================================================
    HERO
-========================= */
+========================================================= */
 
 .hero{
-
     min-height:100vh;
 
     padding:
-        145px 6%
-        90px;
+        135px 6%
+        70px;
 
     display:flex;
-
     flex-direction:column;
-
+    justify-content:center;
     align-items:center;
 
     text-align:center;
@@ -248,9 +195,15 @@ nav a:hover{
     background:
 
         radial-gradient(
-            circle at 50% 20%,
-            rgba(0,200,83,.12),
-            transparent 34%
+            circle at 50% 15%,
+            rgba(0,200,83,.13),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(0,120,255,.09),
+            transparent 30%
         ),
 
         linear-gradient(
@@ -261,8 +214,8 @@ nav a:hover{
 }
 
 .hero-tag{
-
     display:inline-flex;
+    align-items:center;
 
     padding:9px 16px;
 
@@ -277,16 +230,14 @@ nav a:hover{
     color:#80e89f;
 
     font-size:11px;
-
     font-weight:900;
 
     letter-spacing:1.8px;
 
-    margin-bottom:25px;
+    margin-bottom:23px;
 }
 
 .hero h1{
-
     max-width:1050px;
 
     font-family:Georgia,serif;
@@ -310,260 +261,447 @@ nav a:hover{
 }
 
 .hero-line{
-
     width:100px;
-
     height:2px;
 
-    margin:27px auto;
+    margin:25px auto;
 
     background:#ffc400;
 }
 
 .hero-description{
-
     max-width:760px;
 
     color:#99a7b9;
 
     font-size:18px;
-
     line-height:1.7;
 
     margin-bottom:40px;
 }
 
 
-/* =========================
-   BUFFON SECTION
-========================= */
+/* =========================================================
+   SLIDER
+========================================================= */
 
-.buffon-section{
+.slider-shell{
+    width:100%;
+    max-width:1280px;
+
+    position:relative;
+
+    margin:0 auto;
+}
+
+.slider{
+    position:relative;
 
     width:100%;
 
-    max-width:1250px;
+    min-height:650px;
 
-    margin:0 auto;
+    overflow:hidden;
+
+    border-radius:34px;
+
+    border:
+        1px solid rgba(255,196,0,.28);
+
+    background:
+        linear-gradient(
+            145deg,
+            #071523,
+            #04101b
+        );
+
+    box-shadow:
+        0 35px 100px rgba(0,0,0,.48),
+        0 0 80px rgba(0,200,83,.08);
+}
+
+.slide{
+    position:absolute;
+    inset:0;
 
     display:grid;
 
     grid-template-columns:
-        1fr 1fr;
+        1.05fr .95fr;
 
-    gap:65px;
+    align-items:stretch;
 
-    align-items:center;
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateX(30px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease,
+        visibility .7s ease;
+}
+
+.slide.active{
+    opacity:1;
+    visibility:visible;
+    transform:translateX(0);
+}
+
+.slide-photo{
+    position:relative;
+    overflow:hidden;
+
+    min-height:650px;
+}
+
+.slide-photo::after{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 40%,
+            rgba(2,9,20,.80) 100%
+        );
+}
+
+.slide-photo img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+}
+
+.slide-content{
+    position:relative;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    padding:55px;
 
     text-align:left;
 
-    margin-bottom:55px;
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(0,200,83,.10),
+            transparent 35%
+        );
 }
 
-.buffon-content{
-
-    padding:10px 0;
-}
-
-.buffon-tag{
-
-    color:#00d9ff;
+.slide-kicker{
+    color:#57d96b;
 
     font-size:11px;
-
     font-weight:900;
 
     letter-spacing:2px;
 
-    margin-bottom:16px;
+    margin-bottom:15px;
 }
 
-.buffon-content h2{
-
+.slide-content h2{
     font-family:Georgia,serif;
 
     font-size:
-        clamp(38px,4vw,57px);
+        clamp(38px,4vw,58px);
 
-    line-height:1.1;
+    line-height:1.08;
 
     font-weight:500;
 
-    margin-bottom:20px;
+    margin-bottom:12px;
 }
 
-.buffon-content h2 span{
+.slide-content h2 span{
     color:#ffc400;
 }
 
-.buffon-content p{
+.slide-role{
+    color:#00d9ff;
 
-    color:#8d9bad;
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:1.7px;
+
+    margin-bottom:23px;
+}
+
+.slide-description{
+    color:#a1aebe;
 
     font-size:16px;
 
     line-height:1.8;
 
-    margin-bottom:27px;
+    max-width:500px;
+
+    margin-bottom:28px;
 }
 
-.buffon-points{
+.slide-quote{
+    padding:19px 20px;
 
-    display:grid;
+    border-radius:16px;
 
-    gap:12px;
-}
-
-.buffon-point{
-
-    padding:15px 17px;
-
-    border-radius:14px;
-
-    background:#071523;
+    background:rgba(255,255,255,.035);
 
     border:
         1px solid rgba(255,255,255,.07);
-}
 
-.buffon-point strong{
+    border-left:
+        3px solid #ffc400;
 
-    display:block;
+    color:#d8e0ea;
 
     font-size:14px;
 
-    color:#fff;
+    line-height:1.7;
 
-    margin-bottom:4px;
+    margin-bottom:25px;
 }
 
-.buffon-point span{
-
-    color:#7f8d9f;
-
-    font-size:12px;
-
-    line-height:1.5;
-}
-
-.buffon-card{
-
-    position:relative;
-
-    overflow:hidden;
-
-    border-radius:30px;
-
-    border:
-        1px solid rgba(0,217,255,.40);
-
-    background:#071226;
-
-    box-shadow:
-        0 30px 90px rgba(0,0,0,.40),
-        0 0 70px rgba(0,217,255,.12);
-}
-
-.buffon-image{
-
+.slide-quote-label{
     display:block;
 
-    width:100%;
-
-    aspect-ratio:1/1;
-
-    object-fit:cover;
-}
-
-.buffon-overlay{
-
-    position:absolute;
-
-    left:0;
-    right:0;
-    bottom:0;
-
-    padding:65px 25px 25px;
-
-    background:
-        linear-gradient(
-            to top,
-            rgba(2,6,23,.97),
-            rgba(2,6,23,.10)
-        );
-}
-
-.buffon-name{
-
-    font-size:25px;
-
-    font-weight:900;
-}
-
-.buffon-role{
-
-    margin-top:6px;
+    color:#ffc400;
 
     font-size:10px;
 
-    letter-spacing:1.7px;
+    font-weight:900;
 
-    color:#00d9ff;
+    letter-spacing:1.5px;
+
+    margin-bottom:7px;
+}
+
+.slide-features{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.slide-feature{
+    padding:9px 12px;
+
+    border-radius:20px;
+
+    background:
+        rgba(0,200,83,.06);
+
+    border:
+        1px solid rgba(0,200,83,.18);
+
+    color:#8fe6a9;
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:.5px;
 }
 
 
-/* =========================
-   TESTIMONIAL IMAGE
-========================= */
+/* =========================================================
+   SLIDER CONTROLS
+========================================================= */
 
-.testimonial-wrap{
+.slider-arrow{
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    background:
+        rgba(2,9,20,.72);
+
+    backdrop-filter:blur(10px);
+
+    color:#fff;
+
+    font-size:24px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    z-index:20;
+
+    transition:.3s;
+}
+
+.slider-arrow:hover{
+    background:#ffc400;
+    color:#06101d;
+    border-color:#ffc400;
+}
+
+.slider-arrow.prev{
+    left:18px;
+}
+
+.slider-arrow.next{
+    right:18px;
+}
+
+.slider-dots{
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:9px;
+
+    margin-top:20px;
+}
+
+.slider-dot{
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    border:0;
+
+    padding:0;
+
+    background:#49566a;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.slider-dot.active{
+    width:28px;
+
+    border-radius:20px;
+
+    background:#ffc400;
+}
+
+
+/* =========================================================
+   SLIDER PROGRESS
+========================================================= */
+
+.slider-progress{
+    position:absolute;
+
+    left:0;
+    bottom:0;
 
     width:100%;
+    height:3px;
 
-    max-width:1450px;
+    background:rgba(255,255,255,.05);
 
-    margin:0 auto;
+    overflow:hidden;
 
-    padding:12px;
+    z-index:20;
+}
 
-    border-radius:30px;
+.slider-progress-bar{
+    width:0%;
+    height:100%;
 
     background:
         linear-gradient(
-            135deg,
-            rgba(255,196,0,.58),
-            rgba(0,200,83,.38),
-            rgba(0,180,255,.15)
+            90deg,
+            #00c853,
+            #ffc400
         );
-
-    box-shadow:
-        0 35px 100px rgba(0,0,0,.45),
-        0 0 80px rgba(0,200,83,.08);
 }
 
-.testimonial-image{
 
+/* =========================================================
+   INFO BAR
+========================================================= */
+
+.info-bar{
     width:100%;
 
+    max-width:1280px;
+
+    margin:25px auto 0;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    border:
+        1px solid rgba(255,255,255,.07);
+
+    background:#06121e;
+}
+
+.info-item{
+    padding:20px;
+
+    border-right:
+        1px solid rgba(255,255,255,.07);
+
+    text-align:center;
+}
+
+.info-item:last-child{
+    border-right:0;
+}
+
+.info-item strong{
     display:block;
 
-    border-radius:22px;
+    font-size:15px;
 
-    object-fit:cover;
+    color:#fff;
+
+    margin-bottom:5px;
+}
+
+.info-item span{
+    color:#708095;
+
+    font-size:10px;
+
+    letter-spacing:.7px;
 }
 
 
-/* =========================
+/* =========================================================
    SECTION
-========================= */
+========================================================= */
 
 .section{
-
     padding:100px 6%;
 }
 
 .section-header{
-
     max-width:780px;
 
     margin:
@@ -573,7 +711,6 @@ nav a:hover{
 }
 
 .section-tag{
-
     color:#57d96b;
 
     font-size:11px;
@@ -586,7 +723,6 @@ nav a:hover{
 }
 
 .section-title{
-
     font-family:Georgia,serif;
 
     font-size:
@@ -598,7 +734,6 @@ nav a:hover{
 }
 
 .section-description{
-
     color:#8d9bad;
 
     font-size:16px;
@@ -607,12 +742,11 @@ nav a:hover{
 }
 
 
-/* =========================
+/* =========================================================
    FEATURES
-========================= */
+========================================================= */
 
 .cards{
-
     max-width:1250px;
 
     margin:auto;
@@ -626,7 +760,6 @@ nav a:hover{
 }
 
 .card{
-
     padding:30px;
 
     border-radius:22px;
@@ -645,9 +778,7 @@ nav a:hover{
 }
 
 .card:hover{
-
-    transform:
-        translateY(-8px);
+    transform:translateY(-8px);
 
     border-color:
         rgba(255,196,0,.45);
@@ -657,7 +788,6 @@ nav a:hover{
 }
 
 .card-icon{
-
     font-size:29px;
 
     margin-bottom:18px;
@@ -666,14 +796,12 @@ nav a:hover{
 }
 
 .card h3{
-
     font-size:17px;
 
     margin-bottom:10px;
 }
 
 .card p{
-
     color:#7f8d9f;
 
     font-size:13px;
@@ -682,12 +810,11 @@ nav a:hover{
 }
 
 
-/* =========================
-   HOW IT WORKS
-========================= */
+/* =========================================================
+   STEPS
+========================================================= */
 
 .steps{
-
     max-width:1100px;
 
     margin:auto;
@@ -701,7 +828,6 @@ nav a:hover{
 }
 
 .step{
-
     padding:32px;
 
     border-radius:20px;
@@ -713,16 +839,13 @@ nav a:hover{
 }
 
 .step-number{
-
     width:43px;
     height:43px;
 
     border-radius:50%;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
     background:#ffc400;
@@ -735,14 +858,12 @@ nav a:hover{
 }
 
 .step h3{
-
     font-size:20px;
 
     margin-bottom:12px;
 }
 
 .step p{
-
     color:#8492a3;
 
     line-height:1.7;
@@ -751,12 +872,11 @@ nav a:hover{
 }
 
 
-/* =========================
+/* =========================================================
    CONTACT
-========================= */
+========================================================= */
 
 .contact-box{
-
     max-width:680px;
 
     margin:auto;
@@ -780,7 +900,6 @@ nav a:hover{
 }
 
 .contact-box h2{
-
     font-family:Georgia,serif;
 
     font-size:36px;
@@ -789,7 +908,6 @@ nav a:hover{
 }
 
 .contact-box > p{
-
     color:#8190a2;
 
     line-height:1.6;
@@ -800,7 +918,6 @@ nav a:hover{
 input,
 select,
 textarea{
-
     width:100%;
 
     padding:16px;
@@ -826,7 +943,6 @@ textarea{
 input:focus,
 select:focus,
 textarea:focus{
-
     border-color:#ffc400;
 
     box-shadow:
@@ -835,19 +951,16 @@ textarea:focus{
 
 input::placeholder,
 textarea::placeholder{
-
     color:#718095;
 }
 
 textarea{
-
     resize:vertical;
 
     font-family:Inter,Arial,sans-serif;
 }
 
 .submit-btn{
-
     width:100%;
 
     padding:17px;
@@ -877,7 +990,6 @@ textarea{
 }
 
 .submit-btn:hover{
-
     transform:translateY(-2px);
 
     box-shadow:
@@ -885,14 +997,12 @@ textarea{
 }
 
 .submit-btn:disabled{
-
     opacity:.7;
 
     cursor:not-allowed;
 }
 
 .success-message{
-
     margin-top:18px;
 
     padding:14px;
@@ -909,12 +1019,11 @@ textarea{
 }
 
 
-/* =========================
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 footer{
-
     padding:35px 6%;
 
     text-align:center;
@@ -927,7 +1036,6 @@ footer{
 }
 
 .risk{
-
     max-width:900px;
 
     margin:14px auto 0;
@@ -940,9 +1048,9 @@ footer{
 }
 
 
-/* =========================
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
 
 @media(max-width:1050px){
 
@@ -950,30 +1058,38 @@ footer{
         display:none;
     }
 
+    .slide{
+        grid-template-columns:1fr;
+    }
+
+    .slider{
+        min-height:850px;
+    }
+
+    .slide-photo{
+        min-height:420px;
+    }
+
+    .slide-photo::after{
+        background:
+            linear-gradient(
+                to top,
+                rgba(2,9,20,.95),
+                transparent 70%
+            );
+    }
+
+    .slide-content{
+        padding:35px;
+    }
+
     .cards{
         grid-template-columns:
             repeat(2,1fr);
     }
 
-    .buffon-section{
-
-        grid-template-columns:1fr;
-
-        gap:40px;
-    }
-
-    .buffon-content{
-        text-align:center;
-    }
-
-    .buffon-points{
-        text-align:left;
-    }
-
     .steps{
-
         grid-template-columns:1fr;
-
         max-width:700px;
     }
 }
@@ -981,9 +1097,7 @@ footer{
 @media(max-width:650px){
 
     header{
-
         height:74px;
-
         padding:0 5%;
     }
 
@@ -992,31 +1106,24 @@ footer{
     }
 
     .logo-icon{
-
         width:39px;
         height:39px;
-
         font-size:22px;
     }
 
     .header-btn{
-
         padding:10px 15px;
-
         font-size:11px;
     }
 
     .hero{
-
         padding:
-            115px 5%
-            65px;
+            110px 5%
+            55px;
     }
 
     .hero h1{
-
         font-size:40px;
-
         letter-spacing:-1px;
     }
 
@@ -1024,22 +1131,58 @@ footer{
         font-size:16px;
     }
 
-    .buffon-section{
-
-        margin-bottom:40px;
+    .slider{
+        min-height:820px;
+        border-radius:22px;
     }
 
-    .buffon-content h2{
-        font-size:39px;
+    .slide-photo{
+        min-height:330px;
     }
 
-    .testimonial-wrap{
-        padding:7px;
-        border-radius:18px;
+    .slide-content{
+        padding:25px;
     }
 
-    .testimonial-image{
-        border-radius:13px;
+    .slide-content h2{
+        font-size:35px;
+    }
+
+    .slide-description{
+        font-size:14px;
+    }
+
+    .slider-arrow{
+        width:40px;
+        height:40px;
+        font-size:20px;
+    }
+
+    .slider-arrow.prev{
+        left:10px;
+    }
+
+    .slider-arrow.next{
+        right:10px;
+    }
+
+    .info-bar{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .info-item:nth-child(2){
+        border-right:0;
+    }
+
+    .info-item:nth-child(3),
+    .info-item:nth-child(4){
+        border-top:
+            1px solid rgba(255,255,255,.07);
+    }
+
+    .info-item{
+        padding:16px 10px;
     }
 
     .cards{
@@ -1067,9 +1210,9 @@ footer{
 <body>
 
 
-<!-- =========================
+<!-- =========================================================
      HEADER
-========================= -->
+========================================================= -->
 
 <header>
 
@@ -1092,16 +1235,16 @@ QUANTERA <span>AI</span>
 HOME
 </a>
 
-<a href="#buffon">
-PERFORMANCE
-</a>
-
 <a href="#tecnologia">
 TECNOLOGIA
 </a>
 
 <a href="#vantaggi">
 VANTAGGI
+</a>
+
+<a href="#come-funziona">
+COME FUNZIONA
 </a>
 
 <a href="#contatti">
@@ -1122,14 +1265,15 @@ INIZIA ORA
 
 
 
-<!-- =========================
+<!-- =========================================================
      HERO
-========================= -->
+========================================================= -->
 
 <section
 class="hero"
 id="home"
 >
+
 
 <div class="hero-tag">
 
@@ -1140,7 +1284,7 @@ INTELLIGENZA ARTIFICIALE · DATA · STRATEGIA
 
 <h1>
 
-L’Intelligenza Artificiale al servizio
+L'Intelligenza Artificiale al servizio
 
 <span class="gold">
 di decisioni
@@ -1169,152 +1313,312 @@ decisioni più consapevoli.
 
 
 
-<!-- =========================
-     BUFFON
-========================= -->
+<!-- =========================================================
+     SLIDER
+========================================================= -->
 
-<div
-class="buffon-section"
-id="buffon"
+<div class="slider-shell">
+
+
+<div class="slider" id="mainSlider">
+
+
+<!-- SLIDE 1 : BUFFON -->
+
+<article class="slide active">
+
+<div class="slide-photo">
+
+<img
+src="assets/buffon-ai.png"
+alt="Gianluigi Buffon"
 >
 
+</div>
 
-<div class="buffon-content">
 
+<div class="slide-content">
 
-<div class="buffon-tag">
+<div class="slide-kicker">
 PERFORMANCE INTELLIGENCE
 </div>
 
 
 <h2>
 
-Precisione, disciplina,
+Precisione,
 
 <span>
-performance.
+disciplina.
 </span>
 
 </h2>
 
 
-<p>
+<div class="slide-role">
 
-La tecnologia QUANTERA AI porta nel mondo
-dell'analisi digitale principi fondamentali
-come preparazione, disciplina e capacità
-di leggere ogni scenario.
+GIANLUIGI BUFFON · PERFORMANCE
+
+</div>
+
+
+<p class="slide-description">
+
+Un'immagine dedicata alla cultura della
+performance: preparazione, analisi,
+disciplina e capacità di leggere ogni
+scenario.
 
 </p>
 
 
-<div class="buffon-points">
+<div class="slide-quote">
 
-
-<div class="buffon-point">
-
-<strong>
-Analisi avanzata
-</strong>
-
-<span>
-Elaborazione intelligente dei dati.
+<span class="slide-quote-label">
+QUANTERA AI
 </span>
 
-</div>
-
-
-<div class="buffon-point">
-
-<strong>
-Decision Support
-</strong>
-
-<span>
-Insight strutturati per supportare le decisioni.
-</span>
+La tecnologia porta questi principi
+nell'analisi dei dati, trasformando
+informazioni complesse in insight
+strutturati.
 
 </div>
 
 
-<div class="buffon-point">
+<div class="slide-features">
 
-<strong>
-Monitoraggio continuo
-</strong>
-
-<span>
-Una visione aggiornata degli scenari.
-</span>
-
+<div class="slide-feature">
+ANALISI AI
 </div>
 
+<div class="slide-feature">
+DATA INTELLIGENCE
+</div>
+
+<div class="slide-feature">
+DECISION SUPPORT
+</div>
 
 </div>
 
 </div>
 
+</article>
 
 
-<div class="buffon-card">
 
+<!-- SLIDE 2 : BUSINESS / INVESTMENT IMAGE -->
+
+<article class="slide">
+
+<div class="slide-photo">
 
 <img
-
-src="assets/buffon-ai.png"
-
-alt="Gianluigi Buffon"
-
-class="buffon-image"
-
->
-
-
-<div class="buffon-overlay">
-
-<div class="buffon-name">
-GIANLUIGI BUFFON
-</div>
-
-<div class="buffon-role">
-PERFORMANCE · PRECISION · INTELLIGENCE
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-
-
-<!-- =========================
-     TESTIMONIAL IMAGE
-========================= -->
-
-<div class="testimonial-wrap">
-
-<img
-
 src="assets/quantera-testimonials.png"
-
 alt="QUANTERA AI - Business e Investment Intelligence"
-
-class="testimonial-image"
-
 >
 
 </div>
 
+
+<div class="slide-content">
+
+<div class="slide-kicker">
+BUSINESS & INVESTMENT INTELLIGENCE
+</div>
+
+
+<h2>
+
+Tecnologia per
+
+<span>
+analisi migliori.
+</span>
+
+</h2>
+
+
+<div class="slide-role">
+
+BUSINESS · INVESTIMENTI · INTELLIGENZA ARTIFICIALE
+
+</div>
+
+
+<p class="slide-description">
+
+Una visione moderna che unisce
+imprenditoria, tecnologia, dati e
+intelligenza artificiale per affrontare
+scenari complessi con maggiore
+struttura.
+
+</p>
+
+
+<div class="slide-quote">
+
+<span class="slide-quote-label">
+QUANTERA AI
+</span>
+
+Algoritmi avanzati, analisi predittive,
+gestione del rischio e insight in tempo
+reale aiutano a organizzare le
+informazioni in modo più efficace.
+
+</div>
+
+
+<div class="slide-features">
+
+<div class="slide-feature">
+ALGORITMI AVANZATI
+</div>
+
+<div class="slide-feature">
+ANALISI PREDITTIVA
+</div>
+
+<div class="slide-feature">
+RISK INTELLIGENCE
+</div>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- PROGRESS -->
+
+<div class="slider-progress">
+
+<div
+class="slider-progress-bar"
+id="progressBar"
+></div>
+
+</div>
+
+
+</div>
+
+
+<!-- ARROWS -->
+
+<button
+class="slider-arrow prev"
+id="prevBtn"
+aria-label="Slide precedente"
+>
+‹
+</button>
+
+
+<button
+class="slider-arrow next"
+id="nextBtn"
+aria-label="Slide successiva"
+>
+›
+</button>
+
+
+<!-- DOTS -->
+
+<div
+class="slider-dots"
+id="sliderDots"
+>
+
+<button
+class="slider-dot active"
+data-slide="0"
+aria-label="Slide 1"
+></button>
+
+<button
+class="slider-dot"
+data-slide="1"
+aria-label="Slide 2"
+></button>
+
+</div>
+
+
+</div>
+
+
+
+<!-- INFO BAR -->
+
+<div class="info-bar">
+
+<div class="info-item">
+
+<strong>
+AI ANALYTICS
+</strong>
+
+<span>
+ANALISI INTELLIGENTE DEI DATI
+</span>
+
+</div>
+
+
+<div class="info-item">
+
+<strong>
+DATA INTELLIGENCE
+</strong>
+
+<span>
+PATTERN E TREND
+</span>
+
+</div>
+
+
+<div class="info-item">
+
+<strong>
+RISK ANALYSIS
+</strong>
+
+<span>
+VALUTAZIONE DEGLI SCENARI
+</span>
+
+</div>
+
+
+<div class="info-item">
+
+<strong>
+REAL-TIME
+</strong>
+
+<span>
+INFORMAZIONI AGGIORNATE
+</span>
+
+</div>
+
+</div>
 
 </section>
 
 
 
-<!-- =========================
+<!-- =========================================================
      TECNOLOGIA
-========================= -->
+========================================================= -->
 
 <section
 class="section"
@@ -1401,8 +1705,8 @@ Risk Intelligence
 <p>
 
 Strumenti di analisi pensati
-per aiutare a valutare
-rischi e opportunità.
+per valutare meglio rischi,
+opportunità e scenari.
 
 </p>
 
@@ -1429,16 +1733,15 @@ attuale degli scenari.
 
 </div>
 
-
 </div>
 
 </section>
 
 
 
-<!-- =========================
+<!-- =========================================================
      VANTAGGI
-========================= -->
+========================================================= -->
 
 <section
 class="section"
@@ -1479,10 +1782,8 @@ Sicurezza dei dati
 </h3>
 
 <p>
-
 Architettura progettata per
 proteggere le informazioni.
-
 </p>
 
 </div>
@@ -1499,11 +1800,8 @@ Monitoraggio continuo
 </h3>
 
 <p>
-
-Analisi costante degli
-aggiornamenti e dei cambiamenti
-nei dati disponibili.
-
+Analisi costante degli aggiornamenti
+e dei cambiamenti nei dati.
 </p>
 
 </div>
@@ -1520,10 +1818,8 @@ Strategie personalizzate
 </h3>
 
 <p>
-
 Insight organizzati secondo
 esigenze e obiettivi specifici.
-
 </p>
 
 </div>
@@ -1540,15 +1836,11 @@ Accesso globale
 </h3>
 
 <p>
-
-Una piattaforma digitale
-accessibile da qualsiasi
-dispositivo.
-
+Una piattaforma digitale accessibile
+da qualsiasi dispositivo.
 </p>
 
 </div>
-
 
 </div>
 
@@ -1556,9 +1848,9 @@ dispositivo.
 
 
 
-<!-- =========================
+<!-- =========================================================
      COME FUNZIONA
-========================= -->
+========================================================= -->
 
 <section
 class="section"
@@ -1650,16 +1942,15 @@ supportare la pianificazione.
 
 </div>
 
-
 </div>
 
 </section>
 
 
 
-<!-- =========================
+<!-- =========================================================
      CONTATTI
-========================= -->
+========================================================= -->
 
 <section
 class="section"
@@ -1689,7 +1980,6 @@ supportare la tua analisi dei dati.
 
 <div class="contact-box">
 
-
 <h2>
 Richiedi informazioni
 </h2>
@@ -1704,28 +1994,17 @@ per approfondire il tuo progetto.
 
 
 <form
-
 name="contact"
-
 method="POST"
-
 action="/"
-
 data-netlify="true"
-
 netlify-honeypot="bot-field"
-
 >
 
-
 <input
-
 type="hidden"
-
 name="form-name"
-
 value="contact"
-
 >
 
 
@@ -1743,48 +2022,31 @@ Non compilare questo campo:
 
 
 <input
-
 type="text"
-
 name="nome"
-
 placeholder="Nome e Cognome"
-
 required
-
 >
 
 
 <input
-
 type="tel"
-
 name="telefono"
-
 placeholder="Telefono"
-
 required
-
 >
 
 
 <input
-
 type="email"
-
 name="email"
-
 placeholder="Email"
-
 required
-
 >
 
 
 <select
-
 name="budget"
-
 required
 >
 
@@ -1816,30 +2078,21 @@ Da definire
 
 
 <textarea
-
 name="realizzazione"
-
 rows="5"
-
 placeholder="Cosa vuoi realizzare?"
-
 required
-
 ></textarea>
 
 
 <button
-
 type="submit"
-
 class="submit-btn"
-
 >
 
 INVIA RICHIESTA
 
 </button>
-
 
 </form>
 
@@ -1849,9 +2102,9 @@ INVIA RICHIESTA
 
 
 
-<!-- =========================
+<!-- =========================================================
      FOOTER
-========================= -->
+========================================================= -->
 
 <footer>
 
@@ -1871,113 +2124,317 @@ costituiscono una raccomandazione finanziaria.
 
 
 
-<!-- =========================
-     FORM SCRIPT
-========================= -->
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
 
 <script>
 
+/* =========================================================
+   SLIDER
+========================================================= */
+
+const slides =
+document.querySelectorAll(".slide");
+
+const dots =
+document.querySelectorAll(".slider-dot");
+
+const prevBtn =
+document.getElementById("prevBtn");
+
+const nextBtn =
+document.getElementById("nextBtn");
+
+const progressBar =
+document.getElementById("progressBar");
+
+
+let currentSlide = 0;
+
+let autoPlay;
+
+const SLIDE_DURATION = 6000;
+
+
+/* CHANGE SLIDE */
+
+function showSlide(index){
+
+    if(index >= slides.length){
+        index = 0;
+    }
+
+    if(index < 0){
+        index = slides.length - 1;
+    }
+
+    slides.forEach(
+        slide => slide.classList.remove("active")
+    );
+
+    dots.forEach(
+        dot => dot.classList.remove("active")
+    );
+
+    slides[index].classList.add("active");
+
+    dots[index].classList.add("active");
+
+    currentSlide = index;
+
+    restartProgress();
+
+}
+
+
+/* NEXT */
+
+function nextSlide(){
+
+    showSlide(currentSlide + 1);
+
+}
+
+
+/* PREVIOUS */
+
+function previousSlide(){
+
+    showSlide(currentSlide - 1);
+
+}
+
+
+/* AUTOPLAY */
+
+function startAutoplay(){
+
+    clearInterval(autoPlay);
+
+    autoPlay =
+        setInterval(
+            nextSlide,
+            SLIDE_DURATION
+        );
+
+}
+
+
+/* PROGRESS */
+
+function restartProgress(){
+
+    progressBar.style.transition = "none";
+
+    progressBar.style.width = "0%";
+
+    setTimeout(
+        () => {
+
+            progressBar.style.transition =
+                `width ${SLIDE_DURATION}ms linear`;
+
+            progressBar.style.width = "100%";
+
+        },
+        50
+    );
+
+}
+
+
+/* BUTTONS */
+
+nextBtn.addEventListener(
+    "click",
+    function(){
+
+        nextSlide();
+
+        startAutoplay();
+
+    }
+);
+
+
+prevBtn.addEventListener(
+    "click",
+    function(){
+
+        previousSlide();
+
+        startAutoplay();
+
+    }
+);
+
+
+/* DOTS */
+
+dots.forEach(
+    dot => {
+
+        dot.addEventListener(
+            "click",
+            function(){
+
+                showSlide(
+                    parseInt(
+                        dot.dataset.slide
+                    )
+                );
+
+                startAutoplay();
+
+            }
+        );
+
+    }
+);
+
+
+/* PAUSE ON HOVER */
+
+const slider =
+document.getElementById("mainSlider");
+
+slider.addEventListener(
+    "mouseenter",
+    function(){
+
+        clearInterval(autoPlay);
+
+    }
+);
+
+
+slider.addEventListener(
+    "mouseleave",
+    function(){
+
+        startAutoplay();
+
+    }
+);
+
+
+/* START */
+
+restartProgress();
+
+startAutoplay();
+
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
 const form =
 document.querySelector(
-'form[name="contact"]'
+    'form[name="contact"]'
 );
 
 if(form){
 
-form.addEventListener(
-"submit",
-async function(e){
+    form.addEventListener(
+        "submit",
+        async function(e){
 
-e.preventDefault();
+            e.preventDefault();
 
-const button =
-form.querySelector("button");
+            const button =
+                form.querySelector("button");
 
-const formData =
-new FormData(form);
+            const formData =
+                new FormData(form);
 
-button.disabled = true;
+            button.disabled = true;
 
-button.textContent =
-"INVIO...";
-
-
-try{
-
-await fetch(
-"/",
-{
-method:"POST",
-
-headers:{
-"Content-Type":
-"application/x-www-form-urlencoded"
-},
-
-body:
-new URLSearchParams(
-formData
-).toString()
-}
-);
+            button.textContent =
+                "INVIO...";
 
 
-form.reset();
+            try{
+
+                await fetch(
+                    "/",
+                    {
+                        method:"POST",
+
+                        headers:{
+                            "Content-Type":
+                            "application/x-www-form-urlencoded"
+                        },
+
+                        body:
+                        new URLSearchParams(
+                            formData
+                        ).toString()
+                    }
+                );
 
 
-button.textContent =
-"INVIATO ✓";
+                form.reset();
 
 
-button.style.background =
-"#00c853";
+                button.textContent =
+                    "INVIATO ✓";
+
+                button.style.background =
+                    "#00c853";
 
 
-const message =
-document.createElement("div");
+                const message =
+                    document.createElement(
+                        "div"
+                    );
 
-message.className =
-"success-message";
+                message.className =
+                    "success-message";
 
-message.textContent =
-"Grazie! Ti contatteremo presto.";
-
-form.appendChild(message);
+                message.textContent =
+                    "Grazie! Ti contatteremo presto.";
 
 
-setTimeout(
-function(){
+                form.appendChild(message);
 
-button.disabled = false;
 
-button.textContent =
-"INVIA RICHIESTA";
+                setTimeout(
+                    function(){
 
-button.style.background =
-"#ffc400";
+                        button.disabled = false;
 
-message.remove();
+                        button.textContent =
+                            "INVIA RICHIESTA";
 
-},
-5000
-);
+                        button.style.background =
+                            "#ffc400";
 
-}
+                        message.remove();
 
-catch(error){
+                    },
+                    5000
+                );
 
-button.disabled = false;
+            }
 
-button.textContent =
-"RIPROVA";
+            catch(error){
 
-alert(
-"Si è verificato un errore. Riprova."
-);
+                button.disabled = false;
 
-}
+                button.textContent =
+                    "RIPROVA";
 
-});
+                alert(
+                    "Si è verificato un errore. Riprova."
+                );
+
+            }
+
+        }
+    );
 
 }
 
@@ -1985,5 +2442,4 @@ alert(
 
 
 </body>
-
 </html>
