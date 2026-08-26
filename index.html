@@ -5,15 +5,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>QUANTERA AI | Performance Intelligence</title>
+<title>QUANTERA AI | Intelligenza Artificiale</title>
 
 <style>
+
+/* =========================
+   RESET
+========================= */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Inter,Arial,sans-serif;
 }
 
 html{
@@ -21,10 +24,12 @@ html{
 }
 
 body{
-    background:#030712;
+    font-family:Inter,Arial,sans-serif;
+    background:#020914;
     color:#fff;
     overflow-x:hidden;
 }
+
 
 /* =========================
    BACKGROUND
@@ -32,30 +37,50 @@ body{
 
 body::before{
     content:"";
+
     position:fixed;
+
     width:600px;
     height:600px;
+
     top:-250px;
-    right:-150px;
-    background:#006cff;
-    opacity:.12;
-    filter:blur(140px);
+    left:-250px;
+
+    background:#00c853;
+
+    opacity:.07;
+
+    filter:blur(150px);
+
     border-radius:50%;
+
     pointer-events:none;
+
+    z-index:-1;
 }
 
 body::after{
     content:"";
+
     position:fixed;
-    width:500px;
-    height:500px;
+
+    width:600px;
+    height:600px;
+
+    right:-250px;
     bottom:-250px;
-    left:-150px;
-    background:#00d9ff;
-    opacity:.08;
-    filter:blur(140px);
+
+    background:#ffc400;
+
+    opacity:.06;
+
+    filter:blur(150px);
+
     border-radius:50%;
+
     pointer-events:none;
+
+    z-index:-1;
 }
 
 
@@ -64,112 +89,140 @@ body::after{
 ========================= */
 
 header{
-    height:88px;
+
+    height:82px;
+
+    padding:0 6%;
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
-    padding:0 7%;
-
-    background:rgba(3,7,18,.82);
-    backdrop-filter:blur(20px);
-
-    border-bottom:1px solid rgba(255,255,255,.06);
-
     position:fixed;
+
     top:0;
     left:0;
+
     width:100%;
 
-    z-index:100;
+    z-index:1000;
+
+    background:rgba(2,9,20,.90);
+
+    backdrop-filter:blur(20px);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.06);
 }
 
 .logo{
+
     display:flex;
+
     align-items:center;
-    gap:12px;
+
+    gap:10px;
 
     color:white;
+
     text-decoration:none;
 }
 
 .logo-icon{
-    width:46px;
-    height:46px;
+
+    width:44px;
+    height:44px;
 
     border-radius:50%;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
-    font-size:28px;
+    background:
+        linear-gradient(
+            135deg,
+            #ffc400,
+            #00c853
+        );
+
+    color:#06101d;
+
+    font-size:26px;
+
     font-weight:900;
 
-    background:linear-gradient(
-        135deg,
-        #00e5ff,
-        #0066ff
-    );
-
     box-shadow:
-        0 0 25px rgba(0,217,255,.55);
+        0 0 25px rgba(255,196,0,.25);
 }
 
 .logo-text{
-    font-size:23px;
+
+    font-size:22px;
+
     font-weight:900;
+
     letter-spacing:1px;
 }
 
 .logo-text span{
-    color:#00d9ff;
+    color:#00c853;
 }
 
 nav{
+
     display:flex;
+
     align-items:center;
+
+    gap:28px;
 }
 
 nav a{
-    color:#cdd6e7;
+
+    color:#ccd5e1;
+
     text-decoration:none;
 
-    margin:0 18px;
+    font-size:13px;
 
-    font-size:14px;
-    font-weight:600;
+    font-weight:700;
 
     transition:.3s;
 }
 
 nav a:hover{
-    color:#00d9ff;
+    color:#ffc400;
 }
 
-.cta{
-    padding:13px 24px;
+.header-btn{
+
+    padding:12px 24px;
 
     border-radius:30px;
 
-    background:#ffc400;
+    border:1px solid #ffc400;
 
-    color:#07101f;
+    color:#ffc400;
 
     text-decoration:none;
 
-    font-size:14px;
-    font-weight:900;
+    font-size:13px;
+
+    font-weight:800;
 
     transition:.3s;
 }
 
-.cta:hover{
-    transform:translateY(-2px);
+.header-btn:hover{
 
-    box-shadow:
-        0 10px 30px rgba(255,196,0,.25);
+    background:#ffc400;
+
+    color:#06101d;
 }
 
 
@@ -178,274 +231,146 @@ nav a:hover{
 ========================= */
 
 .hero{
+
     min-height:100vh;
 
     padding:
-        150px 7%
-        90px;
+        145px 6%
+        80px;
 
-    display:grid;
+    display:flex;
 
-    grid-template-columns:
-        1fr 1fr;
+    flex-direction:column;
 
     align-items:center;
 
-    gap:70px;
+    text-align:center;
 
     background:
 
         radial-gradient(
-            circle at 75% 35%,
-            rgba(0,105,255,.22),
-            transparent 32%
+            circle at 50% 20%,
+            rgba(0,200,83,.11),
+            transparent 35%
         ),
 
         linear-gradient(
-            135deg,
-            #020617,
-            #06132d 55%,
-            #020617
+            180deg,
+            #020914 0%,
+            #03111d 100%
         );
 }
 
-.hero-content{
-    max-width:680px;
-}
+.hero-tag{
 
-.eyebrow{
     display:inline-flex;
-    align-items:center;
-    gap:10px;
 
-    padding:8px 14px;
+    align-items:center;
+
+    padding:9px 16px;
 
     border-radius:30px;
 
-    border:1px solid rgba(0,217,255,.25);
-
-    background:rgba(0,217,255,.06);
-
-    color:#00d9ff;
-
-    font-size:12px;
-    font-weight:800;
-
-    letter-spacing:1.5px;
-
-    margin-bottom:24px;
-}
-
-.status-dot{
-    width:7px;
-    height:7px;
-
-    border-radius:50%;
-
-    background:#00e676;
-
-    box-shadow:
-        0 0 12px #00e676;
-}
-
-.hero h1{
-    font-size:
-        clamp(48px,6vw,78px);
-
-    line-height:1.02;
-
-    letter-spacing:-3px;
-
-    margin-bottom:28px;
-}
-
-.hero h1 span{
-    display:block;
+    border:
+        1px solid rgba(0,200,83,.35);
 
     background:
-        linear-gradient(
-            90deg,
-            #00d9ff,
-            #4d8dff,
-            #00d9ff
-        );
+        rgba(0,200,83,.06);
 
-    background-size:200% auto;
+    color:#80e89f;
 
-    -webkit-background-clip:text;
-    background-clip:text;
-
-    color:transparent;
-
-    animation:
-        gradientMove 5s linear infinite;
-}
-
-@keyframes gradientMove{
-
-    to{
-        background-position:
-            200% center;
-    }
-
-}
-
-.hero-description{
-    max-width:600px;
-
-    color:#aebbd0;
-
-    font-size:19px;
-
-    line-height:1.7;
-
-    margin-bottom:34px;
-}
-
-.hero-buttons{
-    display:flex;
-    align-items:center;
-    gap:15px;
-
-    flex-wrap:wrap;
-}
-
-.main-btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-
-    padding:17px 30px;
-
-    border-radius:30px;
-
-    background:
-        linear-gradient(
-            90deg,
-            #ffc400,
-            #ff9d00
-        );
-
-    color:#07101f;
-
-    text-decoration:none;
+    font-size:11px;
 
     font-weight:900;
 
-    transition:.3s;
+    letter-spacing:1.8px;
+
+    margin-bottom:25px;
 }
 
-.main-btn:hover{
-    transform:translateY(-3px);
+.hero h1{
 
-    box-shadow:
-        0 15px 35px rgba(255,196,0,.2);
+    max-width:1050px;
+
+    font-family:Georgia,serif;
+
+    font-size:
+        clamp(42px,6vw,76px);
+
+    line-height:1.08;
+
+    font-weight:500;
+
+    letter-spacing:-2px;
 }
 
-.secondary-btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-
-    padding:16px 28px;
-
-    border-radius:30px;
-
-    border:1px solid rgba(255,255,255,.14);
-
-    color:white;
-
-    text-decoration:none;
-
-    font-weight:700;
-
-    background:rgba(255,255,255,.04);
-
-    transition:.3s;
+.hero h1 .gold{
+    color:#ffc400;
 }
 
-.secondary-btn:hover{
-    border-color:#00d9ff;
+.hero h1 .green{
+    color:#57d96b;
+}
 
-    color:#00d9ff;
+.hero-line{
+
+    width:100px;
+
+    height:2px;
+
+    margin:27px auto;
+
+    background:#ffc400;
+}
+
+.hero-description{
+
+    max-width:760px;
+
+    color:#9aa8ba;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    margin-bottom:48px;
 }
 
 
 /* =========================
-   HERO VISUAL
+   MAIN VISUAL
 ========================= */
 
-.hero-visual{
-    position:relative;
+.testimonial-image-wrapper{
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
+    width:100%;
 
-.profile-card{
+    max-width:1450px;
 
-    width:min(520px,100%);
+    padding:12px;
 
-    position:relative;
-
-    border-radius:34px;
-
-    padding:10px;
+    border-radius:30px;
 
     background:
         linear-gradient(
-            145deg,
-            rgba(0,217,255,.5),
-            rgba(0,102,255,.15),
-            rgba(255,255,255,.06)
+            135deg,
+            rgba(255,196,0,.55),
+            rgba(0,200,83,.36),
+            rgba(0,180,255,.15)
         );
 
     box-shadow:
-        0 0 80px rgba(0,217,255,.18),
-        0 35px 90px rgba(0,0,0,.55);
-
-    animation:
-        cardFloat 5s ease-in-out infinite;
-}
-
-@keyframes cardFloat{
-
-    0%,100%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-10px);
-    }
-
-}
-
-.profile-inner{
+        0 35px 100px rgba(0,0,0,.45),
+        0 0 80px rgba(0,200,83,.08);
 
     position:relative;
 
     overflow:hidden;
-
-    border-radius:27px;
-
-    background:#071226;
 }
 
-.profile-image{
+.testimonial-image-wrapper::before{
 
-    width:100%;
-
-    height:570px;
-
-    object-fit:cover;
-
-    object-position:center;
-
-    display:block;
-}
-
-.profile-overlay{
+    content:"";
 
     position:absolute;
 
@@ -453,205 +378,50 @@ nav a:hover{
 
     background:
         linear-gradient(
-            to top,
-            rgba(2,6,23,.95),
-            rgba(2,6,23,.15) 50%,
+            110deg,
+            transparent 25%,
+            rgba(255,255,255,.06),
             transparent 75%
         );
+
+    pointer-events:none;
 }
 
-.profile-top{
+.testimonial-image{
 
-    position:absolute;
-
-    top:22px;
-    left:22px;
-    right:22px;
-
-    display:flex;
-
-    justify-content:space-between;
-    align-items:center;
-}
-
-.live-badge{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    padding:8px 12px;
-
-    border-radius:20px;
-
-    background:
-        rgba(2,6,23,.72);
-
-    backdrop-filter:blur(12px);
-
-    border:
-        1px solid rgba(255,255,255,.12);
-
-    font-size:11px;
-
-    font-weight:800;
-
-    letter-spacing:1px;
-}
-
-.live-dot{
-
-    width:7px;
-    height:7px;
-
-    border-radius:50%;
-
-    background:#00e676;
-
-    box-shadow:0 0 10px #00e676;
-}
-
-.ai-badge{
-
-    padding:8px 12px;
-
-    border-radius:20px;
-
-    background:
-        rgba(0,217,255,.12);
-
-    border:
-        1px solid rgba(0,217,255,.35);
-
-    color:#00d9ff;
-
-    font-size:11px;
-
-    font-weight:900;
-}
-
-.profile-info{
-
-    position:absolute;
-
-    bottom:25px;
-    left:25px;
-    right:25px;
-}
-
-.profile-info h2{
-
-    font-size:32px;
-
-    margin-bottom:4px;
-}
-
-.profile-info p{
-
-    color:#b9c7da;
-
-    font-size:13px;
-
-    margin-bottom:20px;
-}
-
-.metrics{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:10px;
-}
-
-.metric{
-
-    padding:13px;
-
-    border-radius:16px;
-
-    background:
-        rgba(255,255,255,.07);
-
-    backdrop-filter:blur(10px);
-
-    border:
-        1px solid rgba(255,255,255,.08);
-}
-
-.metric strong{
+    width:100%;
 
     display:block;
 
-    color:#00d9ff;
+    border-radius:22px;
 
-    font-size:18px;
+    object-fit:cover;
 
-    margin-bottom:3px;
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.4);
+
+    transition:
+        transform .5s ease;
 }
 
-.metric span{
+.testimonial-image:hover{
 
-    color:#aebbd0;
-
-    font-size:10px;
-}
-
-
-/* =========================
-   TRUST BAR
-========================= */
-
-.trust-bar{
-
-    padding:25px 7%;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:50px;
-
-    background:#020617;
-
-    border-top:
-        1px solid rgba(255,255,255,.05);
-
-    border-bottom:
-        1px solid rgba(255,255,255,.05);
-}
-
-.trust-item{
-
-    color:#8290a8;
-
-    font-size:12px;
-
-    font-weight:800;
-
-    letter-spacing:1.5px;
-
-    text-transform:uppercase;
+    transform:scale(1.01);
 }
 
 
 /* =========================
-   SERVICES
+   QUANTERA INTRO
 ========================= */
 
 .section{
 
-    padding:100px 7%;
+    padding:100px 6%;
 }
 
 .section-header{
 
-    max-width:750px;
+    max-width:780px;
 
     margin:
         0 auto 55px;
@@ -661,88 +431,74 @@ nav a:hover{
 
 .section-tag{
 
-    color:#00d9ff;
+    color:#57d96b;
 
-    font-size:12px;
+    font-size:11px;
 
     font-weight:900;
 
     letter-spacing:2px;
 
-    margin-bottom:12px;
+    margin-bottom:13px;
 }
 
-.title{
+.section-title{
+
+    font-family:Georgia,serif;
 
     font-size:
-        clamp(35px,4vw,50px);
+        clamp(36px,4vw,52px);
 
-    margin-bottom:16px;
+    font-weight:500;
 
-    letter-spacing:-1px;
+    margin-bottom:15px;
 }
 
-.section-subtitle{
+.section-description{
 
-    color:#8f9db4;
+    color:#8d9aab;
 
-    line-height:1.7;
+    font-size:16px;
 
-    font-size:17px;
+    line-height:1.75;
 }
+
+
+/* =========================
+   FEATURES
+========================= */
 
 .cards{
+
+    max-width:1250px;
+
+    margin:auto;
 
     display:grid;
 
     grid-template-columns:
-        repeat(3,1fr);
+        repeat(4,1fr);
 
-    gap:24px;
+    gap:20px;
 }
 
 .card{
 
-    position:relative;
+    padding:30px;
 
-    padding:35px;
-
-    border-radius:25px;
+    border-radius:22px;
 
     background:
         linear-gradient(
             145deg,
-            #0b1730,
-            #071126
+            #071723,
+            #04101b
         );
 
     border:
         1px solid rgba(255,255,255,.07);
 
     transition:.35s;
-
-    overflow:hidden;
-}
-
-.card::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:150px;
-    height:150px;
-
-    top:-80px;
-    right:-80px;
-
-    border-radius:50%;
-
-    background:#00d9ff;
-
-    opacity:.06;
-
-    filter:blur(40px);
 }
 
 .card:hover{
@@ -751,282 +507,104 @@ nav a:hover{
         translateY(-8px);
 
     border-color:
-        rgba(0,217,255,.4);
+        rgba(255,196,0,.45);
 
     box-shadow:
-        0 20px 50px rgba(0,0,0,.3);
+        0 25px 60px rgba(0,0,0,.25);
 }
 
 .card-icon{
 
-    width:55px;
-    height:55px;
+    font-size:29px;
 
-    display:flex;
+    margin-bottom:18px;
 
-    align-items:center;
-    justify-content:center;
-
-    border-radius:17px;
-
-    background:
-        rgba(0,217,255,.08);
-
-    border:
-        1px solid rgba(0,217,255,.2);
-
-    font-size:25px;
-
-    margin-bottom:25px;
+    color:#ffc400;
 }
 
 .card h3{
 
-    font-size:23px;
+    font-size:17px;
 
-    margin-bottom:14px;
+    margin-bottom:10px;
 }
 
 .card p{
 
-    color:#8998b0;
+    color:#7f8d9f;
+
+    font-size:13px;
 
     line-height:1.7;
-
-    font-size:15px;
 }
 
 
 /* =========================
-   PERFORMANCE SECTION
+   HOW IT WORKS
 ========================= */
 
-.performance{
+.steps{
 
-    display:grid;
+    max-width:1100px;
 
-    grid-template-columns:
-        .9fr 1.1fr;
-
-    gap:60px;
-
-    align-items:center;
-}
-
-.performance-text h2{
-
-    font-size:
-        clamp(36px,4vw,55px);
-
-    line-height:1.1;
-
-    margin-bottom:20px;
-}
-
-.performance-text h2 span{
-
-    color:#00d9ff;
-}
-
-.performance-text p{
-
-    color:#95a3b8;
-
-    line-height:1.8;
-
-    margin-bottom:30px;
-}
-
-.performance-list{
-
-    display:grid;
-
-    gap:14px;
-}
-
-.performance-item{
-
-    display:flex;
-
-    gap:14px;
-
-    align-items:flex-start;
-}
-
-.check{
-
-    width:24px;
-    height:24px;
-
-    flex-shrink:0;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    border-radius:50%;
-
-    background:#00d9ff;
-
-    color:#03101d;
-
-    font-size:12px;
-
-    font-weight:900;
-}
-
-.performance-item strong{
-
-    display:block;
-
-    margin-bottom:3px;
-}
-
-.performance-item span{
-
-    color:#7f8da4;
-
-    font-size:13px;
-}
-
-.data-panel{
-
-    padding:30px;
-
-    border-radius:28px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #0b1d3d,
-            #071124
-        );
-
-    border:
-        1px solid rgba(255,255,255,.08);
-
-    box-shadow:
-        0 30px 80px rgba(0,0,0,.35);
-}
-
-.data-header{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    margin-bottom:25px;
-}
-
-.data-header strong{
-
-    font-size:18px;
-}
-
-.data-status{
-
-    color:#00e676;
-
-    font-size:11px;
-
-    font-weight:800;
-}
-
-.chart{
-
-    height:220px;
-
-    display:flex;
-
-    align-items:flex-end;
-
-    gap:12px;
-
-    padding:
-        20px 10px;
-
-    border-bottom:
-        1px solid rgba(255,255,255,.08);
-}
-
-.bar{
-
-    flex:1;
-
-    border-radius:
-        8px 8px 0 0;
-
-    background:
-        linear-gradient(
-            to top,
-            #0066ff,
-            #00d9ff
-        );
-
-    box-shadow:
-        0 0 20px rgba(0,217,255,.12);
-
-    animation:
-        barGrow 1.2s ease-out;
-}
-
-@keyframes barGrow{
-
-    from{
-        height:0 !important;
-    }
-
-}
-
-.bar:nth-child(1){height:32%;}
-.bar:nth-child(2){height:48%;}
-.bar:nth-child(3){height:42%;}
-.bar:nth-child(4){height:67%;}
-.bar:nth-child(5){height:58%;}
-.bar:nth-child(6){height:78%;}
-.bar:nth-child(7){height:91%;}
-
-.data-footer{
+    margin:auto;
 
     display:grid;
 
     grid-template-columns:
         repeat(3,1fr);
 
-    gap:15px;
-
-    margin-top:22px;
+    gap:25px;
 }
 
-.data-stat{
+.step{
 
-    padding:15px;
+    padding:32px;
 
-    border-radius:16px;
+    border-radius:20px;
 
-    background:
-        rgba(255,255,255,.04);
+    background:#06121e;
+
+    border:
+        1px solid rgba(255,255,255,.07);
 }
 
-.data-stat span{
+.step-number{
 
-    display:block;
+    width:43px;
+    height:43px;
 
-    color:#718099;
+    border-radius:50%;
 
-    font-size:11px;
+    display:flex;
 
-    margin-bottom:6px;
+    align-items:center;
+
+    justify-content:center;
+
+    background:#ffc400;
+
+    color:#06101d;
+
+    font-weight:900;
+
+    margin-bottom:20px;
 }
 
-.data-stat strong{
+.step h3{
 
-    font-size:19px;
+    font-size:20px;
 
-    color:#fff;
+    margin-bottom:12px;
+}
+
+.step p{
+
+    color:#8492a3;
+
+    line-height:1.7;
+
+    font-size:14px;
 }
 
 
@@ -1034,7 +612,7 @@ nav a:hover{
    CONTACT
 ========================= */
 
-.form-box{
+.contact-box{
 
     max-width:680px;
 
@@ -1042,36 +620,38 @@ nav a:hover{
 
     padding:45px;
 
-    border-radius:30px;
+    border-radius:28px;
 
     background:
         linear-gradient(
             145deg,
-            #0b1833,
-            #071126
+            #081827,
+            #04101c
         );
 
     border:
-        1px solid rgba(255,255,255,.08);
+        1px solid rgba(255,196,0,.22);
 
     box-shadow:
         0 30px 80px rgba(0,0,0,.35);
 }
 
-.form-box h2{
+.contact-box h2{
 
-    font-size:35px;
+    font-family:Georgia,serif;
+
+    font-size:36px;
 
     margin-bottom:10px;
 }
 
-.form-description{
+.contact-box > p{
 
-    color:#8190a8;
-
-    margin-bottom:25px;
+    color:#8190a2;
 
     line-height:1.6;
+
+    margin-bottom:24px;
 }
 
 input,
@@ -1084,14 +664,14 @@ textarea{
 
     margin:7px 0;
 
-    background:#101f3d;
+    background:#0d1d2e;
+
+    color:#fff;
 
     border:
-        1px solid transparent;
+        1px solid rgba(255,255,255,.08);
 
     border-radius:12px;
-
-    color:white;
 
     font-size:15px;
 
@@ -1104,16 +684,16 @@ input:focus,
 select:focus,
 textarea:focus{
 
-    border-color:#00d9ff;
+    border-color:#ffc400;
 
     box-shadow:
-        0 0 15px rgba(0,217,255,.1);
+        0 0 15px rgba(255,196,0,.08);
 }
 
 input::placeholder,
 textarea::placeholder{
 
-    color:#8492a9;
+    color:#718095;
 }
 
 textarea{
@@ -1123,11 +703,11 @@ textarea{
     font-family:Inter,Arial,sans-serif;
 }
 
-button{
+.submit-btn{
 
     width:100%;
 
-    padding:18px;
+    padding:17px;
 
     margin-top:10px;
 
@@ -1135,9 +715,14 @@ button{
 
     border-radius:30px;
 
-    background:#ffc400;
+    background:
+        linear-gradient(
+            90deg,
+            #ffc400,
+            #ff9d00
+        );
 
-    color:#061020;
+    color:#06101d;
 
     font-weight:900;
 
@@ -1148,14 +733,15 @@ button{
     transition:.3s;
 }
 
-button:hover{
-
-    background:#ffda33;
+.submit-btn:hover{
 
     transform:translateY(-2px);
+
+    box-shadow:
+        0 15px 35px rgba(255,196,0,.15);
 }
 
-button:disabled{
+.submit-btn:disabled{
 
     opacity:.7;
 
@@ -1164,17 +750,19 @@ button:disabled{
 
 .success-message{
 
-    margin-top:20px;
+    margin-top:18px;
 
-    padding:15px;
-
-    background:#00c853;
+    padding:14px;
 
     border-radius:12px;
 
+    background:#00c853;
+
+    color:#04120a;
+
     text-align:center;
 
-    font-weight:bold;
+    font-weight:900;
 }
 
 
@@ -1184,15 +772,28 @@ button:disabled{
 
 footer{
 
+    padding:35px 6%;
+
     text-align:center;
 
-    padding:35px;
+    background:#01060d;
 
-    background:#020617;
+    color:#637184;
 
-    color:#647188;
+    font-size:12px;
+}
 
-    font-size:13px;
+.risk{
+
+    max-width:850px;
+
+    margin:14px auto 0;
+
+    color:#566375;
+
+    font-size:11px;
+
+    line-height:1.6;
 }
 
 
@@ -1200,71 +801,34 @@ footer{
    MOBILE
 ========================= */
 
-@media(max-width:950px){
-
-    header{
-        padding:0 5%;
-    }
+@media(max-width:1050px){
 
     nav{
         display:none;
     }
 
-    .hero{
-
-        grid-template-columns:1fr;
-
-        padding:
-            130px 5%
-            70px;
-
-        gap:50px;
-    }
-
-    .hero-content{
-
-        max-width:none;
-    }
-
-    .hero h1{
-
-        font-size:
-            clamp(42px,10vw,65px);
-
-        letter-spacing:-2px;
-    }
-
-    .hero-visual{
-
-        width:100%;
-    }
-
-    .profile-card{
-
-        max-width:550px;
-    }
-
     .cards{
 
-        grid-template-columns:1fr;
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
-    .performance{
+    .steps{
 
         grid-template-columns:1fr;
 
-        gap:40px;
-    }
-
-    .trust-bar{
-
-        flex-wrap:wrap;
-
-        gap:20px;
+        max-width:700px;
     }
 }
 
-@media(max-width:550px){
+@media(max-width:650px){
+
+    header{
+
+        height:74px;
+
+        padding:0 5%;
+    }
 
     .logo-text{
 
@@ -1273,22 +837,31 @@ footer{
 
     .logo-icon{
 
-        width:40px;
-        height:40px;
+        width:39px;
+        height:39px;
 
-        font-size:23px;
+        font-size:22px;
     }
 
-    .cta{
+    .header-btn{
 
-        padding:11px 15px;
+        padding:10px 15px;
 
         font-size:11px;
     }
 
     .hero{
 
-        padding-top:115px;
+        padding:
+            115px 5%
+            60px;
+    }
+
+    .hero h1{
+
+        font-size:40px;
+
+        letter-spacing:-1px;
     }
 
     .hero-description{
@@ -1296,47 +869,21 @@ footer{
         font-size:16px;
     }
 
-    .hero-buttons{
+    .testimonial-image-wrapper{
 
-        flex-direction:column;
+        padding:7px;
 
-        align-items:stretch;
+        border-radius:18px;
     }
 
-    .main-btn,
-    .secondary-btn{
+    .testimonial-image{
 
-        width:100%;
+        border-radius:13px;
     }
 
-    .profile-image{
+    .cards{
 
-        height:470px;
-    }
-
-    .profile-info h2{
-
-        font-size:26px;
-    }
-
-    .metrics{
-
-        gap:6px;
-    }
-
-    .metric{
-
-        padding:10px;
-    }
-
-    .metric strong{
-
-        font-size:15px;
-    }
-
-    .metric span{
-
-        font-size:8px;
+        grid-template-columns:1fr;
     }
 
     .section{
@@ -1344,14 +891,14 @@ footer{
         padding:75px 5%;
     }
 
-    .form-box{
+    .contact-box{
 
         padding:28px 20px;
     }
 
-    .data-footer{
+    .contact-box h2{
 
-        grid-template-columns:1fr;
+        font-size:30px;
     }
 }
 
@@ -1385,26 +932,33 @@ QUANTERA <span>AI</span>
 <nav>
 
 <a href="#">
-Home
+HOME
 </a>
 
-<a href="#servizi">
-Servizi
+<a href="#tecnologia">
+TECNOLOGIA
 </a>
 
-<a href="#performance">
-Tecnologia
+<a href="#vantaggi">
+VANTAGGI
+</a>
+
+<a href="#come-funziona">
+COME FUNZIONA
 </a>
 
 <a href="#contatti">
-Contatti
+CONTATTI
 </a>
 
 </nav>
 
 
-<a href="#contatti" class="cta">
-Richiedi informazioni
+<a
+href="#contatti"
+class="header-btn"
+>
+INIZIA ORA
 </a>
 
 </header>
@@ -1417,163 +971,54 @@ Richiedi informazioni
 
 <section class="hero">
 
+<div class="hero-tag">
 
-<div class="hero-content">
-
-<div class="eyebrow">
-
-<span class="status-dot"></span>
-
-QUANTERA AI · PERFORMANCE INTELLIGENCE
+INTELLIGENZA ARTIFICIALE · DATA · STRATEGIA
 
 </div>
 
 
 <h1>
 
-Il futuro delle
+L’Intelligenza Artificiale al servizio
 
-<span>
-decisioni intelligenti.
+<span class="gold">
+di decisioni
+</span>
+
+più intelligenti e
+
+<span class="green">
+analisi avanzate.
 </span>
 
 </h1>
 
 
+<div class="hero-line"></div>
+
+
 <p class="hero-description">
 
-Tecnologia di intelligenza artificiale avanzata
-per trasformare dati complessi in analisi,
-strategie e insight intelligenti.
+QUANTERA AI trasforma grandi quantità di
+informazioni in analisi strutturate, trend,
+scenari e insight progettati per supportare
+decisioni più consapevoli.
 
 </p>
 
 
-<div class="hero-buttons">
-
-<a
-href="#contatti"
-class="main-btn"
->
-INIZIA ORA
-</a>
-
-
-<a
-href="#performance"
-class="secondary-btn"
->
-SCOPRI LA TECNOLOGIA
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- =========================
-     BUFFON CARD
-========================= -->
-
-<div class="hero-visual">
-
-
-<div class="profile-card">
-
-<div class="profile-inner">
-
+<div class="testimonial-image-wrapper">
 
 <img
-src="assets/buffon-ai.png"
-alt="Gianluigi Buffon"
-class="profile-image"
+
+src="assets/quantera-testimonials.png"
+
+alt="QUANTERA AI - Investimenti e Intelligenza Artificiale"
+
+class="testimonial-image"
+
 >
-
-
-<div class="profile-overlay"></div>
-
-
-<div class="profile-top">
-
-<div class="live-badge">
-
-<span class="live-dot"></span>
-
-AI PERFORMANCE
-
-</div>
-
-
-<div class="ai-badge">
-QUANTERA AI
-</div>
-
-</div>
-
-
-<div class="profile-info">
-
-<h2>
-Gianluigi Buffon
-</h2>
-
-<p>
-Performance · Precision · Intelligence
-</p>
-
-
-<div class="metrics">
-
-
-<div class="metric">
-
-<strong>
-AI
-</strong>
-
-<span>
-ANALISI
-</span>
-
-</div>
-
-
-<div class="metric">
-
-<strong>
-24/7
-</strong>
-
-<span>
-MONITORAGGIO
-</span>
-
-</div>
-
-
-<div class="metric">
-
-<strong>
-DATA
-</strong>
-
-<span>
-INSIGHT
-</span>
-
-</div>
-
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
 
 </div>
 
@@ -1582,56 +1027,30 @@ INSIGHT
 
 
 <!-- =========================
-     TRUST BAR
-========================= -->
-
-<div class="trust-bar">
-
-<div class="trust-item">
-AI ANALYTICS
-</div>
-
-<div class="trust-item">
-DATA INTELLIGENCE
-</div>
-
-<div class="trust-item">
-STRATEGIC INSIGHTS
-</div>
-
-<div class="trust-item">
-PERFORMANCE
-</div>
-
-</div>
-
-
-
-<!-- =========================
-     SERVICES
+     TECNOLOGIA
 ========================= -->
 
 <section
 class="section"
-id="servizi"
+id="tecnologia"
 >
-
 
 <div class="section-header">
 
 <div class="section-tag">
-TECNOLOGIA
+QUANTERA AI
 </div>
 
-<h2 class="title">
-Intelligenza che crea valore
+<h2 class="section-title">
+Tecnologia costruita per i dati
 </h2>
 
-<p class="section-subtitle">
+<p class="section-description">
 
-Un ecosistema digitale progettato per
-analizzare informazioni, identificare pattern
-e supportare decisioni strategiche.
+Un ecosistema digitale che combina
+intelligenza artificiale, analisi dei dati
+e automazione per trasformare informazioni
+complesse in insight leggibili.
 
 </p>
 
@@ -1644,23 +1063,22 @@ e supportare decisioni strategiche.
 <div class="card">
 
 <div class="card-icon">
-🤖
+🧠
 </div>
 
 <h3>
-Analisi AI
+Algoritmi avanzati
 </h3>
 
 <p>
 
-Algoritmi intelligenti per elaborare
-grandi quantità di dati e identificare
-pattern e tendenze.
+Modelli intelligenti progettati
+per elaborare grandi quantità
+di dati in modo efficiente.
 
 </p>
 
 </div>
-
 
 
 <div class="card">
@@ -1670,19 +1088,39 @@ pattern e tendenze.
 </div>
 
 <h3>
-Strategic Intelligence
+Analisi predittive
 </h3>
 
 <p>
 
-Trasformiamo dati complessi in
-informazioni strutturate per supportare
-decisioni più consapevoli.
+Identificazione di pattern,
+trend e scenari per comprendere
+meglio i possibili sviluppi.
 
 </p>
 
 </div>
 
+
+<div class="card">
+
+<div class="card-icon">
+🛡
+</div>
+
+<h3>
+Risk Intelligence
+</h3>
+
+<p>
+
+Strumenti di analisi pensati
+per aiutare a valutare
+rischi e opportunità.
+
+</p>
+
+</div>
 
 
 <div class="card">
@@ -1692,19 +1130,139 @@ decisioni più consapevoli.
 </div>
 
 <h3>
+Real-Time Insights
+</h3>
+
+<p>
+
+Informazioni aggiornate per
+mantenere una visione più
+attuale degli scenari.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     VANTAGGI
+========================= -->
+
+<section
+class="section"
+id="vantaggi"
+>
+
+<div class="section-header">
+
+<div class="section-tag">
+VANTAGGI
+</div>
+
+<h2 class="section-title">
+Dati trasformati in valore
+</h2>
+
+<p class="section-description">
+
+La tecnologia aiuta a rendere l'analisi
+più organizzata, veloce e accessibile.
+
+</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<div class="card-icon">
+🔐
+</div>
+
+<h3>
+Sicurezza dei dati
+</h3>
+
+<p>
+
+Architettura progettata per
+proteggere le informazioni
+e mantenere il controllo sui dati.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+⏱
+</div>
+
+<h3>
 Monitoraggio continuo
 </h3>
 
 <p>
 
-Analisi automatizzata e monitoraggio
-costante per una visione aggiornata
-degli scenari.
+Analisi costante degli
+aggiornamenti e dei cambiamenti
+nei dati disponibili.
 
 </p>
 
 </div>
 
+
+<div class="card">
+
+<div class="card-icon">
+🎯
+</div>
+
+<h3>
+Strategie personalizzate
+</h3>
+
+<p>
+
+Insight organizzati secondo
+esigenze, obiettivi e scenari
+specifici.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+🌐
+</div>
+
+<h3>
+Accesso globale
+</h3>
+
+<p>
+
+Una piattaforma digitale
+accessibile da qualsiasi
+dispositivo e luogo.
+
+</p>
+
+</div>
 
 </div>
 
@@ -1713,193 +1271,98 @@ degli scenari.
 
 
 <!-- =========================
-     PERFORMANCE
+     COME FUNZIONA
 ========================= -->
 
 <section
 class="section"
-id="performance"
+id="come-funziona"
 >
 
-
-<div class="performance">
-
-
-<div class="performance-text">
-
+<div class="section-header">
 
 <div class="section-tag">
-PERFORMANCE INTELLIGENCE
+COME FUNZIONA
 </div>
 
-
-<h2>
-
-Dati trasformati in
-<span>
-decisioni.
-</span>
-
+<h2 class="section-title">
+Dall'informazione all'insight
 </h2>
 
+<p class="section-description">
 
-<p>
-
-QUANTERA AI utilizza sistemi di analisi
-avanzata per interpretare grandi quantità
-di informazioni e trasformarle in insight
-chiari, strutturati e utilizzabili.
+Un processo semplice per trasformare
+informazioni complesse in risultati leggibili.
 
 </p>
 
-
-<div class="performance-list">
-
-
-<div class="performance-item">
-
-<div class="check">
-✓
-</div>
-
-<div>
-
-<strong>
-Analisi avanzata
-</strong>
-
-<span>
-Elaborazione intelligente dei dati.
-</span>
-
-</div>
-
 </div>
 
 
-<div class="performance-item">
+<div class="steps">
 
-<div class="check">
-✓
+
+<div class="step">
+
+<div class="step-number">
+01
 </div>
 
-<div>
+<h3>
+Raccogliere
+</h3>
 
-<strong>
-Identificazione dei trend
-</strong>
+<p>
 
-<span>
-Individuazione di pattern e scenari.
-</span>
+La piattaforma organizza
+le informazioni provenienti
+dalle fonti disponibili.
 
-</div>
+</p>
 
 </div>
 
 
-<div class="performance-item">
+<div class="step">
 
-<div class="check">
-✓
+<div class="step-number">
+02
 </div>
 
-<div>
+<h3>
+Analizzare
+</h3>
 
-<strong>
-Decision Support
-</strong>
+<p>
 
-<span>
-Informazioni strutturate per strategie più efficaci.
-</span>
+Gli algoritmi elaborano
+i dati per identificare
+pattern e tendenze.
 
-</div>
-
-</div>
-
-
-</div>
+</p>
 
 </div>
 
 
+<div class="step">
 
-<div class="data-panel">
-
-
-<div class="data-header">
-
-<strong>
-AI Performance Analytics
-</strong>
-
-<div class="data-status">
-● SYSTEM ACTIVE
+<div class="step-number">
+03
 </div>
 
-</div>
+<h3>
+Supportare
+</h3>
 
+<p>
 
-<div class="chart">
+Gli insight vengono presentati
+in una forma più chiara per
+supportare la pianificazione.
 
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-
-</div>
-
-
-<div class="data-footer">
-
-
-<div class="data-stat">
-
-<span>
-ANALISI
-</span>
-
-<strong>
-AI-POWERED
-</strong>
+</p>
 
 </div>
-
-
-<div class="data-stat">
-
-<span>
-MONITORAGGIO
-</span>
-
-<strong>
-24/7
-</strong>
-
-</div>
-
-
-<div class="data-stat">
-
-<span>
-PROCESSING
-</span>
-
-<strong>
-REAL-TIME
-</strong>
-
-</div>
-
-
-</div>
-
-</div>
-
 
 </div>
 
@@ -1908,7 +1371,7 @@ REAL-TIME
 
 
 <!-- =========================
-     CONTACT
+     CONTATTI
 ========================= -->
 
 <section
@@ -1916,49 +1379,55 @@ class="section"
 id="contatti"
 >
 
-
 <div class="section-header">
 
 <div class="section-tag">
 CONTATTI
 </div>
 
-<h2 class="title">
-Porta la tua idea nel futuro
+<h2 class="section-title">
+Scopri QUANTERA AI
 </h2>
 
-<p class="section-subtitle">
+<p class="section-description">
 
 Raccontaci il tuo progetto e scopri
-come QUANTERA AI può aiutarti.
+come l'intelligenza artificiale può
+supportare la tua analisi dei dati.
 
 </p>
 
 </div>
 
 
-<div class="form-box">
+<div class="contact-box">
 
 
 <h2>
-Richiedi una consulenza
+Richiedi informazioni
 </h2>
 
 
-<p class="form-description">
+<p>
 
-Compila il modulo e il nostro team
-ti ricontatterà al più presto.
+Compila il modulo e ti ricontatteremo
+per approfondire il tuo progetto.
 
 </p>
 
 
 <form
+
 name="contact"
+
 method="POST"
+
 action="/"
+
 data-netlify="true"
+
 netlify-honeypot="bot-field"
+
 >
 
 
@@ -1975,7 +1444,9 @@ value="contact"
 
 Non compilare questo campo:
 
-<input name="bot-field">
+<input
+name="bot-field"
+>
 
 </label>
 
@@ -1983,31 +1454,48 @@ Non compilare questo campo:
 
 
 <input
+
 type="text"
+
 name="nome"
+
 placeholder="Nome e Cognome"
+
 required
+
 >
 
 
 <input
+
 type="tel"
+
 name="telefono"
+
 placeholder="Telefono"
+
 required
+
 >
 
 
 <input
+
 type="email"
+
 name="email"
+
 placeholder="Email"
+
 required
+
 >
 
 
 <select
+
 name="budget"
+
 required
 >
 
@@ -2039,15 +1527,28 @@ Da definire
 
 
 <textarea
+
 name="realizzazione"
-placeholder="Cosa vuoi realizzare?"
+
 rows="5"
+
+placeholder="Cosa vuoi realizzare?"
+
 required
+
 ></textarea>
 
 
-<button type="submit">
+<button
+
+type="submit"
+
+class="submit-btn"
+
+>
+
 INVIA RICHIESTA
+
 </button>
 
 
@@ -2065,11 +1566,25 @@ INVIA RICHIESTA
 
 <footer>
 
-© 2026 QUANTERA AI · Performance Intelligence
+© 2026 QUANTERA AI · Intelligenza Artificiale
+
+<div class="risk">
+
+Gli investimenti comportano rischi.
+I risultati passati non garantiscono
+risultati futuri. Le informazioni presenti
+sul sito hanno carattere informativo e non
+costituiscono una raccomandazione finanziaria.
+
+</div>
 
 </footer>
 
 
+
+<!-- =========================
+     FORM SCRIPT
+========================= -->
 
 <script>
 
@@ -2078,23 +1593,19 @@ document.querySelector(
 'form[name="contact"]'
 );
 
-
 if(form){
 
 form.addEventListener(
-'submit',
+"submit",
 async function(e){
 
 e.preventDefault();
 
-
 const button =
-form.querySelector('button');
-
+form.querySelector("button");
 
 const formData =
 new FormData(form);
-
 
 button.disabled = true;
 
@@ -2118,6 +1629,7 @@ body:
 new URLSearchParams(
 formData
 ).toString()
+
 }
 );
 
@@ -2128,31 +1640,19 @@ form.reset();
 button.textContent =
 "INVIATO ✓";
 
+
 button.style.background =
 "#00c853";
-
-
-const oldMessage =
-form.querySelector(
-".success-message"
-);
-
-
-if(oldMessage)
-oldMessage.remove();
 
 
 const message =
 document.createElement("div");
 
-
 message.className =
 "success-message";
 
-
 message.textContent =
 "Grazie! Ti contatteremo presto.";
-
 
 form.appendChild(message);
 
@@ -2174,14 +1674,14 @@ message.remove();
 5000
 );
 
+}
 
-}catch(error){
+catch(error){
 
 button.disabled = false;
 
 button.textContent =
 "RIPROVA";
-
 
 alert(
 "Si è verificato un errore. Riprova."
@@ -2190,10 +1690,12 @@ alert(
 }
 
 });
+
 }
 
 </script>
 
 
 </body>
+
 </html>
