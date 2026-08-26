@@ -40,17 +40,17 @@ body::before{
 
     position:fixed;
 
-    width:600px;
-    height:600px;
+    width:650px;
+    height:650px;
 
-    top:-250px;
+    top:-300px;
     left:-250px;
 
     background:#00c853;
 
     opacity:.07;
 
-    filter:blur(150px);
+    filter:blur(160px);
 
     border-radius:50%;
 
@@ -64,17 +64,17 @@ body::after{
 
     position:fixed;
 
-    width:600px;
-    height:600px;
+    width:650px;
+    height:650px;
 
-    right:-250px;
-    bottom:-250px;
+    right:-300px;
+    bottom:-300px;
 
     background:#ffc400;
 
     opacity:.06;
 
-    filter:blur(150px);
+    filter:blur(160px);
 
     border-radius:50%;
 
@@ -111,7 +111,7 @@ header{
 
     background:rgba(2,9,20,.90);
 
-    backdrop-filter:blur(20px);
+    backdrop-filter:blur(18px);
 
     border-bottom:
         1px solid rgba(255,255,255,.06);
@@ -125,9 +125,9 @@ header{
 
     gap:10px;
 
-    color:white;
-
     text-decoration:none;
+
+    color:white;
 }
 
 .logo-icon{
@@ -140,7 +140,6 @@ header{
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
     background:
@@ -179,7 +178,7 @@ nav{
 
     align-items:center;
 
-    gap:28px;
+    gap:27px;
 }
 
 nav a{
@@ -201,7 +200,7 @@ nav a:hover{
 
 .header-btn{
 
-    padding:12px 24px;
+    padding:12px 23px;
 
     border-radius:30px;
 
@@ -236,7 +235,7 @@ nav a:hover{
 
     padding:
         145px 6%
-        80px;
+        90px;
 
     display:flex;
 
@@ -250,14 +249,14 @@ nav a:hover{
 
         radial-gradient(
             circle at 50% 20%,
-            rgba(0,200,83,.11),
-            transparent 35%
+            rgba(0,200,83,.12),
+            transparent 34%
         ),
 
         linear-gradient(
             180deg,
-            #020914 0%,
-            #03111d 100%
+            #020914,
+            #03111d
         );
 }
 
@@ -265,17 +264,15 @@ nav a:hover{
 
     display:inline-flex;
 
-    align-items:center;
-
     padding:9px 16px;
 
     border-radius:30px;
 
     border:
-        1px solid rgba(0,200,83,.35);
+        1px solid rgba(0,200,83,.32);
 
     background:
-        rgba(0,200,83,.06);
+        rgba(0,200,83,.05);
 
     color:#80e89f;
 
@@ -327,25 +324,205 @@ nav a:hover{
 
     max-width:760px;
 
-    color:#9aa8ba;
+    color:#99a7b9;
 
     font-size:18px;
 
     line-height:1.7;
 
-    margin-bottom:48px;
+    margin-bottom:40px;
 }
 
 
 /* =========================
-   MAIN VISUAL
+   BUFFON SECTION
 ========================= */
 
-.testimonial-image-wrapper{
+.buffon-section{
+
+    width:100%;
+
+    max-width:1250px;
+
+    margin:0 auto;
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:65px;
+
+    align-items:center;
+
+    text-align:left;
+
+    margin-bottom:55px;
+}
+
+.buffon-content{
+
+    padding:10px 0;
+}
+
+.buffon-tag{
+
+    color:#00d9ff;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    margin-bottom:16px;
+}
+
+.buffon-content h2{
+
+    font-family:Georgia,serif;
+
+    font-size:
+        clamp(38px,4vw,57px);
+
+    line-height:1.1;
+
+    font-weight:500;
+
+    margin-bottom:20px;
+}
+
+.buffon-content h2 span{
+    color:#ffc400;
+}
+
+.buffon-content p{
+
+    color:#8d9bad;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    margin-bottom:27px;
+}
+
+.buffon-points{
+
+    display:grid;
+
+    gap:12px;
+}
+
+.buffon-point{
+
+    padding:15px 17px;
+
+    border-radius:14px;
+
+    background:#071523;
+
+    border:
+        1px solid rgba(255,255,255,.07);
+}
+
+.buffon-point strong{
+
+    display:block;
+
+    font-size:14px;
+
+    color:#fff;
+
+    margin-bottom:4px;
+}
+
+.buffon-point span{
+
+    color:#7f8d9f;
+
+    font-size:12px;
+
+    line-height:1.5;
+}
+
+.buffon-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    border:
+        1px solid rgba(0,217,255,.40);
+
+    background:#071226;
+
+    box-shadow:
+        0 30px 90px rgba(0,0,0,.40),
+        0 0 70px rgba(0,217,255,.12);
+}
+
+.buffon-image{
+
+    display:block;
+
+    width:100%;
+
+    aspect-ratio:1/1;
+
+    object-fit:cover;
+}
+
+.buffon-overlay{
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    padding:65px 25px 25px;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(2,6,23,.97),
+            rgba(2,6,23,.10)
+        );
+}
+
+.buffon-name{
+
+    font-size:25px;
+
+    font-weight:900;
+}
+
+.buffon-role{
+
+    margin-top:6px;
+
+    font-size:10px;
+
+    letter-spacing:1.7px;
+
+    color:#00d9ff;
+}
+
+
+/* =========================
+   TESTIMONIAL IMAGE
+========================= */
+
+.testimonial-wrap{
 
     width:100%;
 
     max-width:1450px;
+
+    margin:0 auto;
 
     padding:12px;
 
@@ -354,37 +531,14 @@ nav a:hover{
     background:
         linear-gradient(
             135deg,
-            rgba(255,196,0,.55),
-            rgba(0,200,83,.36),
+            rgba(255,196,0,.58),
+            rgba(0,200,83,.38),
             rgba(0,180,255,.15)
         );
 
     box-shadow:
         0 35px 100px rgba(0,0,0,.45),
         0 0 80px rgba(0,200,83,.08);
-
-    position:relative;
-
-    overflow:hidden;
-}
-
-.testimonial-image-wrapper::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-        linear-gradient(
-            110deg,
-            transparent 25%,
-            rgba(255,255,255,.06),
-            transparent 75%
-        );
-
-    pointer-events:none;
 }
 
 .testimonial-image{
@@ -396,22 +550,11 @@ nav a:hover{
     border-radius:22px;
 
     object-fit:cover;
-
-    box-shadow:
-        0 20px 60px rgba(0,0,0,.4);
-
-    transition:
-        transform .5s ease;
-}
-
-.testimonial-image:hover{
-
-    transform:scale(1.01);
 }
 
 
 /* =========================
-   QUANTERA INTRO
+   SECTION
 ========================= */
 
 .section{
@@ -456,7 +599,7 @@ nav a:hover{
 
 .section-description{
 
-    color:#8d9aab;
+    color:#8d9bad;
 
     font-size:16px;
 
@@ -785,7 +928,7 @@ footer{
 
 .risk{
 
-    max-width:850px;
+    max-width:900px;
 
     margin:14px auto 0;
 
@@ -808,9 +951,23 @@ footer{
     }
 
     .cards{
-
         grid-template-columns:
             repeat(2,1fr);
+    }
+
+    .buffon-section{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+    }
+
+    .buffon-content{
+        text-align:center;
+    }
+
+    .buffon-points{
+        text-align:left;
     }
 
     .steps{
@@ -831,7 +988,6 @@ footer{
     }
 
     .logo-text{
-
         font-size:18px;
     }
 
@@ -854,7 +1010,7 @@ footer{
 
         padding:
             115px 5%
-            60px;
+            65px;
     }
 
     .hero h1{
@@ -865,39 +1021,40 @@ footer{
     }
 
     .hero-description{
-
         font-size:16px;
     }
 
-    .testimonial-image-wrapper{
+    .buffon-section{
 
+        margin-bottom:40px;
+    }
+
+    .buffon-content h2{
+        font-size:39px;
+    }
+
+    .testimonial-wrap{
         padding:7px;
-
         border-radius:18px;
     }
 
     .testimonial-image{
-
         border-radius:13px;
     }
 
     .cards{
-
         grid-template-columns:1fr;
     }
 
     .section{
-
         padding:75px 5%;
     }
 
     .contact-box{
-
         padding:28px 20px;
     }
 
     .contact-box h2{
-
         font-size:30px;
     }
 }
@@ -931,8 +1088,12 @@ QUANTERA <span>AI</span>
 
 <nav>
 
-<a href="#">
+<a href="#home">
 HOME
+</a>
+
+<a href="#buffon">
+PERFORMANCE
 </a>
 
 <a href="#tecnologia">
@@ -941,10 +1102,6 @@ TECNOLOGIA
 
 <a href="#vantaggi">
 VANTAGGI
-</a>
-
-<a href="#come-funziona">
-COME FUNZIONA
 </a>
 
 <a href="#contatti">
@@ -969,7 +1126,10 @@ INIZIA ORA
      HERO
 ========================= -->
 
-<section class="hero">
+<section
+class="hero"
+id="home"
+>
 
 <div class="hero-tag">
 
@@ -1008,19 +1168,145 @@ decisioni più consapevoli.
 </p>
 
 
-<div class="testimonial-image-wrapper">
+
+<!-- =========================
+     BUFFON
+========================= -->
+
+<div
+class="buffon-section"
+id="buffon"
+>
+
+
+<div class="buffon-content">
+
+
+<div class="buffon-tag">
+PERFORMANCE INTELLIGENCE
+</div>
+
+
+<h2>
+
+Precisione, disciplina,
+
+<span>
+performance.
+</span>
+
+</h2>
+
+
+<p>
+
+La tecnologia QUANTERA AI porta nel mondo
+dell'analisi digitale principi fondamentali
+come preparazione, disciplina e capacità
+di leggere ogni scenario.
+
+</p>
+
+
+<div class="buffon-points">
+
+
+<div class="buffon-point">
+
+<strong>
+Analisi avanzata
+</strong>
+
+<span>
+Elaborazione intelligente dei dati.
+</span>
+
+</div>
+
+
+<div class="buffon-point">
+
+<strong>
+Decision Support
+</strong>
+
+<span>
+Insight strutturati per supportare le decisioni.
+</span>
+
+</div>
+
+
+<div class="buffon-point">
+
+<strong>
+Monitoraggio continuo
+</strong>
+
+<span>
+Una visione aggiornata degli scenari.
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<div class="buffon-card">
+
+
+<img
+
+src="assets/buffon-ai.png"
+
+alt="Gianluigi Buffon"
+
+class="buffon-image"
+
+>
+
+
+<div class="buffon-overlay">
+
+<div class="buffon-name">
+GIANLUIGI BUFFON
+</div>
+
+<div class="buffon-role">
+PERFORMANCE · PRECISION · INTELLIGENCE
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<!-- =========================
+     TESTIMONIAL IMAGE
+========================= -->
+
+<div class="testimonial-wrap">
 
 <img
 
 src="assets/quantera-testimonials.png"
 
-alt="QUANTERA AI - Investimenti e Intelligenza Artificiale"
+alt="QUANTERA AI - Business e Investment Intelligence"
 
 class="testimonial-image"
 
 >
 
 </div>
+
 
 </section>
 
@@ -1143,6 +1429,7 @@ attuale degli scenari.
 
 </div>
 
+
 </div>
 
 </section>
@@ -1194,8 +1481,7 @@ Sicurezza dei dati
 <p>
 
 Architettura progettata per
-proteggere le informazioni
-e mantenere il controllo sui dati.
+proteggere le informazioni.
 
 </p>
 
@@ -1236,8 +1522,7 @@ Strategie personalizzate
 <p>
 
 Insight organizzati secondo
-esigenze, obiettivi e scenari
-specifici.
+esigenze e obiettivi specifici.
 
 </p>
 
@@ -1258,11 +1543,12 @@ Accesso globale
 
 Una piattaforma digitale
 accessibile da qualsiasi
-dispositivo e luogo.
+dispositivo.
 
 </p>
 
 </div>
+
 
 </div>
 
@@ -1364,6 +1650,7 @@ supportare la pianificazione.
 
 </div>
 
+
 </div>
 
 </section>
@@ -1432,9 +1719,13 @@ netlify-honeypot="bot-field"
 
 
 <input
+
 type="hidden"
+
 name="form-name"
+
 value="contact"
+
 >
 
 
@@ -1444,9 +1735,7 @@ value="contact"
 
 Non compilare questo campo:
 
-<input
-name="bot-field"
->
+<input name="bot-field">
 
 </label>
 
@@ -1629,7 +1918,6 @@ body:
 new URLSearchParams(
 formData
 ).toString()
-
 }
 );
 
