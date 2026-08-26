@@ -26,7 +26,9 @@ color:white;
 overflow-x:hidden;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 header{
 height:90px;
@@ -34,36 +36,48 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 padding:0 7%;
+
 background:rgba(5,11,24,.90);
 backdrop-filter:blur(15px);
+
 position:fixed;
 top:0;
+left:0;
 width:100%;
+
 z-index:100;
 }
-
-/* LOGO */
 
 .logo{
 display:flex;
 align-items:center;
 gap:12px;
+
 text-decoration:none;
 color:white;
 }
 
-
 .logo-icon{
 width:48px;
 height:48px;
+
 border-radius:50%;
-background:linear-gradient(135deg,#00d9ff,#0066ff);
+
+background:linear-gradient(
+135deg,
+#00d9ff,
+#0066ff
+);
+
 display:flex;
 align-items:center;
 justify-content:center;
+
 font-size:30px;
 font-weight:900;
-box-shadow:0 0 30px #00d9ff;
+
+box-shadow:
+0 0 30px #00d9ff;
 }
 
 .logo-text{
@@ -79,37 +93,77 @@ color:#00d9ff;
 nav a{
 color:white;
 text-decoration:none;
+
 margin:0 15px;
+
 font-size:15px;
+
+transition:.3s;
+}
+
+nav a:hover{
+color:#00d9ff;
 }
 
 .cta{
 background:#ffc400;
+
 color:#061020;
+
 padding:15px 30px;
+
 border-radius:30px;
+
 font-weight:bold;
+
 text-decoration:none;
+
+transition:.3s;
 }
 
-/* HERO */
+.cta:hover{
+background:#ffda33;
+
+transform:translateY(-2px);
+}
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
 min-height:100vh;
+
 display:flex;
 align-items:center;
-padding:120px 7% 60px;
+
+gap:50px;
+
+padding:120px 7% 70px;
+
 background:
-radial-gradient(circle at 80% 25%,#006cff66,transparent 35%),
-linear-gradient(120deg,#020617,#071b45);
+
+radial-gradient(
+circle at 80% 25%,
+#006cff66,
+transparent 35%
+),
+
+linear-gradient(
+120deg,
+#020617,
+#071b45
+);
 }
 
 .hero-text{
-width:55%;
+width:48%;
 }
 
 .hero h1{
 font-size:70px;
+
 line-height:1.05;
 }
 
@@ -119,159 +173,271 @@ color:#00d9ff;
 
 .hero p{
 font-size:22px;
+
 line-height:1.6;
+
 color:#d4d9e5;
+
 margin:30px 0;
 }
 
 .main-btn{
 display:inline-block;
-background:linear-gradient(90deg,#ffc400,#ff9d00);
+
+background:
+linear-gradient(
+90deg,
+#ffc400,
+#ff9d00
+);
+
 padding:18px 40px;
+
 border-radius:30px;
+
 color:#081020;
+
 font-weight:900;
+
 text-decoration:none;
+
+transition:.3s;
 }
 
-/* AI PANEL */
+.main-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+0 10px 30px #ffc40055;
+}
+
+
+/* =========================
+   BUFFON IMAGE
+========================= */
 
 .visual{
-width:45%;
+width:52%;
+
 display:flex;
+
 justify-content:center;
+
+align-items:center;
 }
 
-.dashboard{
-width:390px;
-height:390px;
+.buffon-card{
+
+width:min(560px,100%);
+
 border-radius:35px;
-background:linear-gradient(145deg,#102c66,#071226);
-box-shadow:0 0 80px #00d9ff55;
-padding:30px;
-animation:float 4s infinite;
+
+overflow:hidden;
+
+background:#071226;
+
+border:1px solid #00d9ff55;
+
+box-shadow:
+
+0 0 80px #00d9ff55,
+
+0 20px 80px #00000066;
+
+position:relative;
+
+animation:float 4s ease-in-out infinite;
+}
+
+.buffon-image{
+
+width:100%;
+
+display:block;
+
+aspect-ratio:1/1;
+
+object-fit:cover;
+}
+
+.buffon-label{
+
+position:absolute;
+
+left:22px;
+
+bottom:22px;
+
+padding:12px 18px;
+
+border-radius:18px;
+
+background:
+rgba(2,6,23,.80);
+
+border:
+1px solid #00d9ff66;
+
+backdrop-filter:
+blur(10px);
+
+font-size:14px;
+}
+
+.buffon-label strong{
+color:#00d9ff;
 }
 
 @keyframes float{
+
+0%,100%{
+transform:translateY(0);
+}
+
 50%{
-transform:translateY(-15px);
-}
-}
-
-.circle{
-height:140px;
-width:140px;
-border-radius:50%;
-margin:auto;
-background:conic-gradient(#00d9ff,#ffc400,#00d9ff);
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:65px;
-font-weight:900;
+transform:translateY(-12px);
 }
 
-.chart{
-margin-top:40px;
-height:80px;
-display:flex;
-align-items:end;
-gap:10px;
 }
 
-.bar{
-width:25px;
-background:#00d9ff;
-border-radius:5px;
-}
 
-.bar:nth-child(1){
-height:30px;
-}
-
-.bar:nth-child(2){
-height:60px;
-}
-
-.bar:nth-child(3){
-height:45px;
-}
-
-.bar:nth-child(4){
-height:75px;
-}
-
-/* SECTIONS */
+/* =========================
+   SERVICES
+========================= */
 
 .section{
 padding:90px 7%;
 }
 
 .title{
+
 text-align:center;
+
 font-size:45px;
+
 margin-bottom:50px;
 }
 
 .cards{
+
 display:grid;
-grid-template-columns:repeat(3,1fr);
+
+grid-template-columns:
+repeat(3,1fr);
+
 gap:30px;
 }
 
 .card{
+
 background:#0b1630;
+
 padding:35px;
+
 border-radius:25px;
-border:1px solid #ffffff15;
+
+border:
+1px solid #ffffff15;
+
 transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-10px);
+
+transform:
+translateY(-10px);
+
 border-color:#00d9ff;
+
+box-shadow:
+0 20px 50px #00d9ff15;
 }
 
 .card h3{
+
 font-size:25px;
+
 margin-bottom:15px;
 }
 
 .card p{
+
 color:#bfc8dc;
+
 line-height:1.6;
 }
 
-/* FORM */
+
+/* =========================
+   CONTACT FORM
+========================= */
 
 .form-box{
+
 max-width:650px;
+
 margin:auto;
+
 background:#0b1630;
+
 padding:45px;
+
 border-radius:30px;
-border:1px solid #ffffff15;
+
+border:
+1px solid #ffffff15;
+
+box-shadow:
+0 20px 80px #00000044;
 }
 
 .form-box h2{
+
 font-size:35px;
+
 margin-bottom:25px;
 }
 
 input,
 select,
 textarea{
+
 width:100%;
+
 padding:16px;
+
 margin:8px 0;
+
 background:#101f3d;
-border:0;
+
+border:
+1px solid transparent;
+
 border-radius:12px;
+
 color:white;
+
 font-size:16px;
+
+outline:none;
+
+transition:.3s;
 }
 
-input::placeholder{
+input:focus,
+select:focus,
+textarea:focus{
+
+border-color:#00d9ff;
+
+box-shadow:
+0 0 15px #00d9ff22;
+}
+
+input::placeholder,
+textarea::placeholder{
+
 color:#9ba8c0;
 }
 
@@ -279,104 +445,229 @@ select{
 cursor:pointer;
 }
 
+textarea{
+
+font-family:
+Inter,
+Arial,
+sans-serif;
+
+resize:vertical;
+}
+
 button{
+
 width:100%;
+
 padding:18px;
+
 margin-top:10px;
+
 border:0;
+
 border-radius:30px;
+
 background:#ffc400;
+
 color:#061020;
+
 font-weight:bold;
+
 font-size:16px;
+
 cursor:pointer;
+
 transition:.3s;
 }
 
 button:hover{
+
 background:#ffda33;
-transform:translateY(-2px);
+
+transform:
+translateY(-2px);
 }
-textarea{
-width:100%;
-padding:16px;
-margin:8px 0;
-background:#101f3d;
-border:0;
+
+button:disabled{
+
+cursor:not-allowed;
+
+opacity:.8;
+}
+
+.success-message{
+
+margin-top:20px;
+
+padding:15px;
+
+background:#00c853;
+
 border-radius:12px;
-color:white;
-font-size:16px;
-font-family:Inter,Arial,sans-serif;
-resize:vertical;
+
+text-align:center;
+
+font-weight:bold;
 }
 
-textarea::placeholder{
-color:#9ba8c0;
-}
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
+
 text-align:center;
+
 padding:30px;
+
 background:#020617;
+
 color:#aaa;
 }
 
-/* MOBILE */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:900px){
 
 header{
+
 padding:0 5%;
 }
 
+.logo-text{
+
+font-size:20px;
+}
+
+.logo-icon{
+
+width:42px;
+
+height:42px;
+
+font-size:25px;
+}
+
 .cta{
+
 padding:12px 18px;
+
 font-size:13px;
 }
 
-.hero{
-display:block;
+nav{
+
+display:none;
 }
 
-.hero-text,
-.visual{
+.hero{
+
+display:block;
+
+padding-top:130px;
+}
+
+.hero-text{
+
 width:100%;
 }
 
+.visual{
+
+width:100%;
+
+margin-top:50px;
+}
+
 .hero h1{
+
 font-size:42px;
 }
 
 .hero p{
+
 font-size:18px;
 }
 
-.dashboard{
-margin-top:50px;
-width:320px;
-height:320px;
+.buffon-card{
+
+width:100%;
 }
 
 .cards{
+
 grid-template-columns:1fr;
 }
 
-nav{
-display:none;
-}
-
 .section{
+
 padding:70px 5%;
 }
 
 .form-box{
+
 padding:30px 20px;
 }
 
 .form-box h2{
+
 font-size:28px;
+}
+
+}
+
+
+/* =========================
+   EXTRA SMALL MOBILE
+========================= */
+
+@media(max-width:500px){
+
+header{
+
+height:75px;
+}
+
+.logo-text{
+
+font-size:17px;
+}
+
+.logo-icon{
+
+width:38px;
+
+height:38px;
+
+font-size:22px;
+}
+
+.hero{
+
+padding-top:105px;
+}
+
+.hero h1{
+
+font-size:36px;
+}
+
+.main-btn{
+
+padding:15px 30px;
+}
+
+.buffon-label{
+
+font-size:12px;
+
+left:15px;
+
+bottom:15px;
 }
 
 }
@@ -385,7 +676,13 @@ font-size:28px;
 
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
@@ -404,272 +701,549 @@ QUANTERA <span>AI</span>
 
 <nav>
 
-<a href="#">Home</a>
+<a href="#">
+Home
+</a>
 
-<a href="#servizi">Servizi</a>
+<a href="#servizi">
+Servizi
+</a>
 
-<a href="#contatti">Contatti</a>
+<a href="#contatti">
+Contatti
+</a>
 
 </nav>
 
-<a href="#contatti" class="cta">
+
+<a
+href="#contatti"
+class="cta"
+>
+
 Richiedi informazioni
+
 </a>
 
 </header>
 
+
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
+
 
 <div class="hero-text">
 
+
 <h1>
+
 Trasforma il futuro con
+
 <span>
 QUANTERA AI
 </span>
+
 </h1>
 
+
 <p>
-Tecnologia di intelligenza artificiale avanzata per analizzare dati,
-strategie e opportunità finanziarie con strumenti intelligenti.
+
+Tecnologia di intelligenza artificiale avanzata
+per analizzare dati, strategie e opportunità
+finanziarie con strumenti intelligenti.
+
 </p>
 
-<a href="#contatti" class="main-btn">
+
+<a
+href="#contatti"
+class="main-btn"
+>
+
 INIZIA ORA
+
 </a>
 
+
 </div>
+
+
 
 <div class="visual">
 
-<div class="dashboard">
 
-<div class="circle">
-Q
+<div class="buffon-card">
+
+
+<img
+
+src="assets/buffon-ai.png"
+
+alt="Gianluigi Buffon - QUANTERA AI"
+
+class="buffon-image"
+
+>
+
+
+<div class="buffon-label">
+
+<strong>
+QUANTERA AI
+</strong>
+
+· Performance Analytics
+
 </div>
 
-<div class="chart">
-
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
 
 </div>
 
-</div>
 
 </div>
+
 
 </section>
 
-<section class="section" id="servizi">
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section
+class="section"
+id="servizi"
+>
+
 
 <h2 class="title">
+
 La tecnologia del futuro
+
 </h2>
+
 
 <div class="cards">
 
+
 <div class="card">
+
 
 <h3>
 🤖 Analisi AI
 </h3>
 
+
 <p>
-Algoritmi intelligenti per interpretare dati complessi e creare nuove opportunità.
+
+Algoritmi intelligenti per interpretare
+dati complessi e creare nuove opportunità.
+
 </p>
+
 
 </div>
 
+
+
 <div class="card">
+
 
 <h3>
 📊 Strategie
 </h3>
 
+
 <p>
-Decisioni moderne basate su tecnologia e analisi avanzata.
+
+Decisioni moderne basate su tecnologia
+e analisi avanzata.
+
 </p>
+
 
 </div>
 
+
+
 <div class="card">
+
 
 <h3>
 🚀 Innovazione
 </h3>
 
+
 <p>
-Soluzioni digitali professionali per il futuro.
+
+Soluzioni digitali professionali
+per il futuro.
+
 </p>
 
-</div>
 
 </div>
+
+
+</div>
+
 
 </section>
 
-<section class="section" id="contatti">
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+class="section"
+id="contatti"
+>
+
 
 <div class="form-box">
 
+
 <h2>
+
 Richiedi una consulenza
+
 </h2>
 
-<form
-name="contact"
-method="POST"
-action="/"
-data-netlify="true"
-netlify-honeypot="bot-field"
->
 
+<form
+
+name="contact"
+
+method="POST"
+
+action="/"
+
+data-netlify="true"
+
+netlify-honeypot="bot-field"
+
+>
 
 
 <input
+
 type="hidden"
+
 name="form-name"
+
 value="contact"
+
 >
+
 
 <p style="display:none;">
+
 <label>
+
 Non compilare questo campo:
-<input name="bot-field">
+
+<input
+name="bot-field"
+>
+
 </label>
+
 </p>
 
+
 <input
+
 type="text"
+
 name="nome"
+
 placeholder="Nome e Cognome"
+
 required
+
 >
 
+
 <input
+
 type="tel"
+
 name="telefono"
+
 placeholder="Telefono"
+
 required
+
 >
+
 
 <input
+
 type="email"
+
 name="email"
+
 placeholder="Email"
+
 required
+
 >
 
-<select name="budget" required>
+
+<select
+
+name="budget"
+
+required
+
+>
+
 
 <option value="">
+
 Budget disponibile
+
 </option>
+
 
 <option value="Meno di 1.000 €">
+
 Meno di 1.000 €
+
 </option>
+
 
 <option value="1.000 - 5.000 €">
+
 1.000 - 5.000 €
+
 </option>
+
 
 <option value="5.000 - 10.000 €">
+
 5.000 - 10.000 €
+
 </option>
+
 
 <option value="Oltre 10.000 €">
+
 Oltre 10.000 €
+
 </option>
 
+
 <option value="Da definire">
+
 Da definire
+
 </option>
+
 
 </select>
 
 
 <textarea
+
 name="realizzazione"
+
 placeholder="Cosa vuoi realizzare?"
+
 rows="5"
+
 required
+
 ></textarea>
 
 
-<button type="submit">
+<button
+type="submit"
+>
+
 INVIA RICHIESTA
+
 </button>
+
 
 </form>
 
+
 </div>
+
 
 </section>
 
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
-© 2026 QUANTERA AI - Intelligenza Artificiale Avanzata
+© 2026 QUANTERA AI -
+Intelligenza Artificiale Avanzata
 
 </footer>
+
+
+
+<!-- =========================
+     FORM SCRIPT
+========================= -->
+
 <script>
-const form = document.querySelector('form[name="contact"]');
 
-form.addEventListener('submit', async function(e) {
-  e.preventDefault();
+const form =
+document.querySelector(
+'form[name="contact"]'
+);
 
-  const button = form.querySelector('button');
-  const formData = new FormData(form);
 
-  button.disabled = true;
-  button.textContent = "INVIO...";
+form.addEventListener(
 
-  try {
-    await fetch("/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-      body: new URLSearchParams(formData).toString()
-    });
+'submit',
 
-    form.reset();
+async function(e){
 
-    button.textContent = "INVIATO ✓";
-    button.style.background = "#00c853";
+e.preventDefault();
 
-    const oldMessage = form.querySelector(".success-message");
-    if (oldMessage) oldMessage.remove();
 
-    const message = document.createElement("div");
-    message.className = "success-message";
-    message.textContent = "Grazie! Ti contatteremo presto.";
-    message.style.marginTop = "20px";
-    message.style.padding = "15px";
-    message.style.background = "#00c853";
-    message.style.borderRadius = "12px";
-    message.style.textAlign = "center";
-    message.style.fontWeight = "bold";
+const button =
+form.querySelector('button');
 
-    form.appendChild(message);
 
-    setTimeout(() => {
-      button.disabled = false;
-      button.textContent = "INVIA RICHIESTA";
-      button.style.background = "#ffc400";
-      message.remove();
-    }, 5000);
+const formData =
+new FormData(form);
 
-  } catch (error) {
-    button.disabled = false;
-    button.textContent = "RIPROVA";
-    alert("Si è verificato un errore. Riprova.");
-  }
-});
+
+button.disabled = true;
+
+button.textContent =
+"INVIO...";
+
+
+try{
+
+
+await fetch(
+
+"/",
+
+{
+
+method:"POST",
+
+headers:{
+
+"Content-Type":
+"application/x-www-form-urlencoded"
+
+},
+
+body:
+
+new URLSearchParams(
+formData
+).toString()
+
+}
+
+);
+
+
+form.reset();
+
+
+button.textContent =
+"INVIATO ✓";
+
+
+button.style.background =
+"#00c853";
+
+
+const oldMessage =
+form.querySelector(
+".success-message"
+);
+
+
+if(oldMessage){
+
+oldMessage.remove();
+
+}
+
+
+const message =
+document.createElement("div");
+
+
+message.className =
+"success-message";
+
+
+message.textContent =
+"Grazie! Ti contatteremo presto.";
+
+
+form.appendChild(message);
+
+
+setTimeout(
+
+function(){
+
+button.disabled = false;
+
+button.textContent =
+"INVIA RICHIESTA";
+
+button.style.background =
+"#ffc400";
+
+message.remove();
+
+},
+
+5000
+
+);
+
+
+}
+
+catch(error){
+
+
+button.disabled = false;
+
+button.textContent =
+"RIPROVA";
+
+
+alert(
+"Si è verificato un errore. Riprova."
+);
+
+
+}
+
+}
+
+);
+
 </script>
+
 
 </body>
 
