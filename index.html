@@ -56,6 +56,7 @@ body::after{
     z-index:-1;
 }
 
+
 /* =========================
    HEADER
 ========================= */
@@ -387,10 +388,8 @@ nav a:hover{
 .slide-feature{
     padding:9px 12px;
     border-radius:20px;
-
     background:rgba(0,200,83,.06);
     border:1px solid rgba(0,200,83,.18);
-
     color:#8fe6a9;
     font-size:10px;
     font-weight:800;
@@ -411,15 +410,12 @@ nav a:hover{
     height:48px;
 
     border-radius:50%;
-
     border:1px solid rgba(255,255,255,.12);
 
     background:rgba(2,9,20,.72);
-
     backdrop-filter:blur(10px);
 
     color:#fff;
-
     font-size:26px;
 
     display:flex;
@@ -506,15 +502,12 @@ nav a:hover{
     overflow:hidden;
 
     border:1px solid rgba(255,255,255,.07);
-
     background:#06121e;
 }
 
 .info-item{
     padding:20px;
-
     border-right:1px solid rgba(255,255,255,.07);
-
     text-align:center;
 }
 
@@ -587,7 +580,6 @@ nav a:hover{
 
 .card{
     padding:30px;
-
     border-radius:22px;
 
     background:
@@ -604,9 +596,7 @@ nav a:hover{
 
 .card:hover{
     transform:translateY(-8px);
-
-    border-color:
-        rgba(255,196,0,.45);
+    border-color:rgba(255,196,0,.45);
 
     box-shadow:
         0 25px 60px rgba(0,0,0,.25);
@@ -644,18 +634,14 @@ nav a:hover{
 
 .step{
     padding:32px;
-
     border-radius:20px;
-
     background:#06121e;
-
     border:1px solid rgba(255,255,255,.07);
 }
 
 .step-number{
     width:43px;
     height:43px;
-
     border-radius:50%;
 
     display:flex;
@@ -663,7 +649,6 @@ nav a:hover{
     justify-content:center;
 
     background:#ffc400;
-
     color:#06101d;
 
     font-weight:900;
@@ -690,9 +675,7 @@ nav a:hover{
 .cta-band{
     max-width:1200px;
     margin:0 auto;
-
     padding:45px;
-
     border-radius:25px;
 
     border:1px solid rgba(255,196,0,.18);
@@ -711,10 +694,8 @@ nav a:hover{
         );
 
     display:flex;
-
     align-items:center;
     justify-content:space-between;
-
     gap:30px;
 }
 
@@ -734,15 +715,12 @@ nav a:hover{
     flex-shrink:0;
 
     padding:15px 28px;
-
     border-radius:30px;
 
     background:#ffc400;
-
     color:#06101d;
 
     text-decoration:none;
-
     font-weight:900;
 }
 
@@ -754,7 +732,6 @@ nav a:hover{
 .contact-box{
     max-width:680px;
     margin:auto;
-
     padding:45px;
 
     border-radius:28px;
@@ -790,11 +767,9 @@ textarea{
     width:100%;
 
     padding:16px;
-
     margin:7px 0;
 
     background:#0d1d2e;
-
     color:#fff;
 
     border:1px solid rgba(255,255,255,.08);
@@ -804,7 +779,6 @@ textarea{
     font-size:15px;
 
     outline:none;
-
     transition:.3s;
 }
 
@@ -829,13 +803,10 @@ textarea{
 
 .submit-btn{
     width:100%;
-
     padding:17px;
-
     margin-top:10px;
 
     border:0;
-
     border-radius:30px;
 
     background:
@@ -848,11 +819,9 @@ textarea{
     color:#06101d;
 
     font-weight:900;
-
     font-size:15px;
 
     cursor:pointer;
-
     transition:.3s;
 }
 
@@ -863,6 +832,47 @@ textarea{
         0 15px 35px rgba(255,196,0,.15);
 }
 
+.submit-btn:disabled{
+    opacity:.7;
+    cursor:not-allowed;
+}
+
+.success-message{
+    display:none;
+
+    margin-top:18px;
+    padding:16px;
+
+    border-radius:14px;
+
+    background:#00c853;
+
+    color:#04120a;
+
+    text-align:center;
+
+    font-weight:900;
+
+    line-height:1.5;
+}
+
+.error-message{
+    display:none;
+
+    margin-top:18px;
+    padding:16px;
+
+    border-radius:14px;
+
+    background:#d32f2f;
+
+    color:#fff;
+
+    text-align:center;
+
+    font-weight:700;
+}
+
 
 /* =========================
    FOOTER
@@ -870,7 +880,6 @@ textarea{
 
 footer{
     padding:35px 6%;
-
     text-align:center;
 
     background:#01060d;
@@ -1482,7 +1491,7 @@ aria-label="John Elkann">
 </div>
 
 
-<!-- INFO -->
+<!-- INFO BAR -->
 
 <div class="info-bar">
 
@@ -1816,7 +1825,7 @@ SCOPRI DI PIÙ
 
 
 <!-- =========================
-     CONTATTI / NETLIFY FORM
+     CONTATTI
 ========================= -->
 
 <section
@@ -1859,8 +1868,10 @@ per approfondire il tuo progetto.
 <form
 name="contact"
 method="POST"
+action="/"
 data-netlify="true"
 netlify-honeypot="bot-field"
+id="contactForm"
 >
 
 <input
@@ -1947,11 +1958,35 @@ required
 <button
 type="submit"
 class="submit-btn"
+id="submitButton"
 >
 
 INVIA RICHIESTA
 
 </button>
+
+
+<div
+class="success-message"
+id="formSuccess"
+>
+
+Grazie! La tua richiesta è stata
+inviata con successo.
+Ti contatteremo presto.
+
+</div>
+
+
+<div
+class="error-message"
+id="formError"
+>
+
+Si è verificato un errore.
+Riprova tra poco.
+
+</div>
 
 </form>
 
@@ -2019,14 +2054,17 @@ function showSlide(index){
     }
 
     slides.forEach(
-        slide => slide.classList.remove("active")
+        slide =>
+        slide.classList.remove("active")
     );
 
     dots.forEach(
-        dot => dot.classList.remove("active")
+        dot =>
+        dot.classList.remove("active")
     );
 
     slides[index].classList.add("active");
+
     dots[index].classList.add("active");
 
     currentSlide = index;
@@ -2049,16 +2087,18 @@ function startAutoplay(){
 
     clearInterval(autoPlay);
 
-    autoPlay = setInterval(
-        nextSlide,
-        SLIDE_DURATION
-    );
+    autoPlay =
+        setInterval(
+            nextSlide,
+            SLIDE_DURATION
+        );
 }
 
 
 function restartProgress(){
 
     progressBar.style.transition = "none";
+
     progressBar.style.width = "0%";
 
     setTimeout(
@@ -2107,7 +2147,9 @@ dots.forEach(
             function(){
 
                 showSlide(
-                    parseInt(dot.dataset.slide)
+                    parseInt(
+                        dot.dataset.slide
+                    )
                 );
 
                 startAutoplay();
@@ -2174,9 +2216,13 @@ slider.addEventListener(
         if(Math.abs(difference) > 50){
 
             if(difference > 0){
+
                 nextSlide();
+
             }else{
+
                 previousSlide();
+
             }
 
             startAutoplay();
@@ -2190,6 +2236,115 @@ slider.addEventListener(
 
 restartProgress();
 startAutoplay();
+
+
+/* =========================
+   NETLIFY FORM
+========================= */
+
+const form =
+document.getElementById("contactForm");
+
+const submitButton =
+document.getElementById("submitButton");
+
+const successMessage =
+document.getElementById("formSuccess");
+
+const errorMessage =
+document.getElementById("formError");
+
+
+form.addEventListener(
+    "submit",
+    async function(e){
+
+        e.preventDefault();
+
+        successMessage.style.display = "none";
+        errorMessage.style.display = "none";
+
+        submitButton.disabled = true;
+
+        submitButton.textContent =
+            "INVIO...";
+
+        const formData =
+            new FormData(form);
+
+
+        try{
+
+            const response =
+                await fetch(
+                    "/",
+                    {
+                        method:"POST",
+
+                        headers:{
+                            "Content-Type":
+                            "application/x-www-form-urlencoded"
+                        },
+
+                        body:
+                            new URLSearchParams(
+                                formData
+                            ).toString()
+                    }
+                );
+
+
+            if(!response.ok){
+                throw new Error(
+                    "Form submission failed"
+                );
+            }
+
+
+            form.reset();
+
+            submitButton.textContent =
+                "INVIATO ✓";
+
+            submitButton.style.background =
+                "#00c853";
+
+            successMessage.style.display =
+                "block";
+
+
+            setTimeout(
+                function(){
+
+                    submitButton.disabled =
+                        false;
+
+                    submitButton.textContent =
+                        "INVIA RICHIESTA";
+
+                    submitButton.style.background =
+                        "#ffc400";
+
+                },
+                5000
+            );
+
+        }
+        catch(error){
+
+            submitButton.disabled =
+                false;
+
+            submitButton.textContent =
+                "RIPROVA";
+
+            errorMessage.style.display =
+                "block";
+
+        }
+
+    }
+);
 
 </script>
 
