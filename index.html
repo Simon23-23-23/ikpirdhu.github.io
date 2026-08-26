@@ -9,9 +9,9 @@
 
 <style>
 
-/* =========================================================
+/* =========================
    RESET
-========================================================= */
+========================= */
 
 *{
     margin:0;
@@ -61,9 +61,9 @@ body::after{
 }
 
 
-/* =========================================================
+/* =========================
    HEADER
-========================================================= */
+========================= */
 
 header{
     height:82px;
@@ -103,20 +103,18 @@ header{
     align-items:center;
     justify-content:center;
 
-    background:
-        linear-gradient(
-            135deg,
-            #ffc400,
-            #00c853
-        );
+    background:linear-gradient(
+        135deg,
+        #ffc400,
+        #00c853
+    );
 
     color:#06101d;
 
     font-size:26px;
     font-weight:900;
 
-    box-shadow:
-        0 0 25px rgba(255,196,0,.25);
+    box-shadow:0 0 25px rgba(255,196,0,.25);
 }
 
 .logo-text{
@@ -149,18 +147,12 @@ nav a:hover{
 
 .header-btn{
     padding:12px 23px;
-
     border-radius:30px;
-
     border:1px solid #ffc400;
-
     color:#ffc400;
-
     text-decoration:none;
-
     font-size:13px;
     font-weight:800;
-
     transition:.3s;
 }
 
@@ -170,9 +162,9 @@ nav a:hover{
 }
 
 
-/* =========================================================
+/* =========================
    HERO
-========================================================= */
+========================= */
 
 .hero{
     min-height:100vh;
@@ -214,11 +206,9 @@ nav a:hover{
 
     border-radius:30px;
 
-    border:
-        1px solid rgba(0,200,83,.32);
+    border:1px solid rgba(0,200,83,.32);
 
-    background:
-        rgba(0,200,83,.05);
+    background:rgba(0,200,83,.05);
 
     color:#80e89f;
 
@@ -235,8 +225,7 @@ nav a:hover{
 
     font-family:Georgia,serif;
 
-    font-size:
-        clamp(42px,6vw,76px);
+    font-size:clamp(42px,6vw,76px);
 
     line-height:1.08;
 
@@ -274,9 +263,9 @@ nav a:hover{
 }
 
 
-/* =========================================================
+/* =========================
    SLIDER
-========================================================= */
+========================= */
 
 .slider-shell{
     width:100%;
@@ -298,8 +287,7 @@ nav a:hover{
 
     border-radius:32px;
 
-    border:
-        1px solid rgba(255,196,0,.28);
+    border:1px solid rgba(255,196,0,.28);
 
     background:
         linear-gradient(
@@ -326,7 +314,6 @@ nav a:hover{
     align-items:stretch;
 
     opacity:0;
-
     visibility:hidden;
 
     transform:translateX(35px);
@@ -339,9 +326,7 @@ nav a:hover{
 
 .slide.active{
     opacity:1;
-
     visibility:visible;
-
     transform:translateX(0);
 }
 
@@ -381,13 +366,19 @@ nav a:hover{
     object-position:center;
 }
 
-/* Pier Silvio photo */
-.pier-photo img{
-    object-position:center 30%;
+.buffon-photo img{
+    object-position:center;
 }
 
-/* Buffon photo */
-.buffon-photo img{
+.pier-photo img{
+    object-position:center 28%;
+}
+
+.briatore-photo img{
+    object-position:center;
+}
+
+.elkann-photo img{
     object-position:center;
 }
 
@@ -425,8 +416,7 @@ nav a:hover{
 .slide-content h2{
     font-family:Georgia,serif;
 
-    font-size:
-        clamp(38px,4vw,58px);
+    font-size:clamp(38px,4vw,58px);
 
     line-height:1.08;
 
@@ -468,14 +458,11 @@ nav a:hover{
 
     border-radius:16px;
 
-    background:
-        rgba(255,255,255,.035);
+    background:rgba(255,255,255,.035);
 
-    border:
-        1px solid rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.07);
 
-    border-left:
-        3px solid #ffc400;
+    border-left:3px solid #ffc400;
 
     color:#d8e0ea;
 
@@ -513,11 +500,9 @@ nav a:hover{
 
     border-radius:20px;
 
-    background:
-        rgba(0,200,83,.06);
+    background:rgba(0,200,83,.06);
 
-    border:
-        1px solid rgba(0,200,83,.18);
+    border:1px solid rgba(0,200,83,.18);
 
     color:#8fe6a9;
 
@@ -529,9 +514,9 @@ nav a:hover{
 }
 
 
-/* =========================================================
-   CONTROLS
-========================================================= */
+/* =========================
+   SLIDER CONTROLS
+========================= */
 
 .slider-arrow{
     position:absolute;
@@ -545,11 +530,9 @@ nav a:hover{
 
     border-radius:50%;
 
-    border:
-        1px solid rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.12);
 
-    background:
-        rgba(2,9,20,.72);
+    background:rgba(2,9,20,.72);
 
     backdrop-filter:blur(10px);
 
@@ -558,7 +541,6 @@ nav a:hover{
     font-size:26px;
 
     display:flex;
-
     align-items:center;
     justify-content:center;
 
@@ -571,9 +553,7 @@ nav a:hover{
 
 .slider-arrow:hover{
     background:#ffc400;
-
     color:#06101d;
-
     border-color:#ffc400;
 }
 
@@ -589,7 +569,6 @@ nav a:hover{
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
     gap:9px;
@@ -602,7 +581,6 @@ nav a:hover{
     height:8px;
 
     border:0;
-
     padding:0;
 
     border-radius:50%;
@@ -651,13 +629,12 @@ nav a:hover{
 }
 
 
-/* =========================================================
+/* =========================
    INFO BAR
-========================================================= */
+========================= */
 
 .info-bar{
     width:100%;
-
     max-width:1280px;
 
     margin:24px auto 0;
@@ -671,8 +648,7 @@ nav a:hover{
 
     overflow:hidden;
 
-    border:
-        1px solid rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.07);
 
     background:#06121e;
 }
@@ -680,8 +656,7 @@ nav a:hover{
 .info-item{
     padding:20px;
 
-    border-right:
-        1px solid rgba(255,255,255,.07);
+    border-right:1px solid rgba(255,255,255,.07);
 
     text-align:center;
 }
@@ -709,9 +684,9 @@ nav a:hover{
 }
 
 
-/* =========================================================
-   SECTIONS
-========================================================= */
+/* =========================
+   SECTION
+========================= */
 
 .section{
     padding:100px 6%;
@@ -720,8 +695,7 @@ nav a:hover{
 .section-header{
     max-width:780px;
 
-    margin:
-        0 auto 55px;
+    margin:0 auto 55px;
 
     text-align:center;
 }
@@ -758,9 +732,9 @@ nav a:hover{
 }
 
 
-/* =========================================================
+/* =========================
    CARDS
-========================================================= */
+========================= */
 
 .cards{
     max-width:1250px;
@@ -787,8 +761,7 @@ nav a:hover{
             #04101b
         );
 
-    border:
-        1px solid rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.07);
 
     transition:.35s;
 }
@@ -824,9 +797,9 @@ nav a:hover{
 }
 
 
-/* =========================================================
+/* =========================
    STEPS
-========================================================= */
+========================= */
 
 .steps{
     max-width:1100px;
@@ -848,8 +821,7 @@ nav a:hover{
 
     background:#06121e;
 
-    border:
-        1px solid rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.07);
 }
 
 .step-number{
@@ -887,9 +859,9 @@ nav a:hover{
 }
 
 
-/* =========================================================
+/* =========================
    CTA
-========================================================= */
+========================= */
 
 .cta-band{
     max-width:1200px;
@@ -904,7 +876,6 @@ nav a:hover{
         1px solid rgba(255,196,0,.18);
 
     background:
-
         radial-gradient(
             circle at 20% 50%,
             rgba(0,200,83,.10),
@@ -927,7 +898,6 @@ nav a:hover{
 }
 
 .cta-band h2{
-
     font-family:Georgia,serif;
 
     font-size:34px;
@@ -936,7 +906,6 @@ nav a:hover{
 }
 
 .cta-band p{
-
     color:#8492a3;
 
     line-height:1.6;
@@ -945,7 +914,6 @@ nav a:hover{
 }
 
 .cta-band a{
-
     flex-shrink:0;
 
     padding:15px 28px;
@@ -962,12 +930,11 @@ nav a:hover{
 }
 
 
-/* =========================================================
+/* =========================
    CONTACT
-========================================================= */
+========================= */
 
 .contact-box{
-
     max-width:680px;
 
     margin:auto;
@@ -991,7 +958,6 @@ nav a:hover{
 }
 
 .contact-box h2{
-
     font-family:Georgia,serif;
 
     font-size:36px;
@@ -1000,7 +966,6 @@ nav a:hover{
 }
 
 .contact-box > p{
-
     color:#8190a2;
 
     line-height:1.6;
@@ -1011,7 +976,6 @@ nav a:hover{
 input,
 select,
 textarea{
-
     width:100%;
 
     padding:16px;
@@ -1022,8 +986,7 @@ textarea{
 
     color:#fff;
 
-    border:
-        1px solid rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.08);
 
     border-radius:12px;
 
@@ -1037,7 +1000,6 @@ textarea{
 input:focus,
 select:focus,
 textarea:focus{
-
     border-color:#ffc400;
 
     box-shadow:
@@ -1051,11 +1013,11 @@ textarea::placeholder{
 
 textarea{
     resize:vertical;
+
     font-family:Inter,Arial,sans-serif;
 }
 
 .submit-btn{
-
     width:100%;
 
     padding:17px;
@@ -1085,7 +1047,6 @@ textarea{
 }
 
 .submit-btn:hover{
-
     transform:translateY(-2px);
 
     box-shadow:
@@ -1094,11 +1055,11 @@ textarea{
 
 .submit-btn:disabled{
     opacity:.7;
+
     cursor:not-allowed;
 }
 
 .success-message{
-
     margin-top:18px;
 
     padding:14px;
@@ -1115,12 +1076,11 @@ textarea{
 }
 
 
-/* =========================================================
+/* =========================
    FOOTER
-========================================================= */
+========================= */
 
 footer{
-
     padding:35px 6%;
 
     text-align:center;
@@ -1133,7 +1093,6 @@ footer{
 }
 
 .risk{
-
     max-width:900px;
 
     margin:14px auto 0;
@@ -1146,9 +1105,9 @@ footer{
 }
 
 
-/* =========================================================
+/* =========================
    TABLET
-========================================================= */
+========================= */
 
 @media(max-width:1050px){
 
@@ -1199,9 +1158,9 @@ footer{
 }
 
 
-/* =========================================================
+/* =========================
    MOBILE
-========================================================= */
+========================= */
 
 @media(max-width:650px){
 
@@ -1234,6 +1193,7 @@ footer{
 
     .hero h1{
         font-size:40px;
+
         letter-spacing:-1px;
     }
 
@@ -1243,6 +1203,7 @@ footer{
 
     .slider{
         min-height:830px;
+
         border-radius:22px;
     }
 
@@ -1585,12 +1546,12 @@ INNOVATION
 
 
 <!-- =======================================================
-     SLIDE 3 - BRIATORE
+     SLIDE 3 - FLAVIO
 ======================================================= -->
 
 <article class="slide">
 
-<div class="slide-photo">
+<div class="slide-photo briatore-photo">
 
 <img
 src="assets/flavio-briatore.png"
@@ -1663,15 +1624,15 @@ SCENARIO ANALYSIS
 
 
 <!-- =======================================================
-     SLIDE 4 - ELKANN
+     SLIDE 4 - JOHN
 ======================================================= -->
 
 <article class="slide">
 
-<div class="slide-photo">
+<div class="slide-photo elkann-photo">
 
 <img
-src="assets/john-elkann.png"
+src="assets/john-elkann.jpg"
 alt="John Elkann"
 >
 
@@ -2570,7 +2531,6 @@ slider.addEventListener(
 /* TOUCH / SWIPE */
 
 let touchStartX = 0;
-
 let touchEndX = 0;
 
 
@@ -2599,13 +2559,9 @@ slider.addEventListener(
         if(Math.abs(difference) > 50){
 
             if(difference > 0){
-
                 nextSlide();
-
             }else{
-
                 previousSlide();
-
             }
 
             startAutoplay();
