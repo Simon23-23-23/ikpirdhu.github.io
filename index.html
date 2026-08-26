@@ -9,10 +9,6 @@
 
 <style>
 
-/* =========================
-   RESET
-========================= */
-
 *{
     margin:0;
     padding:0;
@@ -60,7 +56,6 @@ body::after{
     z-index:-1;
 }
 
-
 /* =========================
    HEADER
 ========================= */
@@ -68,21 +63,16 @@ body::after{
 header{
     height:82px;
     padding:0 6%;
-
     display:flex;
     align-items:center;
     justify-content:space-between;
-
     position:fixed;
     top:0;
     left:0;
     width:100%;
-
     z-index:1000;
-
     background:rgba(2,9,20,.92);
     backdrop-filter:blur(18px);
-
     border-bottom:1px solid rgba(255,255,255,.06);
 }
 
@@ -98,22 +88,13 @@ header{
     width:44px;
     height:44px;
     border-radius:50%;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
-    background:linear-gradient(
-        135deg,
-        #ffc400,
-        #00c853
-    );
-
+    background:linear-gradient(135deg,#ffc400,#00c853);
     color:#06101d;
-
     font-size:26px;
     font-weight:900;
-
     box-shadow:0 0 25px rgba(255,196,0,.25);
 }
 
@@ -168,15 +149,10 @@ nav a:hover{
 
 .hero{
     min-height:100vh;
-
-    padding:
-        135px 6%
-        70px;
-
+    padding:135px 6% 70px;
     display:flex;
     flex-direction:column;
     align-items:center;
-
     text-align:center;
 
     background:
@@ -185,13 +161,11 @@ nav a:hover{
             rgba(0,200,83,.12),
             transparent 35%
         ),
-
         radial-gradient(
             circle at 80% 70%,
             rgba(0,100,255,.08),
             transparent 28%
         ),
-
         linear-gradient(
             180deg,
             #020914,
@@ -201,36 +175,23 @@ nav a:hover{
 
 .hero-tag{
     display:inline-flex;
-
     padding:9px 16px;
-
     border-radius:30px;
-
     border:1px solid rgba(0,200,83,.32);
-
     background:rgba(0,200,83,.05);
-
     color:#80e89f;
-
     font-size:11px;
     font-weight:900;
-
     letter-spacing:1.8px;
-
     margin-bottom:23px;
 }
 
 .hero h1{
     max-width:1050px;
-
     font-family:Georgia,serif;
-
     font-size:clamp(42px,6vw,76px);
-
     line-height:1.08;
-
     font-weight:500;
-
     letter-spacing:-2px;
 }
 
@@ -245,20 +206,15 @@ nav a:hover{
 .hero-line{
     width:100px;
     height:2px;
-
     margin:25px auto;
-
     background:#ffc400;
 }
 
 .hero-description{
     max-width:760px;
-
     color:#99a7b9;
-
     font-size:18px;
     line-height:1.7;
-
     margin-bottom:42px;
 }
 
@@ -270,31 +226,18 @@ nav a:hover{
 .slider-shell{
     width:100%;
     max-width:1280px;
-
     position:relative;
-
     margin:auto;
 }
 
 .slider{
     position:relative;
-
     width:100%;
-
     min-height:650px;
-
     overflow:hidden;
-
     border-radius:32px;
-
     border:1px solid rgba(255,196,0,.28);
-
-    background:
-        linear-gradient(
-            145deg,
-            #071523,
-            #04101b
-        );
+    background:linear-gradient(145deg,#071523,#04101b);
 
     box-shadow:
         0 35px 100px rgba(0,0,0,.48),
@@ -303,7 +246,6 @@ nav a:hover{
 
 .slide{
     position:absolute;
-
     inset:0;
 
     display:grid;
@@ -332,19 +274,14 @@ nav a:hover{
 
 .slide-photo{
     position:relative;
-
     overflow:hidden;
-
     min-height:650px;
-
     background:#07111d;
 }
 
 .slide-photo::after{
     content:"";
-
     position:absolute;
-
     inset:0;
 
     background:
@@ -358,15 +295,8 @@ nav a:hover{
 .slide-photo img{
     width:100%;
     height:100%;
-
     display:block;
-
     object-fit:cover;
-
-    object-position:center;
-}
-
-.buffon-photo img{
     object-position:center;
 }
 
@@ -374,19 +304,9 @@ nav a:hover{
     object-position:center 28%;
 }
 
-.briatore-photo img{
-    object-position:center;
-}
-
-.elkann-photo img{
-    object-position:center;
-}
-
 .slide-content{
     display:flex;
-
     flex-direction:column;
-
     justify-content:center;
 
     padding:55px;
@@ -403,25 +323,17 @@ nav a:hover{
 
 .slide-kicker{
     color:#57d96b;
-
     font-size:11px;
-
     font-weight:900;
-
     letter-spacing:2px;
-
     margin-bottom:15px;
 }
 
 .slide-content h2{
     font-family:Georgia,serif;
-
     font-size:clamp(38px,4vw,58px);
-
     line-height:1.08;
-
     font-weight:500;
-
     margin-bottom:12px;
 }
 
@@ -431,85 +343,57 @@ nav a:hover{
 
 .slide-role{
     color:#00d9ff;
-
     font-size:11px;
-
     font-weight:800;
-
     letter-spacing:1.6px;
-
     margin-bottom:23px;
 }
 
 .slide-description{
     color:#a1aebe;
-
     font-size:16px;
-
     line-height:1.8;
-
     max-width:500px;
-
     margin-bottom:25px;
 }
 
 .slide-box{
     padding:19px 20px;
-
     border-radius:16px;
-
     background:rgba(255,255,255,.035);
-
     border:1px solid rgba(255,255,255,.07);
-
     border-left:3px solid #ffc400;
-
     color:#d8e0ea;
-
     font-size:14px;
-
     line-height:1.7;
-
     margin-bottom:25px;
 }
 
 .slide-box-label{
     display:block;
-
     color:#ffc400;
-
     font-size:10px;
-
     font-weight:900;
-
     letter-spacing:1.5px;
-
     margin-bottom:7px;
 }
 
 .slide-features{
     display:flex;
-
     flex-wrap:wrap;
-
     gap:8px;
 }
 
 .slide-feature{
     padding:9px 12px;
-
     border-radius:20px;
 
     background:rgba(0,200,83,.06);
-
     border:1px solid rgba(0,200,83,.18);
 
     color:#8fe6a9;
-
     font-size:10px;
-
     font-weight:800;
-
     letter-spacing:.5px;
 }
 
@@ -520,9 +404,7 @@ nav a:hover{
 
 .slider-arrow{
     position:absolute;
-
     top:50%;
-
     transform:translateY(-50%);
 
     width:48px;
@@ -567,65 +449,44 @@ nav a:hover{
 
 .slider-dots{
     display:flex;
-
     align-items:center;
     justify-content:center;
-
     gap:9px;
-
     margin-top:20px;
 }
 
 .slider-dot{
     width:8px;
     height:8px;
-
     border:0;
     padding:0;
-
     border-radius:50%;
-
     background:#4c596a;
-
     cursor:pointer;
-
     transition:.3s;
 }
 
 .slider-dot.active{
     width:28px;
-
     border-radius:20px;
-
     background:#ffc400;
 }
 
 .slider-progress{
     position:absolute;
-
     left:0;
     bottom:0;
-
     width:100%;
     height:3px;
-
     background:rgba(255,255,255,.05);
-
     overflow:hidden;
-
     z-index:20;
 }
 
 .slider-progress-bar{
     width:0%;
     height:100%;
-
-    background:
-        linear-gradient(
-            90deg,
-            #00c853,
-            #ffc400
-        );
+    background:linear-gradient(90deg,#00c853,#ffc400);
 }
 
 
@@ -636,16 +497,12 @@ nav a:hover{
 .info-bar{
     width:100%;
     max-width:1280px;
-
     margin:24px auto 0;
 
     display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
+    grid-template-columns:repeat(4,1fr);
 
     border-radius:20px;
-
     overflow:hidden;
 
     border:1px solid rgba(255,255,255,.07);
@@ -667,25 +524,20 @@ nav a:hover{
 
 .info-item strong{
     display:block;
-
     font-size:14px;
-
     color:#fff;
-
     margin-bottom:5px;
 }
 
 .info-item span{
     color:#708095;
-
     font-size:10px;
-
     letter-spacing:.6px;
 }
 
 
 /* =========================
-   SECTION
+   SECTIONS
 ========================= */
 
 .section{
@@ -694,40 +546,28 @@ nav a:hover{
 
 .section-header{
     max-width:780px;
-
     margin:0 auto 55px;
-
     text-align:center;
 }
 
 .section-tag{
     color:#57d96b;
-
     font-size:11px;
-
     font-weight:900;
-
     letter-spacing:2px;
-
     margin-bottom:13px;
 }
 
 .section-title{
     font-family:Georgia,serif;
-
-    font-size:
-        clamp(36px,4vw,52px);
-
+    font-size:clamp(36px,4vw,52px);
     font-weight:500;
-
     margin-bottom:15px;
 }
 
 .section-description{
     color:#8d9bad;
-
     font-size:16px;
-
     line-height:1.75;
 }
 
@@ -738,14 +578,10 @@ nav a:hover{
 
 .cards{
     max-width:1250px;
-
     margin:auto;
 
     display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
+    grid-template-columns:repeat(4,1fr);
     gap:20px;
 }
 
@@ -778,21 +614,17 @@ nav a:hover{
 
 .card-icon{
     font-size:29px;
-
     margin-bottom:18px;
 }
 
 .card h3{
     font-size:17px;
-
     margin-bottom:10px;
 }
 
 .card p{
     color:#7f8d9f;
-
     font-size:13px;
-
     line-height:1.7;
 }
 
@@ -803,14 +635,10 @@ nav a:hover{
 
 .steps{
     max-width:1100px;
-
     margin:auto;
 
     display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns:repeat(3,1fr);
     gap:25px;
 }
 
@@ -831,7 +659,6 @@ nav a:hover{
     border-radius:50%;
 
     display:flex;
-
     align-items:center;
     justify-content:center;
 
@@ -846,15 +673,12 @@ nav a:hover{
 
 .step h3{
     font-size:20px;
-
     margin-bottom:12px;
 }
 
 .step p{
     color:#8492a3;
-
     line-height:1.7;
-
     font-size:14px;
 }
 
@@ -865,15 +689,13 @@ nav a:hover{
 
 .cta-band{
     max-width:1200px;
-
     margin:0 auto;
 
     padding:45px;
 
     border-radius:25px;
 
-    border:
-        1px solid rgba(255,196,0,.18);
+    border:1px solid rgba(255,196,0,.18);
 
     background:
         radial-gradient(
@@ -891,7 +713,6 @@ nav a:hover{
     display:flex;
 
     align-items:center;
-
     justify-content:space-between;
 
     gap:30px;
@@ -899,17 +720,13 @@ nav a:hover{
 
 .cta-band h2{
     font-family:Georgia,serif;
-
     font-size:34px;
-
     margin-bottom:10px;
 }
 
 .cta-band p{
     color:#8492a3;
-
     line-height:1.6;
-
     max-width:650px;
 }
 
@@ -936,7 +753,6 @@ nav a:hover{
 
 .contact-box{
     max-width:680px;
-
     margin:auto;
 
     padding:45px;
@@ -950,8 +766,7 @@ nav a:hover{
             #04101c
         );
 
-    border:
-        1px solid rgba(255,196,0,.22);
+    border:1px solid rgba(255,196,0,.22);
 
     box-shadow:
         0 30px 80px rgba(0,0,0,.35);
@@ -959,17 +774,13 @@ nav a:hover{
 
 .contact-box h2{
     font-family:Georgia,serif;
-
     font-size:36px;
-
     margin-bottom:10px;
 }
 
 .contact-box > p{
     color:#8190a2;
-
     line-height:1.6;
-
     margin-bottom:24px;
 }
 
@@ -1013,7 +824,6 @@ textarea::placeholder{
 
 textarea{
     resize:vertical;
-
     font-family:Inter,Arial,sans-serif;
 }
 
@@ -1053,28 +863,6 @@ textarea{
         0 15px 35px rgba(255,196,0,.15);
 }
 
-.submit-btn:disabled{
-    opacity:.7;
-
-    cursor:not-allowed;
-}
-
-.success-message{
-    margin-top:18px;
-
-    padding:14px;
-
-    border-radius:12px;
-
-    background:#00c853;
-
-    color:#04120a;
-
-    text-align:center;
-
-    font-weight:900;
-}
-
 
 /* =========================
    FOOTER
@@ -1106,7 +894,7 @@ footer{
 
 
 /* =========================
-   TABLET
+   MOBILE
 ========================= */
 
 @media(max-width:1050px){
@@ -1141,13 +929,11 @@ footer{
     }
 
     .cards{
-        grid-template-columns:
-            repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
     }
 
     .steps{
         grid-template-columns:1fr;
-
         max-width:700px;
     }
 
@@ -1157,16 +943,10 @@ footer{
     }
 }
 
-
-/* =========================
-   MOBILE
-========================= */
-
 @media(max-width:650px){
 
     header{
         height:74px;
-
         padding:0 5%;
     }
 
@@ -1186,14 +966,11 @@ footer{
     }
 
     .hero{
-        padding:
-            110px 5%
-            55px;
+        padding:110px 5% 55px;
     }
 
     .hero h1{
         font-size:40px;
-
         letter-spacing:-1px;
     }
 
@@ -1203,7 +980,6 @@ footer{
 
     .slider{
         min-height:830px;
-
         border-radius:22px;
     }
 
@@ -1238,8 +1014,7 @@ footer{
     }
 
     .info-bar{
-        grid-template-columns:
-            repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
     }
 
     .info-item:nth-child(2){
@@ -1248,8 +1023,7 @@ footer{
 
     .info-item:nth-child(3),
     .info-item:nth-child(4){
-        border-top:
-            1px solid rgba(255,255,255,.07);
+        border-top:1px solid rgba(255,255,255,.07);
     }
 
     .info-item{
@@ -1288,9 +1062,9 @@ footer{
 <body>
 
 
-<!-- =========================================================
+<!-- =========================
      HEADER
-========================================================= -->
+========================= -->
 
 <header>
 
@@ -1306,46 +1080,32 @@ QUANTERA <span>AI</span>
 
 </a>
 
-
 <nav>
 
 <a href="#home">HOME</a>
-
 <a href="#tecnologia">TECNOLOGIA</a>
-
 <a href="#vantaggi">VANTAGGI</a>
-
 <a href="#come-funziona">COME FUNZIONA</a>
-
 <a href="#contatti">CONTATTI</a>
 
 </nav>
 
-
-<a
-href="#contatti"
-class="header-btn"
->
+<a href="#contatti" class="header-btn">
 INIZIA ORA
 </a>
 
 </header>
 
 
-
-<!-- =========================================================
+<!-- =========================
      HERO
-========================================================= -->
+========================= -->
 
-<section
-class="hero"
-id="home"
->
+<section class="hero" id="home">
 
 <div class="hero-tag">
 INTELLIGENZA ARTIFICIALE · DATA · STRATEGIA
 </div>
-
 
 <h1>
 
@@ -1363,9 +1123,7 @@ analisi avanzate.
 
 </h1>
 
-
 <div class="hero-line"></div>
-
 
 <p class="hero-description">
 
@@ -1377,23 +1135,20 @@ decisioni più consapevoli.
 </p>
 
 
-
-<!-- =========================================================
+<!-- =========================
      SLIDER
-========================================================= -->
+========================= -->
 
 <div class="slider-shell">
 
 <div class="slider" id="mainSlider">
 
 
-<!-- =======================================================
-     SLIDE 1 - BUFFON
-======================================================= -->
+<!-- BUFFON -->
 
 <article class="slide active">
 
-<div class="slide-photo buffon-photo">
+<div class="slide-photo">
 
 <img
 src="assets/buffon-ai.png"
@@ -1402,24 +1157,20 @@ alt="Gianluigi Buffon"
 
 </div>
 
-
 <div class="slide-content">
 
 <div class="slide-kicker">
 PERFORMANCE INTELLIGENCE
 </div>
 
-
 <h2>
 Precisione,
 <span>disciplina.</span>
 </h2>
 
-
 <div class="slide-role">
 GIANLUIGI BUFFON · PERFORMANCE
 </div>
-
 
 <p class="slide-description">
 
@@ -1429,7 +1180,6 @@ fondamentali per costruire performance
 di alto livello.
 
 </p>
-
 
 <div class="slide-box">
 
@@ -1442,7 +1192,6 @@ nell'analisi dei dati e nella gestione
 delle informazioni.
 
 </div>
-
 
 <div class="slide-features">
 
@@ -1465,10 +1214,7 @@ DECISION SUPPORT
 </article>
 
 
-
-<!-- =======================================================
-     SLIDE 2 - PIER SILVIO
-======================================================= -->
+<!-- PIER SILVIO -->
 
 <article class="slide">
 
@@ -1481,24 +1227,20 @@ alt="Pier Silvio Berlusconi"
 
 </div>
 
-
 <div class="slide-content">
 
 <div class="slide-kicker">
 BUSINESS & INNOVATION
 </div>
 
-
 <h2>
 Tecnologia,
 <span>visione.</span>
 </h2>
 
-
 <div class="slide-role">
 PIER SILVIO BERLUSCONI · BUSINESS
 </div>
-
 
 <p class="slide-description">
 
@@ -1508,7 +1250,6 @@ in cui aziende e organizzazioni analizzano
 informazioni, dati e opportunità.
 
 </p>
-
 
 <div class="slide-box">
 
@@ -1521,7 +1262,6 @@ per organizzare meglio le informazioni e
 supportare processi decisionali più strutturati.
 
 </div>
-
 
 <div class="slide-features">
 
@@ -1544,14 +1284,11 @@ INNOVATION
 </article>
 
 
-
-<!-- =======================================================
-     SLIDE 3 - FLAVIO
-======================================================= -->
+<!-- FLAVIO -->
 
 <article class="slide">
 
-<div class="slide-photo briatore-photo">
+<div class="slide-photo">
 
 <img
 src="assets/flavio-briatore.png"
@@ -1560,24 +1297,20 @@ alt="Flavio Briatore"
 
 </div>
 
-
 <div class="slide-content">
 
 <div class="slide-kicker">
 ENTREPRENEURSHIP
 </div>
 
-
 <h2>
 Strategia,
 <span>velocità.</span>
 </h2>
 
-
 <div class="slide-role">
 FLAVIO BRIATORE · IMPRENDITORIA
 </div>
-
 
 <p class="slide-description">
 
@@ -1586,7 +1319,6 @@ velocità di analisi e lettura degli scenari
 sono elementi fondamentali.
 
 </p>
-
 
 <div class="slide-box">
 
@@ -1599,7 +1331,6 @@ organizzare informazioni e scenari
 in modo più rapido e strutturato.
 
 </div>
-
 
 <div class="slide-features">
 
@@ -1622,14 +1353,11 @@ SCENARIO ANALYSIS
 </article>
 
 
-
-<!-- =======================================================
-     SLIDE 4 - JOHN
-======================================================= -->
+<!-- JOHN -->
 
 <article class="slide">
 
-<div class="slide-photo elkann-photo">
+<div class="slide-photo">
 
 <img
 src="assets/john-elkann.jpg"
@@ -1638,24 +1366,20 @@ alt="John Elkann"
 
 </div>
 
-
 <div class="slide-content">
 
 <div class="slide-kicker">
 INVESTMENT & TECHNOLOGY
 </div>
 
-
 <h2>
 Investimenti,
 <span>innovazione.</span>
 </h2>
 
-
 <div class="slide-role">
 JOHN ELKANN · INVESTMENT & TECHNOLOGY
 </div>
-
 
 <p class="slide-description">
 
@@ -1665,7 +1389,6 @@ l'analisi, l'innovazione e lo sviluppo
 di nuovi investimenti tecnologici.
 
 </p>
-
 
 <div class="slide-box">
 
@@ -1678,7 +1401,6 @@ e gestione del rischio permettono di
 costruire una visione più strutturata.
 
 </div>
-
 
 <div class="slide-features">
 
@@ -1701,9 +1423,6 @@ AI INTELLIGENCE
 </article>
 
 
-
-<!-- PROGRESS -->
-
 <div class="slider-progress">
 
 <div
@@ -1716,14 +1435,10 @@ id="progressBar">
 </div>
 
 
-
-<!-- ARROWS -->
-
 <button
 class="slider-arrow prev"
 id="prevBtn"
-aria-label="Slide precedente"
->
+aria-label="Slide precedente">
 ‹
 </button>
 
@@ -1731,14 +1446,10 @@ aria-label="Slide precedente"
 <button
 class="slider-arrow next"
 id="nextBtn"
-aria-label="Slide successiva"
->
+aria-label="Slide successiva">
 ›
 </button>
 
-
-
-<!-- DOTS -->
 
 <div class="slider-dots">
 
@@ -1771,60 +1482,28 @@ aria-label="John Elkann">
 </div>
 
 
-
-<!-- INFO BAR -->
+<!-- INFO -->
 
 <div class="info-bar">
 
 <div class="info-item">
-
-<strong>
-AI ANALYTICS
-</strong>
-
-<span>
-ANALISI INTELLIGENTE DEI DATI
-</span>
-
+<strong>AI ANALYTICS</strong>
+<span>ANALISI INTELLIGENTE DEI DATI</span>
 </div>
 
-
 <div class="info-item">
-
-<strong>
-DATA INTELLIGENCE
-</strong>
-
-<span>
-PATTERN E TREND
-</span>
-
+<strong>DATA INTELLIGENCE</strong>
+<span>PATTERN E TREND</span>
 </div>
 
-
 <div class="info-item">
-
-<strong>
-RISK ANALYSIS
-</strong>
-
-<span>
-VALUTAZIONE DEGLI SCENARI
-</span>
-
+<strong>RISK ANALYSIS</strong>
+<span>VALUTAZIONE DEGLI SCENARI</span>
 </div>
 
-
 <div class="info-item">
-
-<strong>
-REAL-TIME
-</strong>
-
-<span>
-INFORMAZIONI AGGIORNATE
-</span>
-
+<strong>REAL-TIME</strong>
+<span>INFORMAZIONI AGGIORNATE</span>
 </div>
 
 </div>
@@ -1832,15 +1511,11 @@ INFORMAZIONI AGGIORNATE
 </section>
 
 
-
-<!-- =========================================================
+<!-- =========================
      TECNOLOGIA
-========================================================= -->
+========================= -->
 
-<section
-class="section"
-id="tecnologia"
->
+<section class="section" id="tecnologia">
 
 <div class="section-header">
 
@@ -1866,16 +1541,11 @@ complesse in insight leggibili.
 
 <div class="cards">
 
-
 <div class="card">
 
-<div class="card-icon">
-🧠
-</div>
+<div class="card-icon">🧠</div>
 
-<h3>
-Algoritmi avanzati
-</h3>
+<h3>Algoritmi avanzati</h3>
 
 <p>
 Modelli intelligenti progettati
@@ -1888,13 +1558,9 @@ di dati in modo efficiente.
 
 <div class="card">
 
-<div class="card-icon">
-📊
-</div>
+<div class="card-icon">📊</div>
 
-<h3>
-Analisi predittive
-</h3>
+<h3>Analisi predittive</h3>
 
 <p>
 Identificazione di pattern,
@@ -1907,13 +1573,9 @@ meglio i possibili sviluppi.
 
 <div class="card">
 
-<div class="card-icon">
-🛡
-</div>
+<div class="card-icon">🛡</div>
 
-<h3>
-Risk Intelligence
-</h3>
+<h3>Risk Intelligence</h3>
 
 <p>
 Strumenti di analisi pensati
@@ -1926,13 +1588,9 @@ opportunità e scenari.
 
 <div class="card">
 
-<div class="card-icon">
-⚡
-</div>
+<div class="card-icon">⚡</div>
 
-<h3>
-Real-Time Insights
-</h3>
+<h3>Real-Time Insights</h3>
 
 <p>
 Informazioni aggiornate per
@@ -1947,15 +1605,11 @@ attuale degli scenari.
 </section>
 
 
-
-<!-- =========================================================
+<!-- =========================
      VANTAGGI
-========================================================= -->
+========================= -->
 
-<section
-class="section"
-id="vantaggi"
->
+<section class="section" id="vantaggi">
 
 <div class="section-header">
 
@@ -1979,16 +1633,11 @@ più organizzata, veloce e accessibile.
 
 <div class="cards">
 
-
 <div class="card">
 
-<div class="card-icon">
-🔐
-</div>
+<div class="card-icon">🔐</div>
 
-<h3>
-Sicurezza dei dati
-</h3>
+<h3>Sicurezza dei dati</h3>
 
 <p>
 Architettura progettata per
@@ -2000,13 +1649,9 @@ proteggere le informazioni.
 
 <div class="card">
 
-<div class="card-icon">
-⏱
-</div>
+<div class="card-icon">⏱</div>
 
-<h3>
-Monitoraggio continuo
-</h3>
+<h3>Monitoraggio continuo</h3>
 
 <p>
 Analisi costante degli aggiornamenti
@@ -2018,13 +1663,9 @@ e dei cambiamenti nei dati.
 
 <div class="card">
 
-<div class="card-icon">
-🎯
-</div>
+<div class="card-icon">🎯</div>
 
-<h3>
-Strategie personalizzate
-</h3>
+<h3>Strategie personalizzate</h3>
 
 <p>
 Insight organizzati secondo
@@ -2036,13 +1677,9 @@ esigenze e obiettivi specifici.
 
 <div class="card">
 
-<div class="card-icon">
-🌐
-</div>
+<div class="card-icon">🌐</div>
 
-<h3>
-Accesso globale
-</h3>
+<h3>Accesso globale</h3>
 
 <p>
 Una piattaforma digitale accessibile
@@ -2056,15 +1693,13 @@ da qualsiasi dispositivo.
 </section>
 
 
-
-<!-- =========================================================
+<!-- =========================
      COME FUNZIONA
-========================================================= -->
+========================= -->
 
 <section
 class="section"
-id="come-funziona"
->
+id="come-funziona">
 
 <div class="section-header">
 
@@ -2087,7 +1722,6 @@ informazioni complesse in risultati leggibili.
 
 
 <div class="steps">
-
 
 <div class="step">
 
@@ -2150,10 +1784,9 @@ supportare la pianificazione.
 </section>
 
 
-
-<!-- =========================================================
+<!-- =========================
      CTA
-========================================================= -->
+========================= -->
 
 <section class="section">
 
@@ -2173,7 +1806,6 @@ in modo più intelligente.
 
 </div>
 
-
 <a href="#contatti">
 SCOPRI DI PIÙ
 </a>
@@ -2183,15 +1815,13 @@ SCOPRI DI PIÙ
 </section>
 
 
-
-<!-- =========================================================
-     CONTATTI
-========================================================= -->
+<!-- =========================
+     CONTATTI / NETLIFY FORM
+========================= -->
 
 <section
 class="section"
-id="contatti"
->
+id="contatti">
 
 <div class="section-header">
 
@@ -2229,7 +1859,6 @@ per approfondire il tuo progetto.
 <form
 name="contact"
 method="POST"
-action="/"
 data-netlify="true"
 netlify-honeypot="bot-field"
 >
@@ -2331,10 +1960,9 @@ INVIA RICHIESTA
 </section>
 
 
-
-<!-- =========================================================
+<!-- =========================
      FOOTER
-========================================================= -->
+========================= -->
 
 <footer>
 
@@ -2353,12 +1981,11 @@ costituiscono una raccomandazione finanziaria.
 </footer>
 
 
-
 <script>
 
-/* =========================================================
+/* =========================
    SLIDER
-========================================================= */
+========================= */
 
 const slides =
 document.querySelectorAll(".slide");
@@ -2376,7 +2003,6 @@ const progressBar =
 document.getElementById("progressBar");
 
 let currentSlide = 0;
-
 let autoPlay;
 
 const SLIDE_DURATION = 6000;
@@ -2393,17 +2019,14 @@ function showSlide(index){
     }
 
     slides.forEach(
-        slide =>
-        slide.classList.remove("active")
+        slide => slide.classList.remove("active")
     );
 
     dots.forEach(
-        dot =>
-        dot.classList.remove("active")
+        dot => dot.classList.remove("active")
     );
 
     slides[index].classList.add("active");
-
     dots[index].classList.add("active");
 
     currentSlide = index;
@@ -2426,18 +2049,16 @@ function startAutoplay(){
 
     clearInterval(autoPlay);
 
-    autoPlay =
-        setInterval(
-            nextSlide,
-            SLIDE_DURATION
-        );
+    autoPlay = setInterval(
+        nextSlide,
+        SLIDE_DURATION
+    );
 }
 
 
 function restartProgress(){
 
     progressBar.style.transition = "none";
-
     progressBar.style.width = "0%";
 
     setTimeout(
@@ -2461,7 +2082,6 @@ nextBtn.addEventListener(
     function(){
 
         nextSlide();
-
         startAutoplay();
 
     }
@@ -2473,7 +2093,6 @@ prevBtn.addEventListener(
     function(){
 
         previousSlide();
-
         startAutoplay();
 
     }
@@ -2488,9 +2107,7 @@ dots.forEach(
             function(){
 
                 showSlide(
-                    parseInt(
-                        dot.dataset.slide
-                    )
+                    parseInt(dot.dataset.slide)
                 );
 
                 startAutoplay();
@@ -2503,9 +2120,7 @@ dots.forEach(
 
 
 const slider =
-document.getElementById(
-    "mainSlider"
-);
+document.getElementById("mainSlider");
 
 
 slider.addEventListener(
@@ -2573,127 +2188,11 @@ slider.addEventListener(
 );
 
 
-/* START */
-
 restartProgress();
-
 startAutoplay();
 
-
-/* =========================================================
-   CONTACT FORM
-========================================================= */
-
-const form =
-document.querySelector(
-    'form[name="contact"]'
-);
-
-if(form){
-
-    form.addEventListener(
-        "submit",
-        async function(e){
-
-            e.preventDefault();
-
-            const button =
-                form.querySelector("button");
-
-            const formData =
-                new FormData(form);
-
-            button.disabled = true;
-
-            button.textContent =
-                "INVIO...";
-
-
-            try{
-
-                await fetch(
-                    "/",
-                    {
-                        method:"POST",
-
-                        headers:{
-                            "Content-Type":
-                            "application/x-www-form-urlencoded"
-                        },
-
-                        body:
-                        new URLSearchParams(
-                            formData
-                        ).toString()
-                    }
-                );
-
-
-                form.reset();
-
-
-                button.textContent =
-                    "INVIATO ✓";
-
-
-                button.style.background =
-                    "#00c853";
-
-
-                const message =
-                    document.createElement(
-                        "div"
-                    );
-
-
-                message.className =
-                    "success-message";
-
-
-                message.textContent =
-                    "Grazie! Ti contatteremo presto.";
-
-
-                form.appendChild(message);
-
-
-                setTimeout(
-                    function(){
-
-                        button.disabled = false;
-
-                        button.textContent =
-                            "INVIA RICHIESTA";
-
-                        button.style.background =
-                            "#ffc400";
-
-                        message.remove();
-
-                    },
-                    5000
-                );
-
-            }
-
-            catch(error){
-
-                button.disabled = false;
-
-                button.textContent =
-                    "RIPROVA";
-
-                alert(
-                    "Si è verificato un errore. Riprova."
-                );
-
-            }
-
-        }
-    );
-}
-
 </script>
+
 
 </body>
 </html>
