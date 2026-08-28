@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -250,15 +251,11 @@ nav a:hover{
     inset:0;
 
     display:grid;
-
-    grid-template-columns:
-        1.02fr .98fr;
-
+    grid-template-columns:1.02fr .98fr;
     align-items:stretch;
 
     opacity:0;
     visibility:hidden;
-
     transform:translateX(35px);
 
     transition:
@@ -311,7 +308,6 @@ nav a:hover{
     justify-content:center;
 
     padding:55px;
-
     text-align:left;
 
     background:
@@ -423,9 +419,7 @@ nav a:hover{
     justify-content:center;
 
     cursor:pointer;
-
     z-index:20;
-
     transition:.3s;
 }
 
@@ -590,7 +584,6 @@ nav a:hover{
         );
 
     border:1px solid rgba(255,255,255,.07);
-
     transition:.35s;
 }
 
@@ -652,7 +645,6 @@ nav a:hover{
     color:#06101d;
 
     font-weight:900;
-
     margin-bottom:20px;
 }
 
@@ -686,7 +678,6 @@ nav a:hover{
             rgba(0,200,83,.10),
             transparent 35%
         ),
-
         linear-gradient(
             145deg,
             #071723,
@@ -935,7 +926,6 @@ footer{
     inset:0;
 
     background:rgba(0,5,12,.86);
-
     backdrop-filter:blur(14px);
 }
 
@@ -1334,8 +1324,6 @@ footer{
         font-size:30px;
     }
 
-    /* POPUP MOBILE */
-
     .welcome-popup{
         padding:15px;
     }
@@ -1343,9 +1331,7 @@ footer{
     .popup-box{
         max-height:92vh;
         overflow-y:auto;
-
         padding:42px 23px 27px;
-
         border-radius:23px;
     }
 
@@ -1382,9 +1368,7 @@ footer{
 <body>
 
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- HEADER -->
 
 <header>
 
@@ -1417,9 +1401,7 @@ INIZIA ORA
 </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
@@ -1455,9 +1437,7 @@ decisioni più consapevoli.
 </p>
 
 
-<!-- =========================
-     SLIDER
-========================= -->
+<!-- SLIDER -->
 
 <div class="slider-shell">
 
@@ -1831,9 +1811,7 @@ aria-label="John Elkann">
 </section>
 
 
-<!-- =========================
-     TECNOLOGIA
-========================= -->
+<!-- TECNOLOGIA -->
 
 <section class="section" id="tecnologia">
 
@@ -1925,9 +1903,7 @@ attuale degli scenari.
 </section>
 
 
-<!-- =========================
-     VANTAGGI
-========================= -->
+<!-- VANTAGGI -->
 
 <section class="section" id="vantaggi">
 
@@ -2013,9 +1989,7 @@ da qualsiasi dispositivo.
 </section>
 
 
-<!-- =========================
-     COME FUNZIONA
-========================= -->
+<!-- COME FUNZIONA -->
 
 <section
 class="section"
@@ -2104,9 +2078,7 @@ supportare la pianificazione.
 </section>
 
 
-<!-- =========================
-     CTA
-========================= -->
+<!-- CTA -->
 
 <section class="section">
 
@@ -2135,9 +2107,7 @@ SCOPRI DI PIÙ
 </section>
 
 
-<!-- =========================
-     CONTATTI
-========================= -->
+<!-- CONTATTI -->
 
 <section
 class="section"
@@ -2185,10 +2155,23 @@ netlify-honeypot="bot-field"
 id="contactForm"
 >
 
+<!-- IDENTIFICAZIONE BRAND -->
 <input
 type="hidden"
 name="form-name"
 value="contact"
+>
+
+<input
+type="hidden"
+name="azienda"
+value="QUANTERA AI"
+>
+
+<input
+type="hidden"
+name="brand"
+value="QUANTERA AI"
 >
 
 
@@ -2306,9 +2289,7 @@ Riprova tra poco.
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -2327,9 +2308,7 @@ costituiscono una raccomandazione finanziaria.
 </footer>
 
 
-<!-- =========================
-     POPUP
-========================= -->
+<!-- POPUP -->
 
 <div
 class="welcome-popup"
@@ -2633,13 +2612,9 @@ slider.addEventListener(
         if(Math.abs(difference) > 50){
 
             if(difference > 0){
-
                 nextSlide();
-
             }else{
-
                 previousSlide();
-
             }
 
             startAutoplay();
@@ -2871,9 +2846,7 @@ document.addEventListener(
     function(e){
 
         if(e.key === "Escape"){
-
             closeWelcomePopup();
-
         }
 
     }
@@ -2884,3 +2857,4 @@ document.addEventListener(
 
 </body>
 </html>
+```
